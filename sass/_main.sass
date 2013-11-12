@@ -1,0 +1,284 @@
+html, body
+	height: 100%
+
+html
+	font-size: 62.5%
+	font-family: sans-serif
+	-ms-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
+
+body
+	margin: 0
+	font:
+		family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif
+		weight: normal
+	line-height: 1.4
+	+fs(12)
+	min-width: 960px
+
++selection(#fff, #00ade6)
+
+// page wrapper
+=wrap
+	width: 940px
+	margin: 0 auto
+
+// icons
+.icon
+	display: inline-block
+	&.icon_login
+		+s(login)
+
+// buttons
+=btn
+	display: inline-block
+	padding: 0 15px
+	height: 30px
+	line-height: 30px
+	font-size: 12px
+	+br(2px)
+	background: #4db11d
+	text-decoration: none
+	&:hover
+		text-decoration: none
+.btn
+	+btn
+
+// sticky footer
+.out
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 auto -230px
+.push, .footer
+	height: 230px
+
+// header
+.header
+	color: #fff
+	+fs(12)
+	height: 60px
+	overflow: hidden
+	background-color: #231f20
+	a
+		text-decoration: none
+		color: inherit
+		&:hover
+			text-decoration: underline
+	.btn
+		text-decoration: none
+		&:hover
+			text-decoration: none
+	.header-i
+		max-width: 1400px
+		margin: 0 auto
+		padding: 0 10px
+		+clr
+	.header__logo
+		float: left
+		position: relative
+		+ht
+		&:before
+			position: absolute
+			right: 100%
+			top: 0
+			width: 1000px
+			height: 100%
+			background: #00ade6
+			content: ""
+		a
+			display: block
+			+s(logo)
+	.header__toolbar
+		float: right
+		text-align: right
+	.divider
+		position: relative
+		display: inline-block
+		vertical-align: top
+		padding-left: 20px
+		padding-right: 20px
+		height: 60px
+		line-height: 60px
+		border-left: 1px solid #383435
+	.language
+		display: inline-block
+		vertical-align: top
+		margin-right: -3px
+		padding-left: 2px
+		padding-right: 0
+		li
+			display: inline-block
+			text-transform: uppercase
+			color: #fff
+			font-size: 11px
+			text-align: center
+			+br(50%)
+			border: 3px solid transparent
+			a, span
+				display: block
+				text-decoration: none
+				color: inherit
+				vertical-align: top
+				width: 30px
+				height: 30px
+				line-height: 30px
+			&.is-active
+				cursor: default
+				a
+					&:hover
+						cursor: default
+			&.is-active, &:hover
+				border: 3px solid rgba(255,255,255,.1)
+				a, span
+					+br(50%)
+					background-color: #4db11d
+					+box-shadow(inset 0 1px 0 rgba(255,255,255,.35))
+	.profile
+		.profile__auth
+			li
+				display: inline-block
+				position: relative
+				padding-left: 15px
+				&:before
+					position: absolute
+					top: 50%
+					margin-top: -2px
+					left: 4px
+					background: #656565
+					content: ""
+					width: 4px
+					height: 4px
+					+br(50%)
+				&:first-child
+					padding-left: 0
+					&:before
+						content: none
+		.profile__login
+			.icon_login
+				margin-bottom: -3px
+				padding-right: 11px
+	.adv
+		display: inline-block
+		vertical-align: top
+		height: 60px
+		line-height: 60px
+		padding: 0 20px
+		.adv__btn
+			+btn
+
+// footer
+.footer
+	background: #222
+	.footer-i
+		+wrap
+		padding: 20px 0 10px
+		color: #fff
+	.footer__copyright
+		margin-top: 2.6em
+		color: #666
+		clear: both
+		a
+			color: inherit
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+	.footer__content
+		+clr
+		color: #ccc
+		a
+			color: inherit
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.footer__item
+		position: relative
+		float: left
+		margin-left: 20px
+		width: 300px
+		&:before
+			position: absolute
+			bottom: 5px
+			left: -20px
+			height: 100px
+			width: 1px
+			background: #373737
+			content: ""
+		&:first-child
+			margin-left: 0
+			&:before
+				content: none
+	.footer__row
+		+clr
+		margin-left: -20px
+		height: 108px
+	.footer__col
+		float: left
+		width: 140px
+		margin-left: 20px
+		p
+			line-height: 1
+			margin-top: 2.2em
+			&:first-child
+				margin-top: 0
+		li
+			margin-top: 1.2em
+			&:first-child
+				margin-top: 0
+
+	.footer__title
+		text-transform: uppercase
+		color: #fff
+		+fs(12)
+		line-height: 1
+		margin-bottom: 2.2em
+
+	.footer__stats
+		strong
+			display: block
+			+fs(20)
+			margin-bottom: 0.3em
+	.footer__contacts
+		.footer__tel
+			+fs(20)
+			color: #fff
+			margin-top: 0
+		.footer__feedback
+			margin-top: .6em
+
+	.footer__socials
+		margin-top: 1em
+		li
+			display: inline-block
+			vertical-align: top
+			margin-top: 0
+			margin-left: 7px
+			&:first-child
+				margin-left: 0
+			a
+				display: block
+				+ht
+				&.footer__socials_gp
+					+s(gp)
+				&.footer__socials_tw
+					+s(tw)
+				&.footer__socials_fb
+					+s(fb)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

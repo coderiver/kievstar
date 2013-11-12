@@ -1,0 +1,11 @@
+$icons: sprite-map("icons/*.png", $spacing: 10px)
+
+@mixin image-size($path)
+	width: image-width($path)
+	height: image-height($path)
+
+@mixin s($sprite, $map: $icons)
+	background: sprite($map, $sprite) no-repeat
+	//background-image: inline-image('icons/'+$sprite+'.png','image/png'); to switches sprites to base64, elegant
+	@include image-size(sprite-file($map, $sprite))
+

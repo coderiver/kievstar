@@ -1,0 +1,8 @@
+$svg: "svg/"
+
+@mixin svg($name, $width, $height)
+	width: $width + px
+	height: $height + px
+	background-image: inline-image($svg + $name + ".svg")
+	-webkit-background-size: 100% 100%
+	background-size: 100% 100%
