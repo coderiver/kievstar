@@ -102,7 +102,7 @@ body { margin: 0; font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-seri
 .push, .footer { height: 230px; }
 
 .header { color: white; font-size: 12px; font-size: 1.2rem; height: 60px; overflow: hidden; background-color: #231f20; }
-.header a { text-decoration: none; color: inherit; }
+.header a { text-decoration: none; color: white; }
 .header a:hover { text-decoration: underline; }
 .header .btn { text-decoration: none; }
 .header .btn:hover { text-decoration: none; }
@@ -114,7 +114,7 @@ body { margin: 0; font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-seri
 .header .header__logo a { display: block; background: url('../img/icons-sc162299358.png') 0 0 no-repeat; width: 443px; height: 60px; }
 .header .header__toolbar { float: right; text-align: right; }
 .header .divider { position: relative; display: inline-block; vertical-align: top; padding-left: 20px; padding-right: 20px; height: 60px; line-height: 60px; border-left: 1px solid #383435; }
-.header .language { display: inline-block; vertical-align: top; margin-right: -3px; padding-left: 2px; padding-right: 0; }
+.header .language { margin-right: -3px; padding-left: 2px; padding-right: 0; }
 .header .language li { display: inline-block; text-transform: uppercase; color: white; font-size: 11px; text-align: center; -webkit-border-radius: 50%; border-radius: 50%; border: 3px solid transparent; }
 .header .language li a, .header .language li span { display: block; text-decoration: none; color: inherit; vertical-align: top; width: 30px; height: 30px; line-height: 30px; }
 .header .language li.is-active { cursor: default; }
@@ -133,21 +133,22 @@ body { margin: 0; font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-seri
 .footer { background: #222222; }
 .footer .footer-i { width: 940px; margin: 0 auto; padding: 20px 0 10px; color: white; }
 .footer .footer__copyright { margin-top: 2.6em; color: #666666; clear: both; }
-.footer .footer__copyright a { color: inherit; text-decoration: underline; }
+.footer .footer__copyright a { color: #666666; text-decoration: underline; }
 .footer .footer__copyright a:hover { text-decoration: none; }
 .footer .footer__content { color: #cccccc; }
 .footer .footer__content:before, .footer .footer__content:after { content: ""; display: table; }
 .footer .footer__content:after { clear: both; }
-.footer .footer__content a { color: inherit; text-decoration: none; }
+.footer .footer__content a { color: #cccccc; text-decoration: none; }
 .footer .footer__content a:hover { text-decoration: underline; }
 .footer .footer__item { position: relative; float: left; margin-left: 20px; width: 300px; }
 .footer .footer__item:before { position: absolute; bottom: 5px; left: -20px; height: 100px; width: 1px; background: #373737; content: ""; }
 .footer .footer__item:first-child { margin-left: 0; }
 .footer .footer__item:first-child:before { content: none; }
-.footer .footer__row { margin-left: -20px; height: 108px; }
+.footer .footer__row { height: 108px; }
 .footer .footer__row:before, .footer .footer__row:after { content: ""; display: table; }
 .footer .footer__row:after { clear: both; }
 .footer .footer__col { float: left; width: 140px; margin-left: 20px; }
+.footer .footer__col:first-child { margin-left: 0; }
 .footer .footer__col p { line-height: 1; margin-top: 2.2em; }
 .footer .footer__col p:first-child { margin-top: 0; }
 .footer .footer__col li { margin-top: 1.2em; }
@@ -163,3 +164,9 @@ body { margin: 0; font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-seri
 .footer .footer__socials li a.footer__socials_gp { background: url('../img/icons-sc162299358.png') 0 -70px no-repeat; width: 30px; height: 30px; }
 .footer .footer__socials li a.footer__socials_tw { background: url('../img/icons-sc162299358.png') 0 -110px no-repeat; width: 30px; height: 30px; }
 .footer .footer__socials li a.footer__socials_fb { background: url('../img/icons-sc162299358.png') 0 -176px no-repeat; width: 30px; height: 30px; }
+
+.lteie8 .header .divider, .lteie8 .header .adv { display: inline; }
+.lteie8 .header .profile .profile__auth li { display: inline; }
+.lteie8 .header .language li { display: inline; padding-top: 12px; }
+.lteie8 .header .language li a, .lteie8 .header .language li span { display: block; }
+.lteie8 .footer .footer__socials li { display: inline; }

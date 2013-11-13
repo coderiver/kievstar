@@ -18,6 +18,9 @@ body
 
 +selection(#fff, #00ade6)
 
+// *
+// 	border: 1px solid red
+
 // page wrapper
 =wrap
 	width: 940px
@@ -62,7 +65,7 @@ body
 	background-color: #231f20
 	a
 		text-decoration: none
-		color: inherit
+		color: #fff
 		&:hover
 			text-decoration: underline
 	.btn
@@ -102,8 +105,6 @@ body
 		line-height: 60px
 		border-left: 1px solid #383435
 	.language
-		display: inline-block
-		vertical-align: top
 		margin-right: -3px
 		padding-left: 2px
 		padding-right: 0
@@ -179,7 +180,7 @@ body
 		color: #666
 		clear: both
 		a
-			color: inherit
+			color: #666
 			text-decoration: underline
 			&:hover
 				text-decoration: none
@@ -187,7 +188,7 @@ body
 		+clr
 		color: #ccc
 		a
-			color: inherit
+			color: #ccc
 			text-decoration: none
 			&:hover
 				text-decoration: underline
@@ -210,12 +211,13 @@ body
 				content: none
 	.footer__row
 		+clr
-		margin-left: -20px
 		height: 108px
 	.footer__col
 		float: left
 		width: 140px
 		margin-left: 20px
+		&:first-child
+			margin-left: 0
 		p
 			line-height: 1
 			margin-top: 2.2em
