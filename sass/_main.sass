@@ -18,8 +18,14 @@ body
 
 +selection(#fff, #00ade6)
 
-// *
-// 	border: 1px solid red
+input, textarea
+	color: #000
+.placeholder
+	color: #999 !important
+
+*
+	// border: 1px solid red
+	// +box-shadow(0px 0px 1px 1px red)
 
 // page wrapper
 =wrap
@@ -73,22 +79,29 @@ body
 		&:hover
 			text-decoration: none
 	.header-i
+		position: relative
 		max-width: 1400px
 		margin: 0 auto
-		padding: 0 10px
+		padding: 0 10px 0 0
 		+clr
+	.header__line
+		position: absolute
+		right: 100%
+		width: 1000px
+		height: 60px
+		background: #00ade6
 	.header__logo
 		float: left
 		position: relative
 		+ht
-		&:before
-			position: absolute
-			right: 100%
-			top: 0
-			width: 1000px
-			height: 100%
-			background: #00ade6
-			content: ""
+		// &:before
+		// 	position: absolute
+		// 	right: 100%
+		// 	top: 0
+		// 	width: 1000px
+		// 	height: 100%
+		// 	background: #00ade6
+		// 	content: ""
 		a
 			display: block
 			+s(logo)
@@ -272,7 +285,80 @@ body
 
 
 
-
+.search
+	background-color: #fff
+	+wrap
+	.search-i
+		height: 50px
+		line-height: 50px
+		padding: 40px 0
+	.yellow-pages
+		float: left
+		width: 160px
+		+fs(20)
+		a
+			color: #333
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.search__form
+		position: relative
+		width: 780px
+		float: right
+	.search__input
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		color: #000
+		+box
+		height: 50px
+		border: 1px solid #d7d7d7
+		+br(2px)
+		padding: 0 230px 0 10px
+		+fs(16)
+		+placeholder(#999)
+		outline: 0
+		&:focus
+			+placeholder(#fff)
+	.search__select
+		float: right
+		width: 160px
+		margin-top: -1px
+		select
+			width: 160px
+			outline: 0
+		.ui-selectmenu
+			background-color: #231f20
+			height: 50px
+			// line-height: 50px
+			+fs(14)
+			color: #fff
+			&:focus, &:active
+				outline: 0
+			&.ui-state-active
+				.ui-selectmenu-icon
+					+rotate(180)
+		.ui-selectmenu-status
+			padding: 0 30px 0 20px
+			line-height: 50px
+		.ui-selectmenu-icon
+			+s(search-arrow)
+			right: 10px
+			margin-top: -4px
+	.search__btn
+		position: relative
+		width: 60px
+		height: 50px
+		float: right
+		background-color: #0095db
+		+br(0 2px 2px 0)
+		border: 0
+		outline: 0
+		i
+			display: inline-block
+			vertical-align: top
+			+s(search)
 
 
 

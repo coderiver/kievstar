@@ -32,10 +32,34 @@
 						<li class="is-active"><span>Ru</span></li>
 					</ul>
 				</div>
+
+				<div class="header__line"></div>
 			</div>
 		</header>
 		<!-- END .header -->
-
+		<!-- BEGIN .search -->
+		<div class="search">
+			<div class="search-i">
+				<div class="yellow-pages"><a href="#">Yellow Pages</a></div>
+				<div class="search__form">
+					<form action="">
+						<input class="search__input" type="text" placeholder="Что Вы ищите?">
+						<button type="submit" class="search__btn"><i></i></button>
+						<div class="search__select">
+							<select name="" id="" class="js-select">
+								<option value="" selected="selected">Выбрать регион</option>
+								<option value="">Киевская область</option>
+								<option value="">Черкасская область</option>
+								<option value="">Автономная Республика Крым</option>
+								<option value="">Винницкая область</option>
+								<option value="">Волынская область</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- END .search -->
 
 
 
@@ -116,7 +140,12 @@
 	</footer>
 	<!-- END .footer -->
 
-	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/jquery-1.10.2.min.js"></script>
+	<script src="js/vendor/jquery.ui.core.js"></script>
+	<script src="js/vendor/jquery.ui.widget.js"></script>
+	<script src="js/vendor/jquery.ui.position.js"></script>
+	<script src="js/vendor/jquery.ui.selectmenu.js"></script>
+	<script src="js/vendor/jquery.placeholder.js"></script>
 	<script src="js/common.js"></script>
 </body>
 </html>
