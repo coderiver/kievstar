@@ -1,17 +1,17 @@
 .lteie8
-	a
-		&:active, &:focus
-			outline: 0
 	.header
 		.divider, .adv
-			display: inline
+			*display: inline
+			zoom: 1
 		.profile
 			.profile__auth
 				li
-					display: inline
+					*display: inline
+					zoom: 1
 		.language
 			li
-				display: inline
+				*display: inline
+				zoom: 1
 				padding-top: 12px
 				a, span
 					display: block
@@ -19,10 +19,27 @@
 	.footer
 		.footer__socials
 			li
-				display: inline
+				*display: inline
+				zoom: 1
 
 	.search
 		.search__input
 			width: 565px
 			height: auto
 			padding: 15px 10px
+
+	.hero
+		.hero-bg
+			display: block
+		.hero__pane
+			display: none
+			&.is-visible
+				display: block
+		.hero__tabs
+			li
+				*display: inline
+				zoom: 1
+			.hero__number
+				*display: inline
+				zoom: 1
+				cursor: pointer
