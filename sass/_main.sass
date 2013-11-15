@@ -449,7 +449,7 @@ input, textarea
 		.hero__picture
 			position: absolute
 			bottom: 0
-			left: 80px
+			left: -1800px
 			+transform(translate3d(-200%,0,0))
 			+transition(all .7s ease-in)
 		.hero__article
@@ -460,6 +460,7 @@ input, textarea
 			width: 380px
 			+fs(12)
 			color: #333
+			right: -1800px
 		.hero__title
 			+fs(24)
 			font-weight: normal
@@ -484,8 +485,10 @@ input, textarea
 			opacity: 1
 			z-index: 100
 			.hero__picture
+				left: 80px
 				+transform(translate3d(0,0,0))
 			.hero__article
+				right: 0
 				+transform(translate3d(0,0,0))
 			.hero__title
 				+transform(translate3d(0,0,0))
