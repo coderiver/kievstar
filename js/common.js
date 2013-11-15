@@ -18,9 +18,30 @@ $(document).ready(function() {
 		return false;
 	});
 
+	//scroll to navbar
+	$(".js-navbar a").click(function (){
+	var page = $(this).attr("href");
+		$('html, body').animate({
+			scrollTop: $(page).offset().top
+		}, 500);
+	return false;
+	});
+
 });
 
 
+$(function() {
+       var nav = $('.js-navbar');
+       var top = nav.offset().top;
 
+       $(window).scroll(function(){
+           var windowpos = $(window).scrollTop();
+           if(windowpos < top) {
+               nav.removeClass('is-fixed');
+           } else {
+               nav.addClass('is-fixed');
+           }
+       });
+   });
 
 
