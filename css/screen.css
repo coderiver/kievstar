@@ -134,6 +134,7 @@ html, body { height: 100%; }
 html { font-size: 62.5%; font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
 
 body { margin: 0; font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif; font-weight: normal; line-height: 1.4; font-size: 12px; font-size: 1.2rem; min-width: 960px; }
+body.is-navbar-fixed { padding-top: 42px; }
 
 ::selection { background: rgba(77, 178, 29, 0.6); color: #333333; }
 
@@ -272,7 +273,7 @@ input, textarea { color: black; }
 .hero .hero__pane.is-visible .hero__button { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
 .navbar { width: 940px; margin: 0 auto; text-align: center; z-index: 100; }
-.navbar.is-fixed { position: fixed; top: 0; left: 50%; margin-left: -470px; opacity: 0.9; }
+.navbar.is-fixed { position: fixed; top: 0; left: 50%; margin-left: -470px; }
 .navbar ul { display: inline-block; font-size: 0; -webkit-border-radius: 2px; border-radius: 2px; border: 1px solid #eeeeee; background-color: white; }
 .navbar li { display: inline-block; height: 40px; line-height: 40px; color: #333333; text-align: center; font-size: 12px; font-size: 1.2rem; border-left: 1px solid #eeeeee; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; -ms-transition: all 0.2s linear; transition: all 0.2s linear; }
 .navbar li:first-child { border-left: 0; }
@@ -280,7 +281,7 @@ input, textarea { color: black; }
 .navbar li a { display: block; padding: 0 35px; color: #333333; text-decoration: none; }
 .navbar li a:hover { text-decoration: none; }
 
-.info { padding: 40px 0 45px; }
+.info { padding: 42px 0 45px; }
 .info article { padding-top: 20px; }
 .info article p { color: #656565; font-size: 12px; font-size: 1.2rem; }
 .info .info__title { font-size: 30px; font-size: 3rem; font-weight: normal; margin-bottom: 1em; text-align: center; }
@@ -311,11 +312,11 @@ input, textarea { color: black; }
 .info .success .success__whois { min-height: 1px; margin-bottom: 1.5em; }
 .info .connected { width: 620px; margin: 0 auto; text-align: center; }
 .info .connected .connected__row { overflow: hidden; margin-top: 30px; margin-bottom: 25px; text-align: left; }
-.info .connected .connected__cols { width: 300px; }
-.info .connected .connected__col1 { float: left; text-align: right; }
-.info .connected .connected__col2 { float: right; margin-top: 8px; }
-.info .connected .connected__col2 a { color: #656565; text-decoration: underline; }
-.info .connected .connected__col2 a:hover { text-decoration: none; }
+.info .connected .connected__item { width: 300px; float: right; margin-top: 8px; }
+.info .connected .connected__item:first-child { float: left; text-align: right; margin-top: 0; }
+.info .connected .connected__item:first-child .btn { color: white; text-decoration: none; }
+.info .connected .connected__item a { color: #656565; text-decoration: underline; }
+.info .connected .connected__item a:hover { text-decoration: none; }
 
 .lteie8 .header .divider, .lteie8 .header .adv { *display: inline; zoom: 1; }
 .lteie8 .header .profile .profile__auth li { *display: inline; zoom: 1; }

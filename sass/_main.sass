@@ -15,6 +15,8 @@ body
 	line-height: 1.4
 	+fs(12)
 	min-width: 960px
+	&.is-navbar-fixed
+		padding-top: 42px
 
 +selection(#333, rgba(#4db21d, .6))
 
@@ -415,7 +417,6 @@ input, textarea
 			padding: 0 15px
 			&:hover,&.is-active
 				color: #fff
-				// text-shadow: 0px 1px 1px #b1b1b1
 				a
 					color: #fff
 					&:hover
@@ -423,8 +424,6 @@ input, textarea
 						text-decoration: none
 				.hero__number
 					border: 2px solid #fff
-					// text-shadow: 0px 1px 1px #d1d1d1
-					// +box-shadow(0px 1px 1px #d1d1d1)
 		a
 			display: block
 			text-align: center
@@ -502,7 +501,7 @@ input, textarea
 			.hero__button
 				+transform(translate3d(0,0,0))
 
-
+// navbar
 .navbar
 	+wrap
 	text-align: center
@@ -512,7 +511,6 @@ input, textarea
 		top: 0
 		left: 50%
 		margin-left: -470px
-		opacity: 0.9
 	ul
 		display: inline-block
 		font-size: 0
@@ -524,7 +522,6 @@ input, textarea
 		height: 40px
 		line-height: 40px
 		color: #333
-		// width: 170px
 		text-align: center
 		+fs(12)
 		border-left: 1px solid #eee
@@ -540,10 +537,10 @@ input, textarea
 			text-decoration: none
 			&:hover
 				text-decoration: none
-				// font-weight: bold
 
+// info
 .info
-	padding: 40px 0 45px
+	padding: 42px 0 45px
 	article
 		padding-top: 20px
 		p
@@ -569,6 +566,8 @@ input, textarea
 		p
 			width: 460px
 			margin: 0 auto
+
+	// benefits
 	.benefits
 		margin-bottom: 25px
 		.benefits__list
@@ -617,6 +616,8 @@ input, textarea
 					+s(site)
 					margin-top: -17px
 					margin-left: -25px
+
+	// success
 	.success
 		padding-top: 0
 		background: #f6f9fb
@@ -643,6 +644,8 @@ input, textarea
 		.success__whois
 			min-height: 1px
 			margin-bottom: 1.5em
+
+	// connected
 	.connected
 		width: 620px
 		margin: 0 auto
@@ -652,14 +655,17 @@ input, textarea
 			margin-top: 30px
 			margin-bottom: 25px
 			text-align: left
-		.connected__cols
+		.connected__item
 			width: 300px
-		.connected__col1
-			float: left
-			text-align: right
-		.connected__col2
 			float: right
 			margin-top: 8px
+			&:first-child
+				float: left
+				text-align: right
+				margin-top: 0
+				.btn
+					color: #fff
+					text-decoration: none
 			a
 				color: #656565
 				text-decoration: underline

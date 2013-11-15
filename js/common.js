@@ -19,29 +19,28 @@ $(document).ready(function() {
 	});
 
 	//scroll to navbar
+	var nav = $('.js-navbar');
+	var top = nav.offset().top;
+
 	$(".js-navbar a").click(function (){
-	var page = $(this).attr("href");
+		var page = $(this).attr("href");
+
 		$('html, body').animate({
-			scrollTop: $(page).offset().top
+			scrollTop: $(page).offset().top - nav.outerHeight()
 		}, 500);
-	return false;
+		return false;
+	});
+
+	$(window).scroll(function(){
+				var windowpos = $(window).scrollTop();
+
+				if(windowpos < top) {
+					nav.removeClass('is-fixed');
+					$('body').removeClass('is-navbar-fixed');
+				} else {
+					nav.addClass('is-fixed');
+					$('body').addClass('is-navbar-fixed');
+				}
 	});
 
 });
-
-
-$(function() {
-       var nav = $('.js-navbar');
-       var top = nav.offset().top;
-
-       $(window).scroll(function(){
-           var windowpos = $(window).scrollTop();
-           if(windowpos < top) {
-               nav.removeClass('is-fixed');
-           } else {
-               nav.addClass('is-fixed');
-           }
-       });
-   });
-
-
