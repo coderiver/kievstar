@@ -124,10 +124,13 @@ input, textarea { color: #333333; }
 
 .placeholder { color: #999999 !important; }
 
+.sticker { display: inline-block; vertical-align: middle; background: #0096db; color: white; text-transform: uppercase; font-weight: bold; font-size: 10px; font-size: 1rem; -webkit-border-radius: 2px; border-radius: 2px; padding: 0 10px; height: 20px; line-height: 20px; cursor: default; }
+
 .topper { background: #f6f6f6; border: solid #dddddd; border-width: 1px 0; margin-bottom: 40px; }
 .topper.topper_mod { border-width: 1px 0 0; }
 .topper .topper-i { width: 940px; margin: 0 auto; padding: 20px 0 0; }
-.topper .topper__title { font-size: 24px; font-size: 2.4rem; font-weight: bold; line-height: 1.2; padding-top: 20px; margin-bottom: 30px; border-top: 1px solid #eeeeee; }
+.topper .topper__title { font-size: 24px; font-size: 2.4rem; font-weight: bold; line-height: 1.2; padding-top: 20px; padding-bottom: 30px; border-top: 1px solid #eeeeee; }
+.topper .topper__title .sticker { margin-left: 15px; }
 .topper .topper__nav ul { font-size: 0; }
 .topper .topper__nav li { width: 140px; text-align: center; height: 40px; line-height: 40px; display: inline-block; font-size: 12px; font-size: 1.2rem; margin-left: 20px; }
 .topper .topper__nav li:first-child { margin-left: 0; }
@@ -202,7 +205,6 @@ div.is-editable .editable .editable__content { position: absolute; top: 50%; lef
 .post:after { clear: both; }
 .post .post__info { float: left; width: 220px; margin-right: 20px; }
 .post .post__image { width: 220px; height: 160px; overflow: hidden; }
-.post .post__image img { min-width: 220px; max-height: 160px; }
 .post .post__image a { display: block; height: 100%; }
 .post .post__meta { text-align: center; margin-top: 20px; }
 .post .post__tel { font-size: 16px; font-size: 1.6rem; line-height: 1.2; font-weight: bold; }
@@ -217,7 +219,10 @@ div.is-editable .editable .editable__content { position: absolute; top: 50%; lef
 .post .post__title { color: #333333; line-height: 1.2; font-size: 16px; font-size: 1.6rem; font-weight: bold; margin-bottom: 1em; }
 .post .post__title a { color: #333333; text-decoration: none; }
 .post .post__title a:hover { text-decoration: underline; }
-.post .post__edit { position: absolute; bottom: 0; left: 0; }
+.post .post__edit, .post .post__tags { position: absolute; bottom: 0; left: 0; }
+.post .post__tags .btn { text-transform: uppercase; font-size: 10px; font-size: 1rem; }
+.post .post__call { margin-bottom: 5px; }
+.post .post__call .btn { display: block; height: 30px; line-height: 30px; font-size: 12px; font-size: 1.2rem; }
 
 .otherlinks .otherlinks__row { margin-top: 40px; padding-top: 40px; border-top: 1px solid #eeeeee; }
 .otherlinks ul:before, .otherlinks ul:after { content: ""; display: table; }
@@ -231,6 +236,16 @@ div.is-editable .editable .editable__content { position: absolute; top: 50%; lef
 .otherlinks .otherlinks__content { display: inline-block; vertical-align: middle; font-size: 12px; font-size: 1.2rem; line-height: 1.2; }
 .otherlinks .otherlinks__text { color: #333333; }
 .otherlinks .otherlinks__number { color: #999999; }
+
+.category .category__list li { margin-bottom: 20px; padding-top: 20px; border-top: 1px solid #eeeeee; }
+.category .category__list li:first-child { border: 0; }
+.category .post__info { float: left; width: 140px; margin-right: 20px; }
+.category .post__image { width: 140px; height: 140px; overflow: hidden; }
+.category .post__content { min-height: 140px; width: 375px; }
+.category .post__title { color: #0096db; }
+.category .post__title a { color: #0096db; text-decoration: none; }
+.category .post__title a:hover { text-decoration: underline; }
+.category .post__meta { position: absolute; top: 20px; right: 0; bottom: 0; margin-top: 0; width: 140px; padding: 20px 10px 0; border-left: 1px solid #eeeeee; }
 
 .ui-selectmenu { display: block; display: inline-block; position: relative; height: 2.2em; vertical-align: middle; text-decoration: none; overflow: hidden; zoom: 1; }
 

@@ -50,6 +50,19 @@ input, textarea
 .placeholder
 	color: #999 !important
 
+.sticker
+	display: inline-block
+	vertical-align: middle
+	background: $blue
+	color: #fff
+	text-transform: uppercase
+	font-weight: bold
+	+fs(10)
+	+br(2px)
+	padding: 0 10px
+	height: 20px
+	line-height: 20px
+	cursor: default
 
 .topper
 	background: $grey
@@ -66,8 +79,10 @@ input, textarea
 		font-weight: bold
 		line-height: 1.2
 		padding-top: 20px
-		margin-bottom: 30px
+		padding-bottom: 30px
 		border-top: 1px solid #eee
+		.sticker
+			margin-left: 15px
 	.topper__nav
 		ul
 			font-size: 0
@@ -318,9 +333,6 @@ div
 		width: 220px
 		height: 160px
 		overflow: hidden
-		img
-			min-width: 220px
-			max-height: 160px
 		a
 			display: block
 			height: 100%
@@ -366,10 +378,21 @@ div
 			text-decoration: none
 			&:hover
 				text-decoration: underline
-	.post__edit
+	.post__edit, .post__tags
 		position: absolute
 		bottom: 0
 		left: 0
+	.post__tags
+		.btn
+			text-transform: uppercase
+			+fs(10)
+	.post__call
+		margin-bottom: 5px
+		.btn
+			display: block
+			height: 30px
+			line-height: 30px
+			+fs(12)
 
 
 
@@ -415,8 +438,41 @@ div
 		color: #999
 
 
-
-
+.category
+	.category__list
+		li
+			margin-bottom: 20px
+			padding-top: 20px
+			border-top: 1px solid #eee
+			&:first-child
+				border: 0
+	.post__info
+		float: left
+		width: 140px
+		margin-right: 20px
+	.post__image
+		width: 140px
+		height: 140px
+		overflow: hidden
+	.post__content
+		min-height: 140px
+		width: 375px
+	.post__title
+		color: $blue
+		a
+			color: $blue
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.post__meta
+		position: absolute
+		top: 20px
+		right: 0
+		bottom: 0
+		margin-top: 0
+		width: 140px
+		padding: 20px 10px 0
+		border-left: 1px solid #eee
 
 
 
