@@ -1,0 +1,134 @@
+
+// hero
+.hero
+	position: relative
+	overflow: hidden
+	background: url(../img/hero-bg.jpg) no-repeat center center #c2bfbe
+	background-size: cover
+	&:before
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 1px
+		content: ""
+		background: rgba(#000, .05)
+	.hero-bg
+		display: none
+		min-height: 110%
+		min-width: 1024px
+		width: 100%
+		height: auto
+		position: absolute
+		bottom: 0
+		left: 0
+	.hero-shadow
+		position: absolute
+		top: 0
+		left: 50%
+		margin-left: -485px
+		width: 969px
+		height: 479px
+		content: ""
+		background: url(../img/hero-shadow.png) no-repeat
+	.hero-i
+		position: relative
+		height: 570px
+		max-width: 1400px
+		min-width: 940px
+		margin: 0 auto
+		padding: 0 10px 0
+		z-index: 10
+	.hero__tabs
+		position: relative
+		z-index: 110
+		text-align: center
+		padding-top: 25px
+		margin-bottom: 25px
+		li
+			display: inline-block
+			padding: 0 15px
+			&:hover,&.is-active
+				color: #fff
+				a
+					color: #fff
+					&:hover
+						color: #fff
+						text-decoration: none
+				.hero__number
+					border: 2px solid #fff
+		a
+			display: block
+			text-align: center
+			color: $dark
+			text-decoration: none
+			+transition(color .3s ease-out)
+			+fs(14)
+		.hero__number
+			display: inline-block
+			+fs(30)
+			width: 50px
+			height: 50px
+			line-height: 50px
+			border: 2px solid $dark
+			margin: 0 auto 15px
+			+transition(border .3s ease-out)
+			+br(50%)
+	.hero__pane
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 457px
+		opacity: 0
+		z-index: -1
+		+transition(all .5s ease-in)
+		.hero__picture
+			position: absolute
+			bottom: 0
+			left: -1800px
+			+transform(translate3d(-200%,0,0))
+			+transition(all .6s ease-in)
+		.hero__article
+			position: absolute
+			right: 45px
+			top: 105px
+			float: right
+			width: 380px
+			+fs(12)
+			right: -1800px
+		.hero__title
+			+fs(24)
+			font-weight: normal
+			margin-bottom: 1em
+			+transform(translate3d(0,-200%,0))
+			+transition(all .5s ease-in)
+			&.hero__title_mod
+				+fs(20)
+				padding-right: 55px
+		.hero__text
+			margin-bottom: 2em
+			line-height: 1.5
+			width: 300px
+			+transform(translate3d(200%,0,0))
+			+transition(all .5s ease-in)
+		.hero__button
+			+transform(translate3d(200%,0,0))
+			+transition(all .6s ease-in)
+			.btn
+				margin-right: 8px
+		&.is-visible
+			opacity: 1
+			z-index: 100
+			.hero__picture
+				left: 80px
+				+transform(translate3d(0,0,0))
+			.hero__article
+				right: 0
+				+transform(translate3d(0,0,0))
+			.hero__title
+				+transform(translate3d(0,0,0))
+			.hero__text
+				+transform(translate3d(0,0,0))
+			.hero__button
+				+transform(translate3d(0,0,0))

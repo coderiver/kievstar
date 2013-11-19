@@ -18,6 +18,12 @@ $(document).ready(function() {
 		return false;
 	});
 
+	$('.box_slide > .box__headline').click(function (event) {
+		jQuery('.box_slide > .box__content').slideToggle();
+		jQuery('.box_slide').toggleClass('is-active');
+		return false;
+	});
+
 	//scroll to navbar
 	var nav = $('.js-navbar');
 	var top = nav.offset().top;
