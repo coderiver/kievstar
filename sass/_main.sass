@@ -254,21 +254,16 @@ div
 				cursor: pointer
 
 .catalog
-	.catalog__about
-		margin-bottom: 20px
-	.catalog__list
-		.catalog__edit
-			display: none
-		&.is-editable
-			.catalog__edit
-				display: block
-	.catalog__item
-		position: relative
-		+clr
+	ul.is-editable
+		.post__edit
+			display: block
+	.post
 		margin-top: 40px
 		&:first-child
 			margin-top: 0
-		&.catalog__item_add
+		&.post_about
+			margin-bottom: 20px
+		&.post_add
 			padding: 20px
 			height: 120px
 			background: $grey
@@ -279,7 +274,7 @@ div
 				text-decoration: underline
 				&:hover
 					text-decoration: none
-			.catalog__edit-btn
+			.post__add-btn
 				float: left
 				height: 118px
 				width: 198px
@@ -289,53 +284,140 @@ div
 				i[class^="icon_"]
 					display: block
 					margin: 0 auto 10px
-			.catalog__edit-wrap
+			.post__add-wrap
 				padding: 20px 10px
-			.catalog__content
+			.post__content
 				min-height: 120px
-			.catalog__title
+				color: #999
 				margin-top: 30px
-				+fs(16)
-				font-weight: bold
+			.post__title
 				color: #999
-			.catalog__text
-				+fs(12)
+			.post__text
 				color: #999
-	.catalog__image
-		float: left
-		width: 220px
-		margin-right: 20px
-		height: 160px
-		overflow: hidden
-		img
-			display: block
-			max-width: 220px
-			min-height: 160px
-		a
-			display: block
-			height: 100%
-	.catalog__content
-		overflow: hidden
-		position: relative
-		min-height: 160px
-	.catalog__title
-		line-height: 1.2
-		+fs(16)
-		font-weight: bold
-		margin-bottom: 1em
-	.catalog__text
-		+fs(12)
-		color: #666
+		.post__edit
+			display: none
 	.catalog__adv
 		border-top: 1px solid #eee
 		padding-top: 20px
 		.title
 			line-height: 1.2
 			margin-bottom: 45px
-	.catalog__edit
+
+
+
+
+
+.post
+	position: relative
+	+clr
+	.post__info
+		float: left
+		width: 220px
+		margin-right: 20px
+	.post__image
+		width: 220px
+		height: 160px
+		overflow: hidden
+		img
+			min-width: 220px
+			max-height: 160px
+		a
+			display: block
+			height: 100%
+	.post__meta
+		text-align: center
+		margin-top: 20px
+	.post__tel
+		+fs(16)
+		line-height: 1.2
+		font-weight: bold
+	.post__rate
+		margin-top: 15px
+		.star
+			margin: 0 auto
+	.post__comments
+		margin-top: 5px
+		+fs(12)
+		color: #666
+		a
+			color: #666
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.post__content
+		min-height: 160px
+		position: relative
+		overflow: hidden
+		+fs(12)
+		color: #666
+		p
+			margin-bottom: 1em
+	.post__text
+		+fs(12)
+		color: #666
+	.post__title
+		color: $dark
+		line-height: 1.2
+		+fs(16)
+		font-weight: bold
+		margin-bottom: 1em
+		a
+			color: $dark
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.post__edit
 		position: absolute
 		bottom: 0
 		left: 0
+
+
+
+.otherlinks
+	.otherlinks__row
+		margin-top: 40px
+		padding-top: 40px
+		border-top: 1px solid #eee
+	ul
+		+clr
+	li
+		float: left
+		width: 220px
+		margin-left: 20px
+		height: 40px
+		overflow: hidden
+		display: table-cell
+		vertical-align: middle
+		&:first-child
+			margin-left: 0
+		a
+			display: block
+			height: 100%
+			text-decoration: none
+			&:hover
+				.otherlinks__text
+					text-decoration: underline
+		i[class^="icon_"], [class*=" icon_"]
+			margin-right: 8px
+	.otherlinks__title
+		line-height: 1.2
+		margin-bottom: 25px
+		font-weight: normal
+		+fs(16)
+	.otherlinks__content
+		display: inline-block
+		vertical-align: middle
+		+fs(12)
+		line-height: 1.2
+	.otherlinks__text
+		color: $dark
+	.otherlinks__number
+		color: #999
+
+
+
+
+
 
 
 
