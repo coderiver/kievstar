@@ -544,8 +544,8 @@ ul.ui-selectmenu-menu-popup { margin-top: -1px; }
 .slider-range { width: 380px; position: relative; -webkit-border-radius: 2px; border-radius: 2px; }
 .slider-range #slider-range-min { height: 28px; overflow: hidden; background: white; border: none; border-right: 1px solid #c6c6c6; -webkit-border-radius: 2px; border-radius: 2px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .slider-range .ui-slider-horizontal .ui-slider-range { height: 28px; background: #0096db; -webkit-border-radius: 0px; border-radius: 0px; }
-.slider-range .ui-slider .ui-slider-handle { width: auto; border: none; z-index: 666; background-color: #0570a2; text-decoration: none; color: white; top: 3px; -webkit-border-radius: 2px; border-radius: 2px; font-size: 12px; font-size: 1.2rem; }
-.slider-range .ui-slider .ui-slider-handle:after { content: ""; background: url('../img/icons-sc248656adb.png') 0 -1102px no-repeat; width: 5px; height: 10px; position: absolute; top: 50%; margin-top: -1px; left: -2px; }
+.slider-range .ui-slider .ui-slider-handle { position: relative; }
+.slider-range .ui-slider .ui-slider-handle:after { content: ""; background: url('../img/icons-sc248656adb.png') 0 -1102px no-repeat; width: 5px; height: 10px; position: absolute; top: 50%; margin-top: -17px; margin-left: -9px; z-index: 777; }
 
 #amount { position: absolute; right: -70px; z-index: 1666; width: 50px; top: 6px; border: none; outline: none; color: #333333; font-size: 12px; font-size: 1.2rem; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 

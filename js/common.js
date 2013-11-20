@@ -54,16 +54,16 @@ $(document).ready(function() {
 
 	// $('.star').raty();
 
-	// $('.star').raty({
-	// 	path      : 'img/icons',
-	// 	// size      : 24,
-	// 	starHalf  : 'star-on.png',
-	// 	starOff   : 'star-off.png',
-	// 	starOn    : 'star-on.png',
-	// 	// target    : '#function-hint',
-	// 	cancel    : false,
-	// 	targetKeep: true,
-	// 	precision : true
-	// });
+	$('.star').raty({
+		path      : 'img/icons',
+		// size      : 24,
+		starHalf  : 'star-on.png',
+		starOff   : 'star-off.png',
+		starOn    : 'star-on.png',
+		// target    : '#function-hint',
+		cancel    : false,
+		targetKeep: true,
+		precision : true
+	});
 
 });
