@@ -68,8 +68,9 @@
 .select_220
 	width: 220px
 .select_small
-	width: 78px
-
+	width: 58px
+.select_mini
+	width: 28px
 .input
 	padding: 5px 10px
 	height: 30px
@@ -127,6 +128,9 @@
 		&:hover
 			text-decoration: underline
 
+.checkbox_mod
+	width: auto
+	line-height: 29px
 .textarea
 	width: 100%
 	min-height: 108px
@@ -148,7 +152,10 @@
 	border: 1px solid #c6c6c6
 	+br(2px)
 	+box
-
+.label_mod
+	height: 30px
+	float: left
+	width: 240px
 ///////////////////////////////// * misk * ////////////////////////////////
 // link
 .link
@@ -222,7 +229,20 @@
 		margin-right: 20px 
 .row__text
 	margin-left: 60px
-	color: #666 
+	color: #666
+.row_categoryapge
+	padding-bottom: 20px
+	+clr
+	.select, .checkbox
+		float: left
+		margin-right: 20px
+	.checkbox_mod
+		width: auto
+		span
+			margin-left: 10px
+	.select_mini
+		float: right
+		margin-right: 0
 ///////////////////////////////// * slider-range * ////////////////////////////////
 .slider-range
 	width: 380px
@@ -249,11 +269,9 @@
 				+s(slider-handle)
 				position: absolute
 				top: 50%
-				margin-top: -17px
+				margin-top: -18px
 				margin-left: -9px
 				z-index: 777 
-
-
 
 #amount
 	position: absolute

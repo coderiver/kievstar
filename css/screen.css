@@ -496,7 +496,9 @@ ul.ui-selectmenu-menu-popup { margin-top: -1px; }
 
 .select_220 { width: 220px; }
 
-.select_small { width: 78px; }
+.select_small { width: 58px; }
+
+.select_mini { width: 28px; }
 
 .input { padding: 5px 10px; height: 30px; outline: none; border: 1px solid #d7d7d7; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 2px; border-radius: 2px; -moz-transition: 0.2s; -o-transition: 0.2s; -webkit-transition: 0.2s; -ms-transition: 0.2s; transition: 0.2s; font-size: 12px; font-size: 1.2rem; color: #333333; }
 .input:focus { border-color: #d7d7d7; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d7d7d7; -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d7d7d7; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d7d7d7; -moz-transition: 0.2s; -o-transition: 0.2s; -webkit-transition: 0.2s; -ms-transition: 0.2s; transition: 0.2s; }
@@ -509,10 +511,14 @@ ul.ui-selectmenu-menu-popup { margin-top: -1px; }
 .checkbox a { color: #0096db; text-decoration: none; font-size: 12px; font-size: 1.2rem; }
 .checkbox a:hover { text-decoration: underline; }
 
+.checkbox_mod { width: auto; line-height: 29px; }
+
 .textarea { width: 100%; min-height: 108px; border: 1px solid #d7d7d7; outline: none; -webkit-border-radius: 2px; border-radius: 2px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -moz-transition: 0.2s; -o-transition: 0.2s; -webkit-transition: 0.2s; -ms-transition: 0.2s; transition: 0.2s; }
 .textarea:focus { border-color: #d7d7d7; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d7d7d7; -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d7d7d7; box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d7d7d7; -moz-transition: 0.2s; -o-transition: 0.2s; -webkit-transition: 0.2s; -ms-transition: 0.2s; transition: 0.2s; }
 
 .label { width: 100%; min-height: 30px; line-height: 28px; border: 1px solid #c6c6c6; -webkit-border-radius: 2px; border-radius: 2px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.label_mod { height: 30px; float: left; width: 240px; }
 
 .link { color: #0096db; text-decoration: none; }
 .link:hover { text-decoration: underline; }
@@ -541,11 +547,19 @@ ul.ui-selectmenu-menu-popup { margin-top: -1px; }
 
 .row__text { margin-left: 60px; color: #666666; }
 
+.row_categoryapge { padding-bottom: 20px; }
+.row_categoryapge:before, .row_categoryapge:after { content: ""; display: table; }
+.row_categoryapge:after { clear: both; }
+.row_categoryapge .select, .row_categoryapge .checkbox { float: left; margin-right: 20px; }
+.row_categoryapge .checkbox_mod { width: auto; }
+.row_categoryapge .checkbox_mod span { margin-left: 10px; }
+.row_categoryapge .select_mini { float: right; margin-right: 0; }
+
 .slider-range { width: 380px; position: relative; -webkit-border-radius: 2px; border-radius: 2px; }
 .slider-range #slider-range-min { height: 28px; overflow: hidden; background: white; border: none; border-right: 1px solid #c6c6c6; -webkit-border-radius: 2px; border-radius: 2px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .slider-range .ui-slider-horizontal .ui-slider-range { height: 28px; background: #0096db; -webkit-border-radius: 0px; border-radius: 0px; }
 .slider-range .ui-slider .ui-slider-handle { position: relative; }
-.slider-range .ui-slider .ui-slider-handle:after { content: ""; background: url('../img/icons-sc248656adb.png') 0 -1102px no-repeat; width: 5px; height: 10px; position: absolute; top: 50%; margin-top: -17px; margin-left: -9px; z-index: 777; }
+.slider-range .ui-slider .ui-slider-handle:after { content: ""; background: url('../img/icons-sc248656adb.png') 0 -1102px no-repeat; width: 5px; height: 10px; position: absolute; top: 50%; margin-top: -18px; margin-left: -9px; z-index: 777; }
 
 #amount { position: absolute; right: -70px; z-index: 1666; width: 50px; top: 6px; border: none; outline: none; color: #333333; font-size: 12px; font-size: 1.2rem; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
