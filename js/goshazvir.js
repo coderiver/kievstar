@@ -36,45 +36,37 @@ $(document).ready(function() {
 		$('.js-select-zvir').removeClass('is-open');
 	});
 
-	// qj slider UI
-	// $(function() {
-	//     $( "#slider-range-min" ).slider({
-	//       range: "min",
-	//       min: 0,
-	//       max: 1000,
-	//       value: 173,
-	//       slide: function( event, ui ) {
-	//         $( "#amount" ).text( "$" + ui.value );
-	//         $(this).find('.ui-slider-handle').text(ui.value);
-	//       }
-	//     });
 
-	//     $( ".ui-slider-handle" ).val( "$" + $( "#slider-range-min" ).slider( "value" ) );
-	//   });
+	// $(function(){
+ //    $("#slider-range-min").slider({
+ //      range: "min",
+ //      min: 0,
+ //      max: 1000,
+ //      value: 173,
 
-	$(function(){
-    $("#slider-range-min").slider({
-      range: "min",
-      min: 0,
-      max: 1000,
-      value: 173,
-
-        // var handle2 = handle1.next();
-        // handle2.append('<span class="sidecar2"></span>');
-
-
-      slide: function( event, ui ) {
-          $( "#amount" ).val( ui.value );
-          $(this).find('.ui-slider-handle').text(ui.value);
-      },
-      create: function(event, ui) {
-          var v=$(this).slider('value');
-          $(this).find('.ui-slider-handle').text(v);
-      }
+ //      slide: function( event, ui ) {
+ //          $( "#amount" ).val( ui.value );
+ //          $(this).find('.ui-slider-handle').text(ui.value);
+ //      },
+ //      create: function(event, ui) {
+ //          var v=$(this).slider('value');
+ //          $(this).find('.ui-slider-handle').text(v);
+ //      }
 
 
 
-    });  
+ //    });  
+	// });
+	$(function() {
+	  $( "#slider-range-min" ).slider({
+	    range: "min",
+	    value: 173,
+	    min: 0,
+	    max: 1000,
+	    slide: function( event, ui ) {
+	      $( "#amount" ).val( "$" + ui.value );
+	    }
+	  });
+	  $( "#amount" ).val( "$" + $( "#slider-range-min" ).slider( "value" ) );
 	});
-
 });
