@@ -211,7 +211,6 @@ input, textarea
 	.box__button
 		text-align: center
 	.box__search-btn
-		text-align: justify
 		.btn
 			margin-bottom: 10px
 	.box__edit
@@ -302,7 +301,8 @@ div
 			.post__add-wrap
 				padding: 20px 10px
 			.post__content
-				min-height: 120px
+				height: 120px
+				width: 400px
 				color: #999
 				margin-top: 30px
 			.post__title
@@ -324,7 +324,7 @@ div
 
 .post
 	position: relative
-	+clr
+	overflow: hidden
 	.post__info
 		float: left
 		width: 220px
@@ -357,9 +357,10 @@ div
 			&:hover
 				text-decoration: underline
 	.post__content
-		min-height: 160px
+		height: auto
 		position: relative
-		overflow: hidden
+		float: left
+		width: 450px
 		+fs(12)
 		color: #666
 		p

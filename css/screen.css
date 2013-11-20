@@ -171,7 +171,6 @@ input, textarea { color: #333333; }
 .box .box__tel-code { color: #999999; }
 .box .box__pin { position: absolute; top: 50%; left: 50%; margin-left: -10px; margin-top: -15px; content: ""; background: url('../img/icons-sb10d961d5a.png') 0 -709px no-repeat; width: 20px; height: 30px; }
 .box .box__button { text-align: center; }
-.box .box__search-btn { text-align: justify; }
 .box .box__search-btn .btn { margin-bottom: 10px; }
 .box .box__edit { position: absolute; top: 4px; right: 4px; content: ""; background: url('../img/icons-sb10d961d5a.png') 0 -1083px no-repeat; width: 10px; height: 10px; }
 
@@ -193,16 +192,14 @@ div.is-editable .editable .editable__content { position: absolute; top: 50%; lef
 .catalog .post.post_add .post__add-btn { float: left; height: 118px; width: 198px; margin-right: 40px; text-align: center; border: 1px dashed #cccccc; }
 .catalog .post.post_add .post__add-btn i[class^="icon_"] { display: block; margin: 0 auto 10px; }
 .catalog .post.post_add .post__add-wrap { padding: 20px 10px; }
-.catalog .post.post_add .post__content { min-height: 120px; color: #999999; margin-top: 30px; }
+.catalog .post.post_add .post__content { height: 120px; width: 400px; color: #999999; margin-top: 30px; }
 .catalog .post.post_add .post__title { color: #999999; }
 .catalog .post.post_add .post__text { color: #999999; }
 .catalog .post .post__edit { display: none; }
 .catalog .catalog__adv { border-top: 1px solid #eeeeee; padding-top: 20px; }
 .catalog .catalog__adv .title { line-height: 1.2; margin-bottom: 45px; }
 
-.post { position: relative; }
-.post:before, .post:after { content: ""; display: table; }
-.post:after { clear: both; }
+.post { position: relative; overflow: hidden; }
 .post .post__info { float: left; width: 220px; margin-right: 20px; }
 .post .post__image { width: 220px; height: 160px; overflow: hidden; }
 .post .post__image a { display: block; height: 100%; }
@@ -213,7 +210,7 @@ div.is-editable .editable .editable__content { position: absolute; top: 50%; lef
 .post .post__comments { margin-top: 5px; font-size: 12px; font-size: 1.2rem; color: #666666; }
 .post .post__comments a { color: #666666; text-decoration: none; }
 .post .post__comments a:hover { text-decoration: underline; }
-.post .post__content { min-height: 160px; position: relative; overflow: hidden; font-size: 12px; font-size: 1.2rem; color: #666666; }
+.post .post__content { height: auto; position: relative; float: left; width: 450px; font-size: 12px; font-size: 1.2rem; color: #666666; }
 .post .post__content p { margin-bottom: 1em; }
 .post .post__text { font-size: 12px; font-size: 1.2rem; color: #666666; }
 .post .post__title { color: #333333; line-height: 1.2; font-size: 16px; font-size: 1.6rem; font-weight: bold; margin-bottom: 1em; }
@@ -487,6 +484,7 @@ ul.ui-selectmenu-menu-popup { margin-top: -1px; }
 .lteie8 .header .language li a, .lteie8 .header .language li span { display: block; }
 .lteie8 .footer .footer__socials li { *display: inline; zoom: 1; }
 .lteie8 .search .search__input { width: 565px; height: auto; padding: 15px 10px; }
+.lteie8 .search .search__select { margin-top: 0; }
 .lteie8 .hero .hero-bg { display: block; }
 .lteie8 .hero .hero__pane { display: none; }
 .lteie8 .hero .hero__pane.is-visible { display: block; }
@@ -494,3 +492,15 @@ ul.ui-selectmenu-menu-popup { margin-top: -1px; }
 .lteie8 .hero .hero__tabs .hero__number { *display: inline; zoom: 1; cursor: pointer; }
 .lteie8 .navbar ul, .lteie8 .navbar li { *display: inline; zoom: 1; }
 .lteie8 .info .benefits .benefits__list li { *display: inline; zoom: 1; }
+.lteie8 .topper .topper__nav li { *display: inline; zoom: 1; }
+.lteie8 .breadcrumb li { *display: inline; zoom: 1; margin-left: 3px; }
+.lteie8 div .editable { display: none; }
+.lteie8 div.is-editable .editable { background: url(../img/edit-bg.png); }
+.lteie8 .sticker { *display: inline; zoom: 1; }
+.lteie8 .category .post__content { height: auto; }
+.lteie8 .catalog .post__content { height: 160px; }
+.lteie8 .otherlinks ul { overflow: hidden; }
+.lteie8 .otherlinks li { height: 45px; }
+.lteie8 .otherlinks li i[class^="icon_"], .lteie8 .otherlinks li [class*=" icon_"] { *display: inline; zoom: 1; }
+.lteie8 .otherlinks .otherlinks__content { *display: inline; zoom: 1; }
+.lteie8 .box .box__search-btn .btn { *display: inline; zoom: 1; }
