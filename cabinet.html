@@ -95,6 +95,7 @@
 								<div class="row-right">
 									<div class="select select_220 js-select-zvir">
 										<span><em class="js-select-text"></em><i></i></span>
+										<!-- span class="js-tooltip" data-tooltip="text1"><em class="js-select-text"></em><i></i></span> -->
 										<input type="hidden" val="" id="kat" class="js-select-input" value="2">
 										<div class="select__drop js-select-drop">
 											<ul>
@@ -111,15 +112,13 @@
 							<div class="row">
 								<label>Заголовок:</label>
 								<div class="row-right">
-									<input type="tel" placeholder="" class="input">
+									<input type="tel" placeholder="" class="input js-tooltip" data-tooltip="text2">
 								</div>								
 							</div>
 							<div class="row">
 								<label for="title">Краткое описание:</label>
 								<div class="row-right">
-									<textarea class="textarea">
-										
-									</textarea>
+									<textarea class="textarea js-tooltip" data-tooltip="text3"></textarea>
 								</div>
 							</div>
 							<div class="row">
@@ -127,6 +126,7 @@
 								<div class="row-right">
 									<div class="select select_220 js-select-zvir">
 										<span><em class="js-select-text"></em><i></i></span>
+										<!-- <span class="js-tooltip" data-tooltip="text4"><em class="js-select-text"></em><i></i></span> -->
 										<input type="hidden" val="" id="kat" class="js-select-input" value="2">
 										<div class="select__drop js-select-drop">
 											<ul>
@@ -150,8 +150,8 @@
 								<label for="">Теги:</label>
 								<div class="row-right">
 									<div class="label">
-										<div class="tag">Услуги адвоката<i class="icon_cross"></i></div>
-										<div class="tag">Услуги адвоката<i class="icon_cross"></i></div>
+										<div class="tag">Услуги адвоката 1<i class="icon_cross"></i></div>
+										<div class="tag">Услуги адвоката 2<i class="icon_cross"></i></div>
 									</div>
 								</div>
 							</div>
@@ -275,12 +275,9 @@
 								<div class="row__label"></div>
 								<div class="row-right row-right_small-sel">
 										<label class="checkbox">
-											<input type="checkbox" value="">
-											<span></span>
+											<input type="checkbox" value=""> 
+											<span class="row__text">Согласно Закону Украины «О защите персональных данных», я даю свое согласие на обработку внесенных мною данных. Так же не имею ничего против если автоматизированная служба сервиса AdPhone будет присылать мне информационные сообщения.</span>
 										</label>
-										<div class="row__text">
-											Согласно Закону Украины «О защите персональных данных», я даю свое согласие на обработку внесенных мною данных. Так же не имею ничего против если автоматизированная служба сервиса AdPhone будет присылать мне информационные сообщения.
-										</div>
 								</div>
 							</div>
 							<div class="row">
@@ -298,10 +295,9 @@
 
 				<aside class="page__sidebar l-sidebar">
 
-					<div class="box box_slide">
+					<div class="box box_mod js-tooltip-box">
 						<div class="box__headline">
 							<h2 class="box__title"><i class="icon_advice"></i>Полезные советы</h2>
-							<i class="icon_arrow"></i>
 						</div>
 						<div class="box__content">
 							<p>Это может быть фото товара,‭ ‬иллюстрация услуги или логотип. Типы файла:‭ ‬jpg,‭ ‬png.‭ ‬Размер до‭ ‬5‭ ‬МБ</p>

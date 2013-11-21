@@ -9,6 +9,7 @@ $(document).ready(function() {
 		var checkbox = el.find(".checkbox");
 		var list = el.find('.js-select-drop');
 		el_title.bind("click",function(event){
+			tooltip();
 			if ($(this).parent().hasClass('is-open')) {
 				$(this).parent().removeClass('is-open');
 			}
@@ -36,6 +37,11 @@ $(document).ready(function() {
 		$('.js-select-zvir').removeClass('is-open');
 	});
 
+	// for tag
+	$('.tag .icon_cross').click(function() {
+	  $(this).parent().fadeOut(100);
+	})
+
 	$(function() {
 	  $( "#slider-range-min" ).slider({
 	    range: "min",
@@ -43,9 +49,25 @@ $(document).ready(function() {
 	    min: 0,
 	    max: 1000,
 	    slide: function( event, ui ) {
-	      $( "#amount" ).val( "$" + ui.value );
+	      $( "#amount" ).val(ui.value + " грн");
 	    }
 	  });
-	  $( "#amount" ).val( "$" + $( "#slider-range-min" ).slider( "value" ) );
+	  $( "#amount" ).val($( "#slider-range-min" ).slider( "value" ) + " грн");
 	});
+
+
+	function tooltip() {
+		var btn = $('.js-tooltip');
+		var box = $('.js-tooltip-box');
+		var box_content = box.find('.box__content');		
+		btn.bind('click', function(){
+			var text = $(this).attr('data-tooltip');
+			box_content.html(text);
+			//slide
+			var pos_top = $(this).position().top;
+			box.css('top', pos_top);
+		});
+	}
+	tooltip();
+
 });
