@@ -1,0 +1,299 @@
+@import lib/base
+// class-form
+	// .select .select_220
+	// .input
+	// .checkbox
+	// .textarea
+	// .label
+// misk
+// PAGE cabinet
+// .row
+// slider-range
+
+
+///////////////////////////////// * class-form * ////////////////////////////////
+.select
+	padding: 2px 10px
+	position: relative
+	height: 26px
+	line-height: 30px
+	color: #54595a
+	font-size: 12px
+	background-color: #fff
+	+box-shadow(inset 0 0 0px 1px #d7d7d7)
+	+unselect
+	+br(2px)
+	&:hover
+		cursor: pointer
+	span
+		display: block
+		padding: 0px
+		line-height: 26px
+		height: 26px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+	em
+		font-style: normal
+	i
+		position: absolute
+		right: 9px
+		top: 50%
+		margin-top: -2px
+		content: ""
+		+s(arrow)
+	&.is-open
+		.select__drop
+			display: block
+		i
+			+transform(rotate(180deg)) 
+	.select__drop
+		display: none
+		position: absolute
+		top: 100%
+		left: 0
+		width: 100%
+		z-index: 666
+		background-color: #fff
+		+box-shadow(inset 0 0px 1px #d7d7d7)
+	ul
+		margin: 0
+	li
+		padding: 2px 10px
+		&:hover
+			background-color: #f6f6f6
+			cursor: pointer
+		span
+			padding: 0
+.select_220
+	width: 220px
+.select_small
+	width: 58px
+.select_mini
+	width: 28px
+.input
+	padding: 5px 10px
+	height: 30px
+	outline: none
+	border: 1px solid #d7d7d7
+	+box
+	+br(2px)
+	+transition(.2s)
+	+fs(12)
+	color: $dark 
+	&:focus
+		border-color: #d7d7d7
+		+box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d7d7d7)
+		+transition(.2s)
+
+.checkbox
+	position: relative
+	display: inline-block
+	color: $dark
+	font-size: 12px
+	span
+		display: inline-block
+		margin-left: 15px
+		font-size: 13px
+		color: $dark
+		+unselect
+	input
+		+opacity(0)
+	input + span
+		&:before
+			content: ""
+			position: absolute
+			top: 6px
+			left: 0px
+			width: 20px
+			height: 20px
+			background: #FFF 
+			+box
+			@include border-radius(2px)
+			@include box-shadow(inset 0 0 0px 1px #eeeeee)
+			font-size: 12px 
+			color: $dark
+			background: #fff
+	input:checked + span
+		&:after
+			content: ""
+			position: absolute
+			top: 12px
+			left: 5px
+			+s(checked)
+	a
+		color: $blue
+		text-decoration: none
+		+fs(12)
+		&:hover
+			text-decoration: underline
+
+.checkbox_mod
+	width: auto
+	line-height: 29px
+.textarea
+	width: 100%
+	min-height: 108px
+	border: 1px solid #d7d7d7
+	outline: none
+	+br(2px)
+	+box
+	+transition(.2s)
+	&:focus
+		border-color: #d7d7d7
+		+box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d7d7d7)
+		+transition(.2s)
+
+
+.label
+	width: 100%
+	min-height: 30px
+	line-height: 28px
+	border: 1px solid #c6c6c6
+	+br(2px)
+	+box
+.label_mod
+	height: 30px
+	float: left
+	width: 240px
+///////////////////////////////// * misk * ////////////////////////////////
+// link
+.link
+	color: #0096DB
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+.link_cab
+	margin-left: 20px
+
+///////////////////////////////// * PAGE cabinet * ////////////////////////////////
+.cabinet
+	label, .row__label
+		float: left
+		line-height: 30px
+.cabinet__img
+	height: 275px
+.tag
+	$bg: rgba(0,150,219,.8)
+	padding: 5px 25px 5px 15px
+	margin: 0 2px 0 3px
+	display: inline-block
+	cursor: pointer
+	position: relative
+	background-color: $bg
+	color: #FFF
+	line-height: 1
+	+transition(.2s)
+	+fs(12px)
+	+br(2px)
+	&:hover
+		background: lighten($bg, 4%)
+		+transition(.2s)
+	.icon_cross
+		cursor: pointer
+		position: absolute
+		right: 4px
+		top: 50%
+		margin-top: -4px
+		+s(cross)
+
+
+///////////////////////////////// * row * ////////////////////////////////
+.row
+	margin-bottom: 20px
+	+clr
+	label, .row__label
+		width: 220px
+		min-height: 30px 
+		margin-right: 20px
+		text-align: right
+		+fs(12)
+		color: $dark 
+		font-weight: bold
+.row-right
+	width: 460px
+	float: left
+	.input
+		width: 100%
+	.checkbox
+		width: auto
+.row-right_small-sel
+	label
+		width: 50px
+		float: left
+		margin-right: 10px
+		font-weight: normal
+		color: #666
+	.select
+		float: left
+		margin-right: 20px 
+.row__text
+	margin-left: 60px
+	color: #666
+.row_categoryapge
+	padding-bottom: 20px
+	+clr
+	.select, .checkbox
+		float: left
+		margin-right: 20px
+	.checkbox_mod
+		width: auto
+		span
+			margin-left: 10px
+	.select_mini
+		float: right
+		margin-right: 0
+///////////////////////////////// * slider-range * ////////////////////////////////
+.slider-range
+	width: 380px
+	position: relative
+	+br(2px)
+	#slider-range-min
+		height: 28px
+		overflow: hidden
+		background: #fff
+		border: none
+		border-right: 1px solid #c6c6c6
+		+br(2px)
+		+box
+	.ui-slider-horizontal
+		.ui-slider-range
+			height: 28px
+			background: $blue
+			+br(0px)
+	.ui-slider
+		.ui-slider-handle
+			position: relative
+			&:after
+				content: ""
+				+s(slider-handle)
+				position: absolute
+				top: 50%
+				margin-top: -18px
+				margin-left: -9px
+				z-index: 777 
+
+#amount
+	position: absolute
+	right: -70px
+	z-index: 1666
+	width: 50px
+	top: 6px
+	border: none
+	outline: none
+	color: $dark 
+	+fs(12)
+	+unselect
+.slider-min
+	position: absolute
+	left: 5px
+	top: 9px
+	z-index: 3333
+	line-height: 1
+	color: #FFF
+.slider-max
+	position: absolute
+	right: 5px
+	top: 9px
+	line-height: 1
+	color: #999

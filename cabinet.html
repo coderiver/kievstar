@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Inner</title>
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.js"></script>
+	<![endif]-->
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" media="screen" href="css/screen.css">
+<!-- 	<link rel="stylesheet" media="screen" href="js/vendor/jquery-ui-1.10.3.custom.css"> -->
+</head>
+<body>
+	<!-- BEGIN .out -->
+	<div class="out">
+		<!-- BEGIN .header -->
+		<header class="header">
+			<div class="header-i">
+				<h1 class="header__logo"><a href="#">Киевстар</a></h1>
+				<div class="header__toolbar">
+					<div class="adv">
+						<a class="adv__btn" href="#">Добавить объявление</a>
+					</div>
+					<div class="profile divider">
+						<ul class="profile__auth">
+							<li class="profile__login"><a href="#"><i class="icon icon_login"></i>Войти</a></li>
+							<li><a href="#">Регистрация</a></li>
+						</ul>
+					</div>
+					<ul class="language divider">
+						<li><a href="#">Ua</a></li>
+						<li class="is-active"><span>Ru</span></li>
+					</ul>
+				</div>
+
+				<div class="header-line"></div>
+			</div>
+		</header>
+		<!-- END .header -->
+		<!-- BEGIN .search -->
+		<div class="search">
+			<div class="search-i">
+				<div class="yellow-pages"><a href="#">Yellow Pages</a></div>
+				<div class="search__form">
+					<form action="">
+						<input class="search__input" type="text" placeholder="Что Вы ищите?">
+						<button type="submit" class="search__btn"><i></i></button>
+						<div class="search__select">
+							<select name="" id="" class="js-select">
+								<option value="" selected="selected">Выбрать регион</option>
+								<option value="">Киевская область</option>
+								<option value="">Черкасская область</option>
+								<option value="">Автономная Республика Крым</option>
+								<option value="">Винницкая область</option>
+								<option value="">Волынская область</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- END .search -->
+
+		<!-- BEGIN .page -->
+		<div class="page">
+
+			<!-- BEGIN .topper -->
+			<div class="topper topper_mod">
+					<div class="topper-i">
+						<ul class="breadcrumb">
+							<li><a href="#">AddPhone Service</a> <span class="divider">/</span></li>
+							<li class="is-active"><span>Личный Кабинет</span></li>
+						</ul>
+						<h2 class="topper__title">Личный Кабинет</h2>
+						<nav class="topper__nav">
+							<ul>
+								<li><span>Мой Сайт</span></li>
+								<li class="is-active"><a href="#">Моя реклама</a></li>
+								<li><a href="#">Статистика</a></li>
+								<li><a href="#">Настройки</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			<!-- END .topper -->
+
+			<div class="page__content l">
+				<div class="page__main l-main">
+
+						<!-- BEGIN .cabinet -->
+						<div class="cabinet">
+							<div class="row">
+								<label for="kat">Категории:</label>
+								<div class="row-right">
+									<div class="select select_220 js-select-zvir">
+										<span><em class="js-select-text"></em><i></i></span>
+										<input type="hidden" val="" id="kat" class="js-select-input" value="2">
+										<div class="select__drop js-select-drop">
+											<ul>
+												<li data-id="1" class="is-selected">value</li>
+												<li data-id="2">1</li>
+												<li data-id="3">2</li>
+												<li data-id="4">3</li>
+												<li data-id="5">4</li>
+										  </ul>
+										</div>
+									</div>										
+								</div>		
+							</div>
+							<div class="row">
+								<label>Заголовок:</label>
+								<div class="row-right">
+									<input type="tel" placeholder="" class="input">
+								</div>								
+							</div>
+							<div class="row">
+								<label for="title">Краткое описание:</label>
+								<div class="row-right">
+									<textarea class="textarea">
+										
+									</textarea>
+								</div>
+							</div>
+							<div class="row">
+								<label for="kat">Регион:</label>
+								<div class="row-right">
+									<div class="select select_220 js-select-zvir">
+										<span><em class="js-select-text"></em><i></i></span>
+										<input type="hidden" val="" id="kat" class="js-select-input" value="2">
+										<div class="select__drop js-select-drop">
+											<ul>
+												<li data-id="1" class="is-selected">value</li>
+												<li data-id="2">1</li>
+												<li data-id="3">2</li>
+												<li data-id="4">3</li>
+												<li data-id="5">4</li>
+										  </ul>
+										</div>
+									</div>										
+								</div>		
+							</div>
+							<div class="row">
+								<label for="">Изображения:</label>
+								<div class="row-right">
+									<div class="cabinet__img"></div>
+								</div>
+							</div>
+							<div class="row">
+								<label for="">Теги:</label>
+								<div class="row-right">
+									<div class="label">
+										<div class="tag">Услуги адвоката<i class="icon_cross"></i></div>
+										<div class="tag">Услуги адвоката<i class="icon_cross"></i></div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="row__label"></div>
+								<div class="row-right">
+									<label class="checkbox">
+										<input type="checkbox" value="">
+										<span>Подключить услугу</span> <a href="#">«Моя реклама»</a>
+									</label>
+								</div>
+							</div>
+							<div class="row">
+								<label for="">Стоимость звонка:</label>
+								<div class="row-right">
+										<div class="slider-range label">
+												<div class="slider-min">0</div>
+											  <input type="text" id="amount"/>
+												<div id="slider-range-min" class="slider-range"></div>
+												<div class="slider-max">1000</div>			
+										</div>
+								</div>
+							</div>
+							<div class="row">
+								<label for="">График роботы:</label>
+								<div class="row-right row-right_small-sel">
+									<label for="">пн-пт</label>
+									<div class="select select_small js-select-zvir">
+										<span><em class="js-select-text">08:00</em><i></i></span>
+										<input type="hidden" val="" id="kat" class="js-select-input" value="2">
+										<div class="select__drop js-select-drop">
+											<ul>
+												<li data-id="1" class="is-selected">08:00</li>
+												<li data-id="2">1</li>
+												<li data-id="3">2</li>
+												<li data-id="4">3</li>
+												<li data-id="5">4</li>
+										  </ul>
+										</div>
+									</div>
+									<div class="select select_small js-select-zvir">
+										<span><em class="js-select-text">value</em><i></i></span>
+										<input type="hidden" val="" id="kat" class="js-select-input" value="2">
+										<div class="select__drop js-select-drop">
+											<ul>
+												<li data-id="1" class="is-selected">value</li>
+												<li data-id="2">1</li>
+												<li data-id="3">2</li>
+												<li data-id="4">3</li>
+												<li data-id="5">4</li>
+										  </ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<label for="">График роботы:</label>
+								<div class="row-right row-right_small-sel">
+									<label for="">пн-пт</label>
+									<div class="select select_small js-select-zvir">
+										<span><em class="js-select-text">value</em><i></i></span>
+										<input type="hidden" val="" id="kat" class="js-select-input" value="2">
+										<div class="select__drop js-select-drop">
+											<ul>
+												<li data-id="1" class="is-selected">value</li>
+												<li data-id="2">1</li>
+												<li data-id="3">2</li>
+												<li data-id="4">3</li>
+												<li data-id="5">4</li>
+										  </ul>
+										</div>
+									</div>
+									<div class="select select_small js-select-zvir">
+										<span><em class="js-select-text">value</em><i></i></span>
+										<input type="hidden" val="" id="kat" class="js-select-input" value="2">
+										<div class="select__drop js-select-drop">
+											<ul>
+												<li data-id="1" class="is-selected">value</li>
+												<li data-id="2">1</li>
+												<li data-id="3">2</li>
+												<li data-id="4">3</li>
+												<li data-id="5">4</li>
+										  </ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<label for="">График роботы:</label>
+								<div class="row-right row-right_small-sel">
+									<label for="">пн-пт</label>
+									<div class="select select_small js-select-zvir">
+										<span><em class="js-select-text">value</em><i></i></span>
+										<input type="hidden" val="" id="kat" class="js-select-input" value="2">
+										<div class="select__drop js-select-drop">
+											<ul>
+												<li data-id="1" class="is-selected">value</li>
+												<li data-id="2">1</li>
+												<li data-id="3">2</li>
+												<li data-id="4">3</li>
+												<li data-id="5">4</li>
+										  </ul>
+										</div>
+									</div>
+									<div class="select select_small js-select-zvir">
+										<span><em class="js-select-text">value</em><i></i></span>
+										<input type="hidden" val="" id="kat" class="js-select-input" value="2">
+										<div class="select__drop js-select-drop">
+											<ul>
+												<li data-id="1" class="is-selected">value</li>
+												<li data-id="2">1</li>
+												<li data-id="3">2</li>
+												<li data-id="4">3</li>
+												<li data-id="5">4</li>
+										  </ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="row__label"></div>
+								<div class="row-right row-right_small-sel">
+										<label class="checkbox">
+											<input type="checkbox" value="">
+											<span></span>
+										</label>
+										<div class="row__text">
+											Согласно Закону Украины «О защите персональных данных», я даю свое согласие на обработку внесенных мною данных. Так же не имею ничего против если автоматизированная служба сервиса AdPhone будет присылать мне информационные сообщения.
+										</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="row__label"></div>
+								<div class="row-right">
+									<a href="#" class="btn btn_primary">Сохранить объявление</a>
+									<a href="#" class="link link_cab">Сохранить объявление</a>
+									<a href="#" class="link link_cab">Отмена</a>
+								</div>
+							</div>					
+						</div>
+						<!-- END /.cabinet -->
+				</div>
+
+
+				<aside class="page__sidebar l-sidebar">
+
+					<div class="box box_slide">
+						<div class="box__headline">
+							<h2 class="box__title"><i class="icon_advice"></i>Полезные советы</h2>
+							<i class="icon_arrow"></i>
+						</div>
+						<div class="box__content">
+							<p>Это может быть фото товара,‭ ‬иллюстрация услуги или логотип. Типы файла:‭ ‬jpg,‭ ‬png.‭ ‬Размер до‭ ‬5‭ ‬МБ</p>
+							<p>Вы можете сортировать изображения, просто перетаскивая их.</p>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</div>
+		<!-- END .page -->
+
+
+		<div class="push"></div>
+	</div>
+	<!-- END .out -->
+
+	<!-- BEGIN .footer -->
+	<footer class="footer">
+		<div class="footer-i">
+			<div class="footer__content">
+				<div class="footer__item">
+					<h2 class="footer__title">Категории</h2>
+					<div class="footer__row">
+						<ul class="footer__col">
+							<li><a href="#">Электроника</a></li>
+							<li><a href="#">Работа</a></li>
+							<li><a href="#">Отдых</a></li>
+							<li><a href="#">Электроника</a></li>
+						</ul>
+						<ul class="footer__col">
+							<li><a href="#">Дом и сад</a></li>
+							<li><a href="#">Недвижимость</a></li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Работа</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__item">
+					<h2 class="footer__title">Статистика</h2>
+					<div class="footer__row">
+						<div class="footer__col">
+							<p>
+								<strong class="footer__stats">10 689 936</strong>
+								Участников
+							</p>
+							<p>
+								<strong class="footer__stats">257 862</strong>
+								Звонков в месяц
+							</p>
+						</div>
+						<div class="footer__col">
+							<p>
+								<strong class="footer__stats">657 862</strong>
+								Предложений
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="footer__item">
+					<h2 class="footer__title">Свяжитесь с нами</h2>
+					<div class="footer__row">
+						<div class="footer__col">
+							<p class="footer__tel">044 466-0-466</p>
+							<p class="footer__feedback"><a href="#">Обратная связь</a></p>
+							<ul class="footer__socials">
+								<li><a class="footer__socials_gp"href="#">gp</a></li>
+								<li><a class="footer__socials_tw"href="#">tw</a></li>
+								<li><a class="footer__socials_fb"href="#">fb</a></li>
+							</ul>
+						</div>
+						<div class="footer__col">
+							<ul>
+								<li><a href="#">Об услуге</a></li>
+								<li><a href="#">Партнёрам</a></li>
+								<li><a href="#">Помощь</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright">©1998–2012.  ПрАТ «ВОВАН»  <a href="#">Всі права захищено</a>. Використання матеріалів цього сайту можливе тільки з посиланням на джерело.</div>
+		</div>
+	</footer>
+	<!-- END .footer -->
+
+	<script src="js/vendor/jquery-1.10.2.min.js"></script>
+	<script src="js/vendor/jquery.ui.core.js"></script>
+	<script src="js/vendor/jquery.ui.widget.js"></script>
+	<script src="js/vendor/jquery.ui.position.js"></script>
+	<script src="js/vendor/jquery.ui.selectmenu.js"></script>
+	<script src="js/vendor/jquery-ui-1.10.3.custom.js"></script>
+	<script src="js/vendor/jquery.placeholder.js"></script>
+	<script src="js/vendor/jquery.raty.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/goshazvir.js"></script>
+</body>
+</html>
