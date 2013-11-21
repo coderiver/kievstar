@@ -198,6 +198,7 @@ div.is-editable .editable .editable__content { position: absolute; top: 50%; lef
 .catalog .post .post__edit { display: none; }
 .catalog .catalog__adv { border-top: 1px solid #eeeeee; padding-top: 20px; }
 .catalog .catalog__adv .title { line-height: 1.2; margin-bottom: 45px; }
+.catalog .catalog__adv .post__content { height: 160px; overflow: hidden; }
 
 .post { position: relative; overflow: hidden; }
 .post .post__info { float: left; width: 220px; margin-right: 20px; }
