@@ -566,7 +566,7 @@ ul.ui-selectmenu-menu-popup { margin-top: -1px; }
 
 .slider-max { position: absolute; right: 5px; top: 9px; line-height: 1; color: #999999; }
 
-.box_mod { position: relative; -moz-transition: top 0.2s linear; -o-transition: top 0.2s linear; -webkit-transition: top 0.2s linear; -ms-transition: top 0.2s linear; transition: top 0.2s linear; }
+.box_mod { position: relative; padding-bottom: 1em; -moz-transition: top 0.2s linear; -o-transition: top 0.2s linear; -webkit-transition: top 0.2s linear; -ms-transition: top 0.2s linear; transition: top 0.2s linear; }
 .box_mod .icon_advice { background: url('../img/icons-sd7f355d294.png') 0 -120px no-repeat; width: 40px; height: 40px; }
 
 .lteie8 .header .divider, .lteie8 .header .adv { *display: inline; zoom: 1; }
