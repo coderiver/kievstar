@@ -25,7 +25,7 @@ $(document).ready(function() {
 		return false;
 	});
 
-	// //scroll to navbar
+	//scroll to navbar
 	// var nav = $('.js-navbar');
 	// var top = nav.offset().top;
 
@@ -39,20 +39,58 @@ $(document).ready(function() {
 	// });
 
 	// $(window).scroll(function(){
-	// 			var windowpos = $(window).scrollTop();
+	// 	var windowpos = $(window).scrollTop();
 
-	// 			if(windowpos < top) {
-	// 				nav.removeClass('is-fixed');
-	// 				$('body').removeClass('is-navbar-fixed');
-	// 			} else {
-	// 				nav.addClass('is-fixed');
-	// 				$('body').addClass('is-navbar-fixed');
-	// 			}
+	// 	if(windowpos < top) {
+	// 		nav.removeClass('is-fixed');
+	// 		$('body').removeClass('is-navbar-fixed');
+	// 	} else {
+	// 		nav.addClass('is-fixed');
+	// 		$('body').addClass('is-navbar-fixed');
+	// 	}
 	// });
 
-	
 
-	// $('.star').raty();
+
+	// scroll
+	$(".js-navbar a").click(function() {
+		var navbar_nav = $(this).attr("href");
+
+		$(".js-navbar li").removeClass('is-active');
+		$(this).parent().addClass('is-active');
+
+		$("html, body").animate({
+			scrollTop: $(navbar_nav).offset().top
+		}, 500);
+		return false;
+	});
+
+	function nav() {
+		$(".js-nav-section").each(function(){
+			var pos = $(this).offset().top;
+			var id = $(this).attr('id');
+			console.log("."+id);
+			if ($(window).scrollTop() >= pos) {
+				$(".js-navbar li").removeClass("is-active");
+				$('[href = #'+id+']').parent().addClass('is-active');
+				// $('body').addClass('is-navbar-fixed');
+				// $('.js-navbar').addClass('is-fixed');
+			}
+		});
+	}
+	$(window).scroll(function(){
+		if ($(".js-navbar").length > 0) {
+			nav();
+		}
+	});
+
+
+
+
+
+
+
+
 
 	$('.star').raty({
 		path      : 'img/icons',
