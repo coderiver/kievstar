@@ -11,7 +11,6 @@ $(document).ready(function() {
 	});
 
 
-	// tabs
 	$(".js-tabs-pane").removeClass("is-visible");
 	$(".js-tabs-nav li:first").addClass("is-active");
 	$(".js-tabs-pane:first").addClass("is-visible");
@@ -25,34 +24,6 @@ $(document).ready(function() {
 		return false;
 	});
 
-	//scroll to navbar
-	// var nav = $('.js-navbar');
-	// var top = nav.offset().top;
-
-	// $(".js-navbar a").click(function (){
-	// 	var page = $(this).attr("href");
-
-	// 	$('html, body').animate({
-	// 		scrollTop: $(page).offset().top - nav.outerHeight()
-	// 	}, 500);
-	// 	return false;
-	// });
-
-	// $(window).scroll(function(){
-	// 	var windowpos = $(window).scrollTop();
-
-	// 	if(windowpos < top) {
-	// 		nav.removeClass('is-fixed');
-	// 		$('body').removeClass('is-navbar-fixed');
-	// 	} else {
-	// 		nav.addClass('is-fixed');
-	// 		$('body').addClass('is-navbar-fixed');
-	// 	}
-	// });
-
-
-
-	// scroll
 	$(".js-navbar a").click(function() {
 		var navbar_nav = $(this).attr("href");
 
@@ -69,39 +40,54 @@ $(document).ready(function() {
 		$(".js-nav-section").each(function(){
 			var pos = $(this).offset().top;
 			var id = $(this).attr('id');
-			console.log("."+id);
+			//console.log("."+id);
 			if ($(window).scrollTop() >= pos) {
 				$(".js-navbar li").removeClass("is-active");
 				$('[href = #'+id+']').parent().addClass('is-active');
-				// $('body').addClass('is-navbar-fixed');
-				// $('.js-navbar').addClass('is-fixed');
 			}
 		});
 	}
+
+	function fixed_nav() {
+		var nav_pos = $(".js-navbar").offset().top;
+		console.log("nav "+nav_pos);
+		var scroll_pos = $(window).scrollTop();
+		console.log("scroll "+scroll_pos);
+		if (scroll_pos >= nav_pos) {
+			$("body").addClass("is-navbar-fixed");
+			$(".js-navbar").addClass("is-fixed");
+		}
+		else {
+			$("body").removeClass("is-navbar-fixed");
+			$(".js-navbar").removeClass("is-fixed");
+		}
+	}
+
+	if ($(".js-navbar").length > 0) {
+		nav();
+		fixed_nav();
+	} 
+
 	$(window).scroll(function(){
 		if ($(".js-navbar").length > 0) {
 			nav();
+			fixed_nav();
 		}
 	});
 
 
-
-
-
-
-
-
-
-	$('.star').raty({
-		path      : 'img/icons',
-		// size      : 24,
-		starHalf  : 'star-on.png',
-		starOff   : 'star-off.png',
-		starOn    : 'star-on.png',
-		// target    : '#function-hint',
-		cancel    : false,
-		targetKeep: true,
-		precision : true
-	});
+	if ($(".star").length > 0) {
+		$('.star').raty({
+			path      : 'img/icons',
+			// size      : 24,
+			starHalf  : 'star-on.png',
+			starOff   : 'star-off.png',
+			starOn    : 'star-on.png',
+			// target    : '#function-hint',
+			cancel    : false,
+			targetKeep: true,
+			precision : true
+		});
+	}
 
 });

@@ -428,8 +428,9 @@ ul.ui-selectmenu-menu-popup { margin-top: -1px; }
 .hero .hero__pane.is-visible .hero__text { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .hero .hero__pane.is-visible .hero__button { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
-.navbar { width: 940px; margin: 0 auto; text-align: center; z-index: 100; }
-.navbar.is-fixed { position: fixed; top: 0; left: 50%; margin-left: -470px; }
+.navbar { width: 940px; margin: 0 auto; text-align: center; z-index: 100; min-height: 42px; }
+.navbar.is-fixed { margin-top: -42px; }
+.navbar.is-fixed ul { position: fixed; top: 0; left: 50%; z-index: 100; margin-left: -328px; }
 .navbar ul { display: inline-block; font-size: 0; -webkit-border-radius: 2px; border-radius: 2px; border: 1px solid #eeeeee; background: white; }
 .navbar li { display: inline-block; height: 40px; line-height: 40px; color: #333333; text-align: center; font-size: 12px; font-size: 1.2rem; border-left: 1px solid #eeeeee; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; -ms-transition: all 0.2s linear; transition: all 0.2s linear; }
 .navbar li:first-child { border-left: 0; }
