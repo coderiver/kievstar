@@ -1,4 +1,18 @@
 $(document).ready(function() {
+
+	// popup
+	jQuery('body').click(function(event) {
+		jQuery('.popup').addClass('is-active');
+		jQuery('.overlay').addClass('is-active');
+		return false;
+	});
+	jQuery('.popup__close, .overlay').click(function(event) {
+		jQuery('.popup').removeClass('is-active');
+		jQuery('.overlay').removeClass('is-active');
+		return false;
+	});
+
+		
 	//select
 	function select() {
 		var el = $('.js-select-zvir');
@@ -69,5 +83,7 @@ $(document).ready(function() {
 		});
 	}
 	tooltip();
+
+
 
 });

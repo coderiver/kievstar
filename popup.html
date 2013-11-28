@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>CategoryPage</title>
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.js"></script>
+	<![endif]-->
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" media="screen" href="css/screen.css">
+</head>
+<body>
+	<div class="popup is-active">
+		<div class="popup__close"></div>
+		<div class="popup-i">
+			<h2 class="popup__title">Войти в аккаунт</h2>
+			<div class="popup__content">
+				<div class="popup__content-note">
+					<p>Логин - Ваш номер телефона в формате 0ХХХХХХХХХ</p>
+					<p>Пароль был выслан Вам в SMS при регистрации</p>	
+				</div>
+				<div class="input-login input-login_mb">
+					<input type="tel" placeholder="Логин" class="input input_mod" data-tooltip="text1">
+					<i class="icon_log"></i>
+					<div class="popup__error is-active">Не удалось авторизировать с введенными логином и паролем</div>
+				</div>
+				<div class="input-pass">	
+					<input type="tel" placeholder="Пароль" class="input input_mod" data-tooltip="text2">
+					<i class="icon_pass"></i>
+				</div>
+				<label class="checkbox checkbox_popup">
+					<input type="checkbox" value="">
+					<span>Запомнить меня</span> <a href="#">Напомнить пароль</a>
+				</label>
+				<a href="#" class="btn btn_primary">Войти</a>
+				<div class="popup__reg"><a href="#">Зарегистрироваться</a></div>
+			</div>
+		</div>
+	</div> 
+	<div class="overlay is-active"></div>
+
+	<!-- BEGIN .out -->
+	<div class="out">
+		<!-- BEGIN .header -->
+		<header class="header">
+			<div class="header-i">
+				<h1 class="header__logo"><a href="#">Киевстар</a></h1>
+				<div class="header__toolbar">
+					<div class="adv">
+						<a class="adv__btn" href="#">Добавить объявление</a>
+					</div>
+					<div class="profile divider">
+						<ul class="profile__auth">
+							<li class="profile__login"><a href="#"><i class="icon icon_login"></i>Войти</a></li>
+							<li><a href="#">Регистрация</a></li>
+						</ul>
+					</div>
+					<ul class="language divider">
+						<li><a href="#">Ua</a></li>
+						<li class="is-active"><span>Ru</span></li>
+					</ul>
+				</div>
+
+				<div class="header-line"></div>
+			</div>
+		</header>
+		<!-- END .header -->
+		<!-- BEGIN .search -->
+		<div class="search">
+			<div class="search-i">
+				<div class="yellow-pages"><a href="#">Yellow Pages</a></div>
+				<div class="search__form">
+					<form action="">
+						<input class="search__input" type="text" placeholder="Что Вы ищите?">
+						<button type="submit" class="search__btn"><i></i></button>
+						<div class="search__select">
+							<select name="" id="" class="js-select">
+								<option value="" selected="selected">Выбрать регион</option>
+								<option value="">Киевская область</option>
+								<option value="">Черкасская область</option>
+								<option value="">Автономная Республика Крым</option>
+								<option value="">Винницкая область</option>
+								<option value="">Волынская область</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- END .search -->
+
+		<!-- BEGIN .page -->
+		<div class="page">
+
+			<!-- BEGIN .topper -->
+			<div class="topper topper_mod">
+				<div class="topper-i">
+					<ul class="breadcrumb">
+						<li><a href="#">Каталог</a> <span class="divider">/</span></li>
+						<li class="is-active"><span>Недвижимость</span></li>
+					</ul>
+					<h2 class="topper__title">Недвижимость <div class="sticker">324 объявления</div></h2>
+					<div class="row row_categoryapge">
+						<div class="select select_220 js-select-zvir">
+							<span><em class="js-select-text">value</em><i></i></span>
+							<input type="hidden" val="" id="kat" class="js-select-input" value="2">
+							<div class="select__drop js-select-drop">
+								<ul>
+									<li data-id="1" class="is-selected">value</li>
+									<li data-id="2">1</li>
+									<li data-id="3">2</li>
+									<li data-id="4">3</li>
+									<li data-id="5">4</li>
+							  </ul>
+							</div>
+						</div>
+						<div class="select select_220 js-select-zvir">
+							<span><em class="js-select-text">value</em><i></i></span>
+							<input type="hidden" val="" id="kat" class="js-select-input" value="2">
+							<div class="select__drop js-select-drop">
+								<ul>
+									<li data-id="1" class="is-selected">value</li>
+									<li data-id="2">1</li>
+									<li data-id="3">2</li>
+									<li data-id="4">3</li>
+									<li data-id="5">4</li>
+							  </ul>
+							</div>
+						</div>
+						<div class="label_mod">
+							<label class="checkbox checkbox_mod">
+								<input type="checkbox" value="">
+								<span>Только с отзывами</span>
+							</label>
+							<div class="select select_mini js-select-zvir">
+								<span><em class="js-select-text">10</em><i></i></span>
+								<input type="hidden" val="" id="kat" class="js-select-input" value="2">
+								<div class="select__drop js-select-drop">
+									<ul>
+										<li data-id="1" class="is-selected">10</li>
+										<li data-id="2">1</li>
+										<li data-id="3">2</li>
+										<li data-id="4">3</li>
+										<li data-id="5">4</li>
+								  </ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<!-- END .topper -->
+
+			<div class="page__content l">
+				<div class="page__main l-main">
+
+						<!-- BEGIN .category -->
+						<section class="category">
+							<ul class="category__list">
+								<li class="post">
+									<div class="post__info">
+										<figure class="post__image">
+											<a href="#"><img src="img/cat-6.jpg" alt="img"></a>
+										</figure>
+										<div class="post__meta">
+											<div class="post__call"><a href="#" class="btn btn_primary">Позвонить</a></div>
+											<div class="post__rate"><div class="star"></div></div>
+											<div class="post__comments"><a href="#">Отзывы: 12</a></div>
+										</div>
+									</div>
+									<article class="post__content">
+										<h2 class="post__title">Quo ei exerci possim vidisse ad eam convenire</h2>
+										<div class="post__text">
+											Cu nec odio primis. Et ius aperiri adversarium, fuisset consulatu assueverit et vel. Ex malorum mediocrem sadipscing.
+										</div>
+										<div class="post__tags">
+											<a href="#" class="btn btn_small btn_primary">Киев</a>
+											<a href="#" class="btn btn_small btn_primary">Обувь Zooligans</a>
+										</div>
+									</article>
+								</li>
+								<li class="post">
+									<div class="post__info">
+										<figure class="post__image">
+											<a href="#"><img src="img/cat-7.jpg" alt="img"></a>
+										</figure>
+										<div class="post__meta">
+											<div class="post__call"><a href="#" class="btn btn_primary">Позвонить</a></div>
+											<div class="post__tel">+38 067 18098818</div>
+											<div class="post__rate"><div class="star"></div></div>
+											<div class="post__comments"><a href="#">Отзывы: 12</a></div>
+										</div>
+									</div>
+									<article class="post__content">
+										<h2 class="post__title">Et sit eligendi ponderum vituperatoribus</h2>
+										<div class="post__text">
+											Cu nec odio primis. Et ius aperiri adversarium, fuisset consulatu assueverit et vel. Ex malorum mediocrem sadipscing.
+										</div>
+										<div class="post__tags">
+											<a href="#" class="btn btn_small btn_primary">Киев</a>
+											<a href="#" class="btn btn_small btn_primary">Обувь Zooligans</a>
+										</div>
+									</article>
+								</li>
+								<li class="post">
+									<div class="post__info">
+										<figure class="post__image">
+											<a href="#"><img src="img/cat-8.jpg" alt="img"></a>
+										</figure>
+										<div class="post__meta">
+											<div class="post__tel">+38 067 18098818</div>
+											<div class="post__rate"><div class="star"></div></div>
+											<div class="post__comments"><a href="#">Отзывы: 12</a></div>
+										</div>
+									</div>
+									<article class="post__content">
+										<h2 class="post__title">Sit labitur virtute moderatius te</h2>
+										<div class="post__text">
+											Cu nec odio primis. Et ius aperiri adversarium, fuisset consulatu assueverit et vel. Ex malorum mediocrem sadipscing.
+										</div>
+										<div class="post__tags">
+											<a href="#" class="btn btn_small btn_primary">Киев</a>
+											<a href="#" class="btn btn_small btn_primary">Обувь Zooligans</a>
+										</div>
+									</article>
+								</li>
+								<li class="post">
+									<div class="post__info">
+										<figure class="post__image">
+											<a href="#"><img src="img/cat-9.jpg" alt="img"></a>
+										</figure>
+										<div class="post__meta">
+											<div class="post__tel">+38 067 18098818</div>
+											<div class="post__rate"><div class="star"></div></div>
+											<div class="post__comments"><a href="#">Отзывы: 12</a></div>
+										</div>
+									</div>
+									<article class="post__content">
+										<h2 class="post__title">Quo ei exerci possim vidisse ad eam convenire</h2>
+										<div class="post__text">
+											Cu nec odio primis. Et ius aperiri adversarium, fuisset consulatu assueverit et vel. Ex malorum mediocrem sadipscing.
+										</div>
+										<div class="post__tags">
+											<a href="#" class="btn btn_small btn_primary">Киев</a>
+											<a href="#" class="btn btn_small btn_primary">Обувь Zooligans</a>
+										</div>
+									</article>
+								</li>
+								<li class="post">
+									<div class="post__info">
+										<figure class="post__image">
+											<a href="#"><img src="img/cat-10.jpg" alt="img"></a>
+										</figure>
+										<div class="post__meta">
+											<div class="post__tel">+38 067 18098818</div>
+											<div class="post__rate"><div class="star"></div></div>
+											<div class="post__comments"><a href="#">Отзывы: 12</a></div>
+										</div>
+									</div>
+									<article class="post__content">
+										<h2 class="post__title">Cuius facilis posidonium consequuntur</h2>
+										<div class="post__text">
+											Cu nec odio primis. Et ius aperiri adversarium, fuisset consulatu assueverit et vel. Ex malorum mediocrem sadipscing.
+										</div>
+										<div class="post__tags">
+											<a href="#" class="btn btn_small btn_primary">Киев</a>
+											<a href="#" class="btn btn_small btn_primary">Обувь Zooligans</a>
+										</div>
+									</article>
+								</li>
+								<li class="post">
+									<div class="post__info">
+										<figure class="post__image">
+											<a href="#"><img src="img/cat-11.jpg" alt="img"></a>
+										</figure>
+										<div class="post__meta">
+											<div class="post__tel">+38 067 18098818</div>
+											<div class="post__rate"><div class="star"></div></div>
+											<div class="post__comments"><a href="#">Отзывы: 12</a></div>
+										</div>
+									</div>
+									<article class="post__content">
+										<h2 class="post__title">Vis complectitur comprehensam adqui eu solum</h2>
+										<div class="post__text">
+											Cu nec odio primis. Et ius aperiri adversarium, fuisset consulatu assueverit et vel. Ex malorum mediocrem sadipscing.
+										</div>
+										<div class="post__tags">
+											<a href="#" class="btn btn_small btn_primary">Киев</a>
+											<a href="#" class="btn btn_small btn_primary">Обувь Zooligans</a>
+										</div>
+									</article>
+								</li>
+							</ul>
+						</section>
+						<!-- END .category -->
+
+
+				</div>
+
+
+				<aside class="page__sidebar l-sidebar">
+
+					<div class="box box_slide">
+						<div class="box__headline">
+							<h2 class="box__title"><i class="icon_advice"></i>Полезные советы</h2>
+							<i class="icon_arrow"></i>
+						</div>
+						<div class="box__content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, ipsam, laudantium, autem ex harum veritatis beatae possimus quas consectetur ipsa aut sunt eligendi nam voluptate explicabo accusamus voluptatem dignissimos iusto?</p>
+						</div>
+					</div>
+
+					<div class="box box_fill">
+						<div class="box__headline">
+							<h2 class="box__title"><i class="icon_adv"></i>Добавить объявление</h2>
+						</div>
+						<div class="box__content">
+							<p>Бренд трансформирует охват эмпирический медиабизнес целевая аудитория.</p>
+							<div class="box__button">
+								<p><a href="#" class="btn">Добавить объявление</a></p>
+								<p>или звонитие 848<br>support@mr.kyivstar.ua</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="box box_fill">
+						<div class="box__headline">
+							<h2 class="box__title"><i class="icon_pop"></i>Популярные поиски</h2>
+						</div>
+						<div class="box__content">
+							<div class="box__search-btn">
+								<a href="#" class="btn btn_small btn_empty is-active">Аренда квартир <span>320</span></a>
+								<a href="#" class="btn btn_small btn_empty">Аренда <span>320</span></a>
+								<a href="#" class="btn btn_small btn_empty">Продажа <span>640</span></a>
+								<a href="#" class="btn btn_small btn_empty">Аренда земли <span>218</span></a>
+								<a href="#" class="btn btn_small btn_empty">Аренда квартир <span>320</span></a>
+								<a href="#" class="btn btn_small btn_empty">Аренда <span>320</span></a>
+							</div>
+						</div>
+					</div>
+
+
+				</aside>
+			</div>
+		</div>
+		<!-- END .page -->
+
+
+		<div class="push"></div>
+	</div>
+	<!-- END .out -->
+
+	<!-- BEGIN .footer -->
+	<footer class="footer">
+		<div class="footer-i">
+			<div class="footer__content">
+				<div class="footer__item">
+					<h2 class="footer__title">Категории</h2>
+					<div class="footer__row">
+						<ul class="footer__col">
+							<li><a href="#">Электроника</a></li>
+							<li><a href="#">Работа</a></li>
+							<li><a href="#">Отдых</a></li>
+							<li><a href="#">Электроника</a></li>
+						</ul>
+						<ul class="footer__col">
+							<li><a href="#">Дом и сад</a></li>
+							<li><a href="#">Недвижимость</a></li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Работа</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__item">
+					<h2 class="footer__title">Статистика</h2>
+					<div class="footer__row">
+						<div class="footer__col">
+							<p>
+								<strong class="footer__stats">10 689 936</strong>
+								Участников
+							</p>
+							<p>
+								<strong class="footer__stats">257 862</strong>
+								Звонков в месяц
+							</p>
+						</div>
+						<div class="footer__col">
+							<p>
+								<strong class="footer__stats">657 862</strong>
+								Предложений
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="footer__item">
+					<h2 class="footer__title">Свяжитесь с нами</h2>
+					<div class="footer__row">
+						<div class="footer__col">
+							<p class="footer__tel">044 466-0-466</p>
+							<p class="footer__feedback"><a href="#">Обратная связь</a></p>
+							<ul class="footer__socials">
+								<li><a class="footer__socials_gp"href="#">gp</a></li>
+								<li><a class="footer__socials_tw"href="#">tw</a></li>
+								<li><a class="footer__socials_fb"href="#">fb</a></li>
+							</ul>
+						</div>
+						<div class="footer__col">
+							<ul>
+								<li><a href="#">Об услуге</a></li>
+								<li><a href="#">Партнёрам</a></li>
+								<li><a href="#">Помощь</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright">©1998–2012.  ПрАТ «ВОВАН»  <a href="#">Всі права захищено</a>. Використання матеріалів цього сайту можливе тільки з посиланням на джерело.</div>
+		</div>
+	</footer>
+	<!-- END .footer -->
+
+
+
+	<script src="js/vendor/jquery-1.10.2.min.js"></script>
+	<script src="js/vendor/jquery.ui.core.js"></script>
+	<script src="js/vendor/jquery.ui.widget.js"></script>
+	<script src="js/vendor/jquery.ui.position.js"></script>
+	<script src="js/vendor/jquery.ui.selectmenu.js"></script>
+	<script src="js/vendor/jquery.placeholder.js"></script>
+	<script src="js/vendor/jquery.raty.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/goshazvir.js"></script>
+</body>
+</html>

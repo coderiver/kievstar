@@ -85,7 +85,26 @@
 		border-color: #d7d7d7
 		+box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d7d7d7)
 		+transition(.2s)
-
+.input_mod
+	height: 40px
+	padding: 5px 10px 5px 40px
+.input-login, .input-pass
+	position: relative
+	.icon_log
+		position: absolute
+		top: 6px
+		left: 6px
+	.icon_pass
+		position: absolute
+		top: 6px
+		left: 6px
+.input-login_mb
+	margin-bottom: -1px
+.icon_log
+	+s(icon_log)
+.icon_pass
+	+s(icon_pass)
+	
 .checkbox
 	position: relative
 	display: inline-block
@@ -132,6 +151,16 @@
 .checkbox_mod
 	width: auto
 	line-height: 29px
+.checkbox_popup
+	width: 100%
+	margin: 20px 0 15px
+	text-align: left
+	+clr
+	span
+		float: left
+		margin-left: 25px
+	a
+		float: right
 .textarea
 	width: 100%
 	min-height: 108px
@@ -315,3 +344,104 @@
 	+transition(top 0.2s linear)
 	.icon_advice
 		+s(help)
+
+///////////////////////////////// * popup * ////////////////////////////////
+.overlay
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background: rgba(#333, .5)
+	z-index: -1
+	opacity: 0
+	+transition(all .3s linear)
+	&.is-active
+		opacity: 1
+		z-index: 1000
+
+.popup
+	position: fixed
+	width: 420px
+	left: 50%
+	top: 50%
+	margin-left: -210px
+	margin-top: -200px
+	// z-index: -1
+	// opacity: 0
+	background-color: #fff
+	+br(3px)
+	+transform(translate3d(0,-700px,0))
+	+transition(all .3s ease-in)
+	+box-shadow(0 0 30px 0 rgba(0,0,0, .3))
+	&.is-active
+		opacity: 1
+		z-index: 1001
+		+transform(translate3d(0,0,0))
+	.popup-i
+		position: relative
+		padding: 20px
+		text-align: center
+	.popup__close
+		position: absolute
+		top: 10px
+		right: 10px
+		+s(popup-close)
+		z-index: 666
+		&:hover
+			cursor: pointer
+	.popup__title
+		color: #000
+		line-height: 1.2
+		margin: 0 0 20px
+	.input
+		width: 100%
+	.btn
+		display: block
+.popup__content
+.popup__content-note
+	margin-bottom: 20px
+.popup__reg
+	margin-top: 20px
+	height: 40px
+	line-height: 40px
+	position: relative
+	&:after
+		content: ""
+		height: 1px
+		position: absolute
+		left: -20px
+		right: -20px
+		top: 0
+		background: #eee 
+	a
+		color: #0096db
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+.popup__error
+	display: none
+	width: 210px
+	min-height: 40px
+	padding: 4px 10px
+	position: absolute
+	right: -212px
+	top: 0px
+	background: #fa5e5b
+	color: #FFF
+	text-align: left
+	+box
+	+br(2px)
+	&:before
+		content: ""
+		width: 0px
+		height: 0px
+		border-style: solid
+		border-width: 5px 5px 5px 0
+		border-color: transparent #fa5e5b transparent transparent
+		position: absolute
+		top: 16px
+		left: -5px
+	&.is-active
+		display: block
+
