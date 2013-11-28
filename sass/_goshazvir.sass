@@ -119,6 +119,7 @@
 		+unselect
 	input
 		+opacity(0)
+		vertical-align: top
 	input + span
 		&:before
 			content: ""
@@ -152,15 +153,13 @@
 	width: auto
 	line-height: 29px
 .checkbox_popup
-	width: 100%
-	margin: 20px 0 15px
 	text-align: left
 	+clr
+	input
+		float: left
 	span
 		float: left
 		margin-left: 25px
-	a
-		float: right
 .textarea
 	width: 100%
 	min-height: 108px
@@ -415,6 +414,7 @@
 		top: 0
 		background: #eee 
 	a
+		padding-top: 10px
 		color: #0096db
 		text-decoration: none
 		&:hover
@@ -444,4 +444,15 @@
 		left: -5px
 	&.is-active
 		display: block
+.popup__row
+	margin: 20px 0 15px
+	+clr
+	.checkbox_popup
+		float: left
+	.popup__remind
+		float: right
+		color: #0096DB
+		text-decoration: none
+		&:hover
+			text-decoration: underline
 
