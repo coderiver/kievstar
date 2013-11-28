@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	// popup
-	jQuery('body').click(function(event) {
+	jQuery('.profile__login a').click(function(event) {
 		jQuery('.popup').addClass('is-active');
 		jQuery('.overlay').addClass('is-active');
 		return false;
