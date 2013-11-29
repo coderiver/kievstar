@@ -25,6 +25,8 @@
 	+br(2px)
 	&:hover
 		cursor: pointer
+	.lteie8 &
+		border: 1px solid #D7D7D7 
 	span
 		display: block
 		padding: 0px
@@ -43,8 +45,10 @@
 		content: ""
 		+s(arrow)
 	&.is-open
+		z-index: 1000 
 		.select__drop
 			display: block
+			z-index: 1000 
 		i
 			+transform(rotate(180deg)) 
 	.select__drop
@@ -53,9 +57,12 @@
 		top: 100%
 		left: 0
 		width: 100%
-		z-index: 666
+		z-index: 1000
 		background-color: #fff
 		+box-shadow(inset 0 0px 1px #d7d7d7)
+		.lteie8 &
+			border: 1px solid #d7d7d7 
+			left: -1px 
 	ul
 		margin: 0
 	li
@@ -81,13 +88,17 @@
 	+transition(.2s)
 	+fs(12)
 	color: $dark 
+	&.input_mod
+		height: 40px
+		padding: 5px 10px 5px 40px
+	.lteie8 &
+		padding: 6px 10px 
+		height: auto 
 	&:focus
 		border-color: #d7d7d7
 		+box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d7d7d7)
 		+transition(.2s)
-.input_mod
-	height: 40px
-	padding: 5px 10px 5px 40px
+
 .input-login, .input-pass
 	position: relative
 	.icon_log
@@ -120,6 +131,12 @@
 	input
 		+opacity(0)
 		vertical-align: top
+		.lteie8 &
+			+opacity(1)
+			width: auto 
+			position: absolute
+			left: 0
+			top: 0  
 	input + span
 		&:before
 			content: ""
@@ -148,7 +165,16 @@
 		+fs(12)
 		&:hover
 			text-decoration: underline
-
+.lteie8
+	.row_special 
+		white-space: nowrap
+		.checkbox
+			white-space: nowrap
+			input
+				margin-right: 5px 
+			span
+				margin-left: 25px 
+				zoom: 1
 .checkbox_mod
 	width: auto
 	line-height: 29px
@@ -169,6 +195,7 @@
 	+br(2px)
 	+box
 	+transition(.2s)
+	font-family: Arial,sans-serif 
 	&:focus
 		border-color: #d7d7d7
 		+box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d7d7d7)
@@ -198,7 +225,6 @@
 
 ///////////////////////////////// * PAGE cabinet * ////////////////////////////////
 .cabinet
-	position: relative
 	label, .row__label
 		float: left
 		line-height: 30px
@@ -217,6 +243,12 @@
 	+transition(.2s)
 	+fs(12px)
 	+br(2px)
+	.lteie8 &
+		display: inline
+		zoom: 1
+		background: #32AAE1
+		top: 3px 
+		padding: 5px 25px 7px 15px
 	&:hover
 		background: lighten($bg, 4%)
 		+transition(.2s)
@@ -232,7 +264,14 @@
 ///////////////////////////////// * row * ////////////////////////////////
 .row
 	margin-bottom: 20px
+	
 	+clr
+	.lteie8 &
+		width: 100%
+		zoom: 1 
+	.lteie8 &.is-open
+		position: relative
+		z-index: 2000 
 	label, .row__label
 		width: 220px
 		min-height: 30px 
@@ -241,6 +280,9 @@
 		+fs(12)
 		color: $dark 
 		font-weight: bold
+		.lteie8 &
+			width: 210px 
+			display: inline-block
 	.checkbox
 		min-height: 20px
 		line-height: 20px 
@@ -258,15 +300,24 @@
 		text-align: left 
 		line-height: 1.2
 .row-right_small-sel
+	text-align: left
+	position: relative 
 	label
 		width: 50px
 		float: left
 		margin-right: 10px
 		font-weight: normal
 		color: #666
+		.lteie8 &
+			display: inline
+			zoom: 1
+			width: 30px 
 	.select
 		float: left
 		margin-right: 20px 
+		.lteie8 &
+			display: inline
+			zoom: 1
 .row_categoryapge
 	padding-bottom: 20px
 	+clr
@@ -286,6 +337,8 @@
 	width: 380px
 	position: relative
 	+br(2px)
+	.lteie8 &
+		height: 28px !important
 	#slider-range-min
 		height: 28px
 		overflow: hidden
@@ -294,22 +347,34 @@
 		border-right: 1px solid #c6c6c6
 		+br(2px)
 		+box
+		.lteie8 &
+			height: 30px
 	.ui-slider-horizontal
 		.ui-slider-range
 			height: 28px
 			background: $blue
 			+br(0px)
+			.lteie8 &
+				height: 35px
 	.ui-slider
 		.ui-slider-handle
 			position: relative
-			&:after
-				content: ""
-				+s(slider-handle)
-				position: absolute
-				top: 50%
-				margin-top: -18px
-				margin-left: -9px
-				z-index: 777 
+			+s(slider-handle)
+			position: absolute
+			margin-left: -10px  
+			margin-top: -20px 
+			
+			z-index: 1000 
+			.lteie8 &
+				margin-top: -25px 
+			// &:after
+			// 	content: ""
+				
+			// 	position: absolute
+			// 	top: 50%
+			// 	margin-top: -18px
+			// 	margin-left: -9px
+			// 	z-index: 777 
 
 #amount
 	position: absolute
@@ -321,7 +386,7 @@
 	outline: none
 	color: $dark 
 	+fs(12)
-	+unselect
+	//+unselect
 .slider-min
 	position: absolute
 	left: 5px
