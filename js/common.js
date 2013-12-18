@@ -54,17 +54,6 @@ $(document).ready(function() {
 
 	// $('.star').raty();
 
-	$('.star').raty({
-		path      : 'img/icons',
-		// size      : 24,
-		starHalf  : 'star-on.png',
-		starOff   : 'star-off.png',
-		starOn    : 'star-on.png',
-		// target    : '#function-hint',
-		cancel    : false,
-		targetKeep: true,
-		precision : true
-	});
 
 
 
@@ -130,19 +119,18 @@ $(document).ready(function() {
 	  $(this).parent().fadeOut(100);
 	})
 
-	$(function() {
-	  $( "#slider-range-min" ).slider({
-	    range: "min",
-	    value: 173,
-	    min: 0,
-	    max: 1000,
-	    slide: function( event, ui ) {
-	      $( "#amount" ).val(ui.value + " грн");
-	    }
-	  });
-	  $( "#amount" ).val($( "#slider-range-min" ).slider( "value" ) + " грн");
-	});
-
+	if($('#slider-range-min').length>1){
+		  $( "#slider-range-min" ).slider({
+		    range: "min",
+		    value: 173,
+		    min: 0,
+		    max: 1000,
+		    slide: function( event, ui ) {
+		      $( "#amount" ).val(ui.value + " грн");
+		    }
+		  });
+		  $( "#amount" ).val($( "#slider-range-min" ).slider( "value" ) + " грн");
+	  }
 
 	function tooltip() {
 		var btn = $('.js-tooltip');
@@ -159,5 +147,16 @@ $(document).ready(function() {
 	tooltip();
 
 
+	$('.star').raty({
+		path      : 'img/icons',
+		// size      : 24,
+		starHalf  : 'star-on.png',
+		starOff   : 'star-off.png',
+		starOn    : 'star-on.png',
+		// target    : '#function-hint',
+		cancel    : false,
+		targetKeep: true,
+		precision : true
+	});
 
 });
