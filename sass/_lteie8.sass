@@ -106,7 +106,49 @@
 			.btn
 				*display: inline
 				zoom: 1
-
+	.table__promotion
+		tr
+			td, th
+				.checkbox 
+					input
+						opacity: 1
+						z-index: 1
+				.checkbox input + span
+					&:before
+						background: none
+			td
+				.select__drop
+					border: none 
+				ul
+					margin-top: 0 
+					border: 1px solid #D7D7D7
+					li
+						border-top: 1px solid #D7D7D7
+						&:first-child
+							border: none 
+	.select
+		line-height: 26px
+	.select_mini-40
+		border: 1px solid #fff 
+		span
+			display: inline
+		ul
+			width: 140px
+			margin-left: 1px 
+			li
+				width: 120px
+		&:hover
+			border: 1px solid #D7D7D7
+	.marker
+		background: url('../img/icons/marker.png')
+		&:before
+			display: none
+	.marker_green
+		background: url('../img/icons/marker_green.png') 
+	.marker_pause
+		background: url('../img/icons/pause.png') 
+	.marker_delete
+		background: url('../img/icons/marker_delete.png') 
 
 
 
