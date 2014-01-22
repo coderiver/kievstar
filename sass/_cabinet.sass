@@ -554,6 +554,8 @@
 			
 ////////////////////////////  * PAGE cabinet-advertising *  ////////////////////////////////////
 
+.page__content_mod
+	margin-bottom: 30px
 .topper_bottom
 	margin-bottom: 20px
 .page__row
@@ -567,7 +569,7 @@
 .btn_primary-right
 	float: right !important
 .table__promotion
-	margin: 20px 0 30px 0 
+	margin-top: 20px
 	width: 100%
 	font-size: 12px
 	font-family: "Helvetica CY","Nimbus Sans L",sans-serif 
@@ -673,21 +675,48 @@
 	margin-left: 11px
 	width: 10px
 	height: 10px
-	border-radius: 50%
 	z-index: 1 
 	display: inline-block
-	&:before
-		position: absolute
-		content: ""
-		top: 1px
-		left: -1px
-		+s(marker) 
+	top: 1px
+	left: -1px
+	+s(marker) 
 .marker_green
-	&:before
-		+s(marker_green) 
+	+s(marker_green) 
 .marker_pause
-	&:before
-		+s(pause)
+	+s(pause)
 .marker_delete
-	&:before
-		+s(marker_delete)
+	+s(marker_delete)
+.select__marker
+	font-size: 0
+.pagination
+	margin: 0 auto
+	margin-bottom: 45px
+	text-align: center
+	li
+		margin-left: 10px
+		width: 24px
+		height: 24px
+		vertical-align: top
+		border-radius: 50%
+		background: #CCC 
+		display: inline-block
+		&:hover
+			transition: all 0.2s linear
+			background: #0096db
+		a
+			position: relative
+			width: 100%
+			height: 24px
+			color: #FFF 
+			font-size: 11px
+			line-height: 24px
+			text-decoration: none
+			display: block
+	.pagination__prew
+		top: 6px
+		left: 8px
+		+s(pagination__prew)
+	.pagination__next			
+		top: 6px
+		left: 9px
+		+s(pagination__next)

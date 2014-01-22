@@ -101,9 +101,9 @@ $(document).ready(function() {
 		});
 		item.bind("click",function(){
 			$(this).toggleClass("is-selected");
-			var text = $(this).text();
+			var text = $(this).html();
 			var id = $(this).attr("data-id");
-			$(this).parents(".js-select-other").find(".js-select-text").text(text);
+			$(this).parents(".js-select-other").find(".js-select-text").html(text);
 			$(this).parents(".js-select-other").find(".js-select-input").val(id);
 	 });
 	};

@@ -137,19 +137,25 @@
 			margin-left: 1px 
 			li
 				width: 120px
+			.marker_green, .marker_pause, .marker_delete
+				top: -2px
 		&:hover
-			border: 1px solid #D7D7D7
-	.marker
-		background: url('../img/icons/marker.png')
-		&:before
-			display: none
-	.marker_green
-		background: url('../img/icons/marker_green.png') 
-	.marker_pause
-		background: url('../img/icons/pause.png') 
-	.marker_delete
-		background: url('../img/icons/marker_delete.png') 
-
+			border: 1px solid #D7D7D7 
+	.pagination
+		margin: 0 40%
+		margin-bottom: 45px
+		width: 20%
+		+clr
+		li
+			float: left
+			display: block
+			vertical-align: top
+	.pagination__prew
+		width: 24px
+		height: 19px
+	.pagination__next
+		width: 24px
+		height: 19px
 
 
 
