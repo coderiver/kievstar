@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>statistics</title>
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.js"></script>
+	<![endif]-->
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" media="screen" href="css/screen.css">
+<!-- 	<link rel="stylesheet" media="screen" href="js/vendor/jquery-ui-1.10.3.custom.css"> -->
+</head>
+<body>
+	<!-- BEGIN .out -->
+	<div class="out">
+		<!-- BEGIN .header -->
+		<header class="header">
+			<div class="header-i">
+				<h1 class="header__logo"><a href="#">Киевстар</a></h1>
+				<div class="header__toolbar">
+					<div class="adv">
+						<a class="adv__btn" href="#">Добавить объявление</a>
+					</div>
+					<div class="profile divider">
+						<ul class="profile__auth">
+							<li class="profile__login"><a href="#"><i class="icon icon_login"></i>Войти</a></li>
+							<li><a href="#">Регистрация</a></li>
+						</ul>
+					</div>
+					<ul class="language divider">
+						<li><a href="#">Ua</a></li>
+						<li class="is-active"><span>Ru</span></li>
+					</ul>
+				</div>
+
+				<div class="header-line"></div>
+			</div>
+		</header>
+		<!-- END .header -->
+		<!-- BEGIN .search -->
+		<div class="search">
+			<div class="search-i">
+				<div class="yellow-pages"><a href="#">Yellow Pages</a></div>
+				<div class="search__form">
+					<form action="">
+						<input class="search__input" type="text" placeholder="Что Вы ищите?">
+						<button type="submit" class="search__btn"><i></i></button>
+						<div class="search__select">
+							<select name="" id="" class="js-select">
+								<option value="" selected="selected">Выбрать регион</option>
+								<option value="">Киевская область</option>
+								<option value="">Черкасская область</option>
+								<option value="">Автономная Республика Крым</option>
+								<option value="">Винницкая область</option>
+								<option value="">Волынская область</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- END .search -->
+
+		<!-- BEGIN .page -->
+		<div class="page">
+
+			<!-- BEGIN .topper -->
+			<div class="topper topper_mod topper_bottom">
+					<div class="topper-i">
+						<ul class="breadcrumb">
+							<li><a href="#">Моя Реклама</a> <span class="divider">/</span></li>
+							<li class="is-active"><span>Личный Кабинет</span></li>
+						</ul>
+						<h2 class="topper__title">Личный Кабинет</h2>
+						<nav class="topper__nav">
+							<ul>
+								<li><span>Мой Сайт</span></li>
+								<li><a href="#">Моя реклама</a></li>
+								<li class="is-active"><a href="#">Статистика</a></li>
+								<li><a href="#">Настройки</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			<!-- END .topper -->
+			<!-- BEGIN .page__content l -->
+			<div class="page__content page__content_mod l ">
+				<div class="page__row">
+					<div class="stage"><span class="stage__text">Отчетный период:</span>
+						<div class="calendar"><i></i>10 Января 2012</div><span> по</span>
+						<div class="calendar"><i></i>10 Января 2012</div>
+					</div>
+					<a class="btn btn_primary btn_primary-right btn_primary-ridwid" href="#">Экспорт</a>
+				</div>
+				<div class="statistics">
+					<img src="img/table-pic.png" alt="img">
+				</div>
+				<table class="table__promotion table__statistics">
+					<tr>
+						<th class="ht-top" colspan="5"><h3 class="th-h3">Мои рекламные компании</h3></th>
+						<th class="ht-top" colspan="4"><h3 class="th-h3">Звонки</h3></td>
+						<th class="ht-top"><h3 class="th-h3">Расходы</h3></td>
+					</tr>
+					<tr>
+						<th class="ht-top ht-top_blue" colspan="5">30</th>
+						<th class="ht-top ht-top_blue">135</th>
+						<th class="ht-top ht-top_bord ht-top_blue">12</th>
+						<th class="ht-top ht-top_bord ht-top_blue">6</th>
+						<th class="ht-top ht-top_bord ht-top_blue">153</th>
+						<th class="ht-top ht-top_blue">657</th>
+					</tr>
+					<tr>
+						<th class="width1"> №</th>
+						<th class="width2_mod"><h3 class="th-h3">Заголовок</h3></th>
+						<th class="width3_mod"><h3 class="th-h3">Статус</h3></th>
+						<th class="width4_mod"><h3 class="th-h3">Дата публикации</h3></th>
+						<th class="width5"><h3 class="th-h3">Тариф</h3></th>
+						<th class="width5"><h3 class="th-h3">Целевые</h3></th>
+						<th class="width5"><h3 class="th-h3">Не целевые</h3></th>
+						<th class="width8_mod"><h3 class="th-h3">Пропущенные</h3></th>
+						<th class="width9"><h3 class="th-h3">Всего</h3></th>
+						<th class="width3_mod"><h3 class="th-h3">К оплате</h3></th>
+					</tr>
+					<tr>
+						<td>12345</td>
+						<td><a class="td-advertising" href="#">Регистрация бизнеса</a></td>
+						<td><span class="td-status">Активно</span></td>
+						<td><span class="td-date">23 нояб. 2012</span></td>
+						<td><span class="td-rate">5</span></td>
+						<td><span class="td-rate">45</span></td>
+						<td><span class="td-rate">4</span></td>
+						<td><span class="td-rate">2</span></td>
+						<td><span class="td-rate">51</span></td>
+						<td><span class="td-rate">255</span></td>
+					</tr>
+					<tr>
+						<td>12345</td>
+						<td><a class="td-advertising" href="#">Регистрация бизнеса</a></td>
+						<td><span class="td-status">Активно</span></td>
+						<td><span class="td-date">23 нояб. 2012</span></td>
+						<td><span class="td-rate">5</span></td>
+						<td><span class="td-rate">45</span></td>
+						<td><span class="td-rate">4</span></td>
+						<td><span class="td-rate">2</span></td>
+						<td><span class="td-rate">51</span></td>
+						<td><span class="td-rate">255</span></td>
+					</tr>
+					<tr>
+						<td>12345</td>
+						<td><a class="td-advertising" href="#">Регистрация бизнеса</a></td>
+						<td><span class="td-status">Активно</span></td>
+						<td><span class="td-date">23 нояб. 2012</span></td>
+						<td><span class="td-rate">5</span></td>
+						<td><span class="td-rate">45</span></td>
+						<td><span class="td-rate">4</span></td>
+						<td><span class="td-rate">2</span></td>
+						<td><span class="td-rate">51</span></td>
+						<td><span class="td-rate">255</span></td>
+					</tr>
+				</table>
+			</div>
+			<!-- END .page__content l -->
+	</div>
+	<!-- END .out -->
+
+	<!-- BEGIN .footer -->
+	<footer class="footer">
+		<div class="footer-i">
+			<div class="footer__content">
+				<div class="footer__item">
+					<h2 class="footer__title">Категории</h2>
+					<div class="footer__row">
+						<ul class="footer__col">
+							<li><a href="#">Электроника</a></li>
+							<li><a href="#">Работа</a></li>
+							<li><a href="#">Отдых</a></li>
+							<li><a href="#">Электроника</a></li>
+						</ul>
+						<ul class="footer__col">
+							<li><a href="#">Дом и сад</a></li>
+							<li><a href="#">Недвижимость</a></li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Работа</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__item">
+					<h2 class="footer__title">Статистика</h2>
+					<div class="footer__row">
+						<div class="footer__col">
+							<p>
+								<strong class="footer__stats">10 689 936</strong>
+								Участников
+							</p>
+							<p>
+								<strong class="footer__stats">257 862</strong>
+								Звонков в месяц
+							</p>
+						</div>
+						<div class="footer__col">
+							<p>
+								<strong class="footer__stats">657 862</strong>
+								Предложений
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="footer__item">
+					<h2 class="footer__title">Свяжитесь с нами</h2>
+					<div class="footer__row">
+						<div class="footer__col">
+							<p class="footer__tel">044 466-0-466</p>
+							<p class="footer__feedback"><a href="#">Обратная связь</a></p>
+							<ul class="footer__socials">
+								<li><a class="footer__socials_gp"href="#">gp</a></li>
+								<li><a class="footer__socials_tw"href="#">tw</a></li>
+								<li><a class="footer__socials_fb"href="#">fb</a></li>
+							</ul>
+						</div>
+						<div class="footer__col">
+							<ul>
+								<li><a href="#">Об услуге</a></li>
+								<li><a href="#">Партнёрам</a></li>
+								<li><a href="#">Помощь</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright">©1998–2012.  ПрАТ «ВОВАН»  <a href="#">Всі права захищено</a>. Використання матеріалів цього сайту можливе тільки з посиланням на джерело.</div>
+		</div>
+	</footer>
+	<!-- END .footer -->
+	
+	<script src="js/vendor/jquery-1.10.2.min.js"></script>
+	<script src="js/vendor/jquery.ui.core.js"></script>
+	<script src="js/vendor/jquery.ui.widget.js"></script>
+	<script src="js/vendor/jquery.ui.position.js"></script>
+	<script src="js/vendor/jquery.ui.selectmenu.js"></script>
+	<script src="js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="js/vendor/jquery.placeholder.js"></script>
+	<script src="js/vendor/jquery.raty.min.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
