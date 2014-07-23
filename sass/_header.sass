@@ -2,12 +2,13 @@
 .header
 	color: #fff
 	+fs(12)
-	height: 60px
+	height: 70px
 	overflow: hidden
-	background-color: #231f20
+	background-color: #fff
+	border-bottom: 1px solid #dddddd
 	a
 		text-decoration: none
-		color: #fff
+		color: #279cdf
 		&:hover
 			text-decoration: underline
 	.btn
@@ -16,7 +17,7 @@
 			text-decoration: none
 	.header-i
 		position: relative
-		max-width: 1400px
+		max-width: 940px
 		margin: 0 auto
 		padding: 0 10px 0 0
 		+clr
@@ -32,7 +33,7 @@
 		+ht
 		a
 			display: block
-			+s(logo)
+			+s(newlogo)
 	.header__toolbar
 		float: right
 		text-align: right
@@ -42,9 +43,9 @@
 		vertical-align: top
 		padding-left: 20px
 		padding-right: 20px
-		height: 60px
-		line-height: 60px
-		border-left: 1px solid #383435
+		height: 70px
+		line-height: 70px
+		border-left: 1px solid #ddd
 	.language
 		margin-right: -3px
 		padding-left: 2px
@@ -52,7 +53,7 @@
 		li
 			display: inline-block
 			text-transform: uppercase
-			color: #fff
+			color: #000
 			font-size: 11px
 			text-align: center
 			+br(50%)
@@ -75,6 +76,7 @@
 						cursor: default
 			&.is-active, &:hover
 				border: 3px solid rgba(255,255,255,.1)
+				color: #fff
 				a, span
 					background-color: $green
 					+box-shadow(inset 0 1px 0 rgba(255,255,255,.35))
@@ -106,8 +108,8 @@
 	.adv
 		display: inline-block
 		vertical-align: top
-		height: 60px
-		line-height: 60px
+		height: 70px
+		line-height: 70px
 		padding: 0 20px
 		.adv__btn
 			+btn
