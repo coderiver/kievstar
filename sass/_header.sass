@@ -2,10 +2,7 @@
 .header
 	color: #fff
 	+fs(12)
-	height: 70px
-	overflow: hidden
 	background-color: #fff
-	border-bottom: 1px solid #dddddd
 	a
 		text-decoration: none
 		color: #279cdf
@@ -33,8 +30,8 @@
 		+ht
 		a
 			display: block
-			+s(newlogo)
-	.header__toolbar
+			+sr(newlogo) 
+	.header__toolbar 
 		float: right
 		text-align: right
 	.divider
@@ -45,7 +42,6 @@
 		padding-right: 20px
 		height: 70px
 		line-height: 70px
-		border-left: 1px solid #ddd
 	.language
 		margin-right: -3px
 		padding-left: 2px
@@ -113,3 +109,13 @@
 		padding: 0 20px
 		.adv__btn
 			+btn
+	.header__advertisement
+		float: left
+		margin-left: 15px
+		font-size: 20px
+		color: #333333
+		line-height: 70px
+		text-decoration: none
+		display: inline-block 
+		&:hover
+			text-decoration: none
