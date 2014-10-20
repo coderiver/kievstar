@@ -106,8 +106,15 @@ $(document).ready(function() {
 			$(this).parents(".js-select-other").find(".js-select-text").html(text);
 			$(this).parents(".js-select-other").find(".js-select-input").val(id);
 	 });
+		item.click(function(){
+			$(this).parent().parent().parent().addClass("is-select");
+		})
 	};
 	select();
+
+	// if($(".js-select-input").val("change")){
+	// 	$(this).parent().addClass("is-select");
+	// };
 
 	//click document
 	$(document).click(function() {
