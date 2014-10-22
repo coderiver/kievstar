@@ -3,9 +3,10 @@
 	background-color: #fff
 	+wrap
 	.search-i
-		height: 30px
+		height: 90px
 		line-height: 50px
-		padding: 15px 0
+		padding: 20px 0
+		+box
 	// .yellow-pages
 	// 	float: left
 	// 	width: 160px
@@ -17,8 +18,24 @@
 	// 			text-decoration: none
 	.search__form
 		position: relative
-		width: 838px
+		width: 100%
 		float: left
+	.search__link
+		position: absolute
+		top: 18px
+		left: 72px
+		height: 15px
+		line-height: 1
+		text-decoration: none
+		z-index: 2
+		font-size: 14px
+		color: #0096db
+		border-bottom: 1px dashed #0096db
+		&:hover
+			border: none
+	.is-active
+		.search__link
+			display: none
 	.search__input
 		position: absolute
 		top: 0
@@ -26,11 +43,11 @@
 		width: 100%
 		color: #000
 		+box
-		height: 30px
+		height: 50px
 		border: 1px solid #d7d7d7
 		+br(2px)
 		padding: 0 230px 0 10px
-		+fs(12)
+		font-size: 14px
 		+placeholder(#999)
 		outline: 0
 		&:focus
@@ -39,13 +56,14 @@
 		position: absolute
 		top: 0
 		right: 60px
-		width: 118px
+		width: 160px
 		select
-			width: 118px
+			width: 160px
 			outline: 0
 		.ui-selectmenu
-			background-color: #231f20
-			height: 30px
+			background-color: #0096db
+			height: 50px
+			border-right: 1px solid #0087c5
 			// line-height: 50px
 			+fs(12)
 			color: #fff
@@ -57,7 +75,8 @@
 					+rotate(180)
 		.ui-selectmenu-status
 			padding: 0 30px 0 20px
-			line-height: 30px
+			line-height: 50px
+			font-size: 14px
 			white-space: nowrap
 			-ms-text-overflow: ellipsis
 			text-overflow: ellipsis
@@ -69,7 +88,7 @@
 	.search__btn
 		position: relative
 		width: 60px
-		height: 30px
+		height: 50px
 		float: right
 		background: $blue
 		+br(0 2px 2px 0)

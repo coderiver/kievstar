@@ -119,6 +119,7 @@ $(document).ready(function() {
 	//click document
 	$(document).click(function() {
 		$('.js-select-other').removeClass('is-open');
+		$(".search__form").removeClass("is-active");
 	});
 
 	// for tag
@@ -166,4 +167,17 @@ $(document).ready(function() {
 		precision : true
 	});
 
+	$(".search__input").focus(function (){
+		$(this).parent().parent().addClass("is-active");
+	});
+		
+	$( ".search__form" ).click(function( event ) {
+	  event.stopPropagation();
+	});
+	$(".js-theme").on('click', function(){
+		$(".js-theme").removeClass('is-active');
+		$(this).addClass('is-active');
+		$('.js-popup-overlay').addClass('is-active');
+	});
+	$('#mysite-form').validate();
 });

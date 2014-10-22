@@ -501,20 +501,20 @@ div
 		display: inline-block
 		+transition(all 0.1s linear)
 		+box
-		// &:hover,
+		&:hover,
 		&.is-active
 			background: #0096db
 			.theme__text
 				color: #fff
 			.theme__select
 				display: block
-		// &.is-active
-		// 	&:hover
-		// 		.theme__select
-		// 			display: block
-		// &:hover
-		// 	.theme__select
-		// 		display: none
+		&.is-active
+			&:hover
+				.theme__select
+					display: block
+		&:hover
+			.theme__select
+				display: none
 	.theme__wrap
 		height: 200px
 		font-size: 0
@@ -582,6 +582,14 @@ div
 			+box
 			&:focus
 				outline: none
+			&.error
+				border-color: #fa5e5b
+				+border-radius(2px 2px 0 0)
+				background: #fedfde
+		input.error + .error
+			display: none !important
+			+ .mysite__error
+				display: block
 	.mysite__col
 		position: relative
 		margin-right: 18px
@@ -618,7 +626,24 @@ div
 		span
 			color: #999999
 	// .select
-
+	.mysite__error
+		position: relative
+		padding-left: 10px
+		height: 30px
+		line-height: 28px
+		font-size: 12px
+		color: #fff
+		+border-radius(0 0 2px 2px)
+		background: #fa5e5b
+		display: none
+		+box
+		.ico
+			position: absolute
+			right: 5px
+			top: 50%
+			margin-top: -10px
+		.ico__eror
+			+s(ico__eror)
 
 //prompt
 .prompt
@@ -639,3 +664,43 @@ div
 		+box
 	.prompt__text
 		padding: 8px 8px 15px
+
+//mysite__bottom
+.mysite__bottom
+	padding-top: 20px
+	+clr
+	.mysite__btn
+		position: relative
+		float: right
+		padding-left: 12px
+		height: 50px
+		text-align: left
+		line-height: 50px
+		width: 220px
+		+border-radius(2px)
+		border: none
+		background: #0096db
+		+box
+		i
+			position: absolute
+			top: 50%
+			right: 10px
+			margin-top: -7px
+			+s(but-left)
+		&:hover
+			background: #0085c2
+		&:focus
+			outline: none
+
+//popup
+.overlay
+	&.is-active
+		.popup
+			padding: 20px
+			width: auto
+			margin: -450px 0 0 -540px
+			opacity: 1
+			z-index: 1001
+			top: 50%
+	.popup__img
+		border: 1px solid #eeeeee
