@@ -301,9 +301,12 @@ div.is-editable .editable .editable__content { position: absolute; top: 50%; lef
 .mysite__bottom .mysite__btn:hover { background: #0085c2; }
 .mysite__bottom .mysite__btn:focus { outline: none; }
 
-.overlay.is-active .popup { padding: 20px; width: auto; margin: -450px 0 0 -540px; opacity: 1; z-index: 1001; top: 50%; }
+.overlay.is-active .popup { padding: 20px; width: auto; margin: -420px 0 0 -540px; opacity: 1; z-index: 1001; top: 50%; }
 .overlay .popup__img { border: 1px solid #eeeeee; }
 
+@media only all and (max-height: 768px) { body { overflow: hidden; }
+  body .overlay { overflow: auto; }
+  body .overlay.is-active .popup { position: absolute; top: 50px; margin-top: 0; } }
 .ui-selectmenu { display: block; display: inline-block; position: relative; height: 2.2em; vertical-align: middle; text-decoration: none; overflow: hidden; zoom: 1; }
 
 .ui-selectmenu-icon { position: absolute; right: 6px; margin-top: -8px; top: 50%; }

@@ -698,9 +698,20 @@ div
 		.popup
 			padding: 20px
 			width: auto
-			margin: -450px 0 0 -540px
+			margin: -420px 0 0 -540px
 			opacity: 1
 			z-index: 1001
 			top: 50%
 	.popup__img
 		border: 1px solid #eeeeee
+		
+@media only all and (max-height: 768px)
+	body
+		overflow: hidden
+		.overlay
+			overflow: auto
+			&.is-active
+				.popup
+					position: absolute
+					top: 50px
+					margin-top: 0
