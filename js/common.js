@@ -180,4 +180,17 @@ $(document).ready(function() {
 		$('.js-popup-overlay').addClass('is-active');
 	});
 	$('#mysite-form').validate();
+	// $('#site-email, #site-name').on('change', function (){
+	// 	$('#js-btn-mysite').removeAttr("disabled");
+	// });
+	function buttondisabled() {
+		$('#site-email, #site-name').on('input', function (){
+			var nameLength = $('#site-name').val().length;
+			var emailLength = $('#site-email').val().length;
+			if ((nameLength || emailLength) > 0) {
+				$('#js-btn-mysite').removeAttr("disabled");
+			};
+		});
+	}
+	buttondisabled();
 });

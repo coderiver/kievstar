@@ -563,6 +563,19 @@ div
 	border-top: 1px solid #eee
 	border-bottom: 1px solid #eee
 	+clr
+	&.mysite__wrap_mod
+		border-top: 0
+		.mysite__form
+			float: none
+			width: 100%
+		.mysite__row
+			margin: 0 0 0 17px
+			width: 460px
+			vertical-align: top
+			display: inline-block
+			+box
+			&:first-child
+				margin-left: 0
 
 //mysite__form
 .mysite__form
@@ -645,26 +658,6 @@ div
 		.ico__eror
 			+s(ico__eror)
 
-//prompt
-.prompt
-	float: right
-	width: 460px
-	border: 1px solid #eee
-	+border-radius(2px)
-	+box
-	.prompt__title
-		padding: 0 8px
-		height: 39px
-		line-height: 38px
-		font-weight: bold
-		color: #333
-		font-size: 12px
-		border-bottom: 1px solid #eee
-		background: #f6f6f6
-		+box
-	.prompt__text
-		padding: 8px 8px 15px
-
 //mysite__bottom
 .mysite__bottom
 	padding-top: 20px
@@ -687,10 +680,98 @@ div
 			right: 10px
 			margin-top: -7px
 			+s(but-left)
+		&:disabled
+			opacity: 0.6
 		&:hover
 			background: #0085c2
 		&:focus
 			outline: none
+		&.mysite__btn_small
+			padding: 0 23px
+			height: 30px
+			width: auto
+			min-width: 140px
+			text-align: center
+			line-height: 30px
+	a.mysite__btn_small
+		float: left
+		margin-right: 20px
+
+//prompt
+.prompt
+	float: right
+	width: 460px
+	border: 1px solid #eee
+	+border-radius(2px)
+	+box
+	.prompt__title
+		padding: 0 8px
+		height: 39px
+		line-height: 38px
+		font-weight: bold
+		color: #333
+		font-size: 12px
+		border-bottom: 1px solid #eee
+		background: #f6f6f6
+		+box
+	.prompt__text
+		padding: 8px 8px 15px
+
+//gen
+.gen
+	.gen__row
+		margin-top: 20px
+		font-size: 0
+	.gen__item
+		position: relative
+		margin-left: 20px
+		padding: 8px 0 0 58px
+		width: 218px
+		height: 50px
+		border: 1px solid #eee
+		+border-radius(2px)
+		display: inline-block
+		+box
+		&:first-child
+			margin-left: 0
+	.gen__item_big
+		padding: 32px 0 0 108px
+		width: 458px
+		height: 100px
+		.gen__img
+			width: 98px
+	.gen__img
+		position: absolute
+		left: 0
+		top: 0
+		height: 100%
+		width: 48px
+		border-right: 1px solid #eee
+		.ico
+			position: absolute
+			top: 50%
+			left: 50%
+			&.ico_date
+				margin: -18px 0 0 -16px
+			&.ico_sales
+				margin: -19px 0 0 -18px
+			&.ico_expected-order
+				margin: -9px 0 0 -9px
+			&.ico_demands-for-delay
+				margin: -10px 0 0 -9px
+			&.ico_end-products
+				margin: -7px 0 0 -10px
+			&.ico_goods-in-stock
+				margin:  -8px 0 0 -10px
+
+	.gen__text-blue
+		color: #0096db
+		font-size: 20px
+		line-height: 1
+	.gen__text
+		color: #333
+		font-size: 12px
+
 
 //popup
 .overlay

@@ -85,26 +85,88 @@
 			<div class="l mysite">
 				<p>Воздействие на потребителя разнородно изменяет креатив, учитывая современные тенденции. Адекватная менльность поддерживает конструктивный пак-шот, опираясь на опыт западных коллег. Искусство медиапланирования, конечно стабилизирует типичный ребрендинг, работая над проектом.</p>
 				<form action="" id="mysite-form">
-					<div class="mysite__wrap">
+					<div class="mysite__wrap mysite__wrap_mod">
 						<div class="mysite__form">
 							<div class="mysite__row">
-								<input id="site-name" name="name" minlength="5" type="text" placeholder="Название сайта" required>
+								<input id="site-name" name="name" minlength="5" type="text" placeholder="Название сайта" value="" required>
 								<div class="error mysite__error">Название сайта должно быть не меньше 5 символов
 									<i class="ico ico__eror"></i>
 								</div>
 							</div>
 							<div class="mysite__row">
-								<input id="site-email" type="email" name="email" placeholder="Email" required>
+								<input id="site-email" type="email" name="email" placeholder="Email" value="" required>
 								<div class="error mysite__error">Введите корректный Email-адрес
 									<i class="ico ico__eror"></i>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="mysite__bottom">
-						<button class="btn mysite__btn">Создать сайт <i></i></button>
+						<div class="mysite__bottom">
+							<a href="#" class="btn mysite__btn mysite__btn_small">Перейти на сайт</a>
+							<a href="#" class="btn mysite__btn mysite__btn_small">Перейти к управлению сайтом</a>
+							<button class="btn mysite__btn mysite__btn_small" id="js-btn-mysite" disabled>Сохранить</button>
+						</div>
 					</div>
 				</form>
+				<div class="gen">
+					<div class="gen__row">
+						<div class="gen__item gen__item_big">
+							<div class="gen__img">
+								<i class="ico ico_date"></i>
+							</div>
+							<div class="gen__right">
+								<div class="gen__text-blue">18 Июня 2014</div>
+								<div class="gen__text">дата создания</div>
+							</div>
+						</div>
+						<div class="gen__item gen__item_big">
+							<div class="gen__img">
+								<i class="ico ico_sales"></i>
+							</div>
+							<div class="gen__right">
+								<div class="gen__text-blue">20000.00 <span class="gen__text">грн</span></div>
+								<div class="gen__text">продажи в этом месяце</div>
+							</div>
+						</div>
+					</div>
+					<div class="gen__row">
+						<div class="gen__item">
+							<div class="gen__img">
+								<i class="ico ico_expected-order"></i>
+							</div>
+							<div class="gen__right">
+								<div class="gen__text-blue">2896</div>
+								<div class="gen__text">заказов ожидают</div>
+							</div>
+						</div>
+						<div class="gen__item">
+							<div class="gen__img">
+								<i class="ico ico_demands-for-delay"></i>
+							</div>
+							<div class="gen__right">
+								<div class="gen__text-blue">6892</div>
+								<div class="gen__text">заказов на задержке</div>
+							</div>
+						</div>
+						<div class="gen__item">
+							<div class="gen__img">
+								<i class="ico ico_end-products"></i>
+							</div>
+							<div class="gen__right">
+								<div class="gen__text-blue">8930</div>
+								<div class="gen__text">товаров заканчиваются</div>
+							</div>
+						</div>
+						<div class="gen__item">
+							<div class="gen__img">
+								<i class="ico ico_goods-in-stock"></i>
+							</div>
+							<div class="gen__right">
+								<div class="gen__text-blue">363</div>
+								<div class="gen__text">товаров нет в наличии</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!-- END l -->
 		</div>
