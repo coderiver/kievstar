@@ -1,204 +1,257 @@
-*
-	margin: 0
-	padding: 0
-	// +box
-	// &:before, &:after
-	// 	+box
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
 
 
-.clearfix:after
-	display: block
-	visibility: hidden
-	clear: both
-	height: 0
-	content: ''
-	font-size: 0
-	line-height: 0
+body
+	font-family: Arial, sans-serif 
+	font-size: 12px 
+	line-height: 1.4
+// fonts
 
-html,
-button,
-input,
-select,
-textarea
-	color: #222
++font("HelveticaNeue Bold", helveticaneuecyr-bold)
++font("HelveticaNeue Medium", helveticaneuecyr-medium)
++font("HelveticaNeue Roman", HelveticaNeueCyr-Reg)
++font("HelveticaNeue Light", helveticaneuecyr-light)
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary
-	display: block
+//vars
 
-audio,
-canvas,
-video
-	display: inline-block
+=bold
+	font-family: "HelveticaNeue Bold", Helvetica, sans-serif 
+=med
+	font-family: "HelveticaNeue Medium", Helvetica, sans-serif 
+=reg
+	font-family: "HelveticaNeue Roman", Helvetica, sans-serif 
+=light
+	font-family: "HelveticaNeue Light", Helvetica, sans-serif 
 
-audio,
-canvas,
-img,
-svg,
-video
-	vertical-align: middle
 
-fieldset
-	border: 0
-	margin: 0
-	padding: 0
 
-textarea
-	resize: vertical
-	overflow: auto
-	vertical-align: top
-
-ul
-	list-style: none
-
-table
-	border-collapse: collapse
-	border-spacing: 0
-
-img
-	border: 0
-
-+iphone
-	*
-		-webkit-text-size-adjust: none
-
-audio:not([controls])
-	display: none
-	height: 0
-
-[hidden],
-template
-	display: none
-
+//reset
+h1, h2, h3, h4, h5, h6, strong, b
+	font-weight: normal
+	line-height: 1.2
 a
-	outline: 0
-	background: transparent
-	&:focus
-		outline: 0
-	&:active,
-	&:hover
-		outline: 0
+	text-decoration: none
 
-abbr[title]
-	border-bottom: 1px dotted
 
-b,
-strong
-	font-weight: bold
+h4
+	color: #333333
+	+reg
+	font-size: 18px 
 
-dfn
-	font-style: italic
+h6
+	+bold
+	font-size: 13px
+	color: #424e55 
 
-hr
-	-moz-box-sizing: content-box
-	box-sizing: content-box
-	height: 0
-
-mark
-	background: #ff0
-	color: #000
-
-code,
-kbd,
-pre,
-samp
-	font-family: monospace, serif
-	font-size: 1em
-
-pre
-	white-space: pre-wrap
-
-q
-	quotes: "\201C" "\201D" "\2018" "\2019"
-
-small
-	font-size: 80%
-
-sub,
-sup
-	font-size: 75%
-	line-height: 0
+	
+.btn-menu
+	width: 30px
+	height: 30px
+	background: #0eb0ea
+	+border-radius(2px)
 	position: relative
-	vertical-align: baseline
-
-sup
-	top: -0.5em
-
-sub
-	bottom: -0.25em
-
-svg:not(:root)
-	overflow: hidden
-
-figure
-	margin: 0
-
-fieldset
-	border: 1px solid #c0c0c0
-	margin: 0 2px
-	padding: 0.35em 0.625em 0.75em
-
-legend
-	border: 0
-	padding: 0
-
-button,
-input,
-select,
-textarea
-	font-family: inherit
-	font-size: 100%
-	margin: 0
-
-button,
-input
-	line-height: normal
-
-button,
-select
-	text-transform: none
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"]
-	-webkit-appearance: button
+	&:active
+		top: 1px
+	span
+		border-top: 2px solid #fff
+		border-bottom: 2px solid #fff
+		padding: 3px 0
+		display: block
+		width: 80% 
+		margin: 0 auto
+		&:before
+			content: "" 
+			width: 100%
+			height: 2px
+			background: #fff
+			display: block 
+	
+.btn
+	+reg
+	font-size: 12px
+	color: #fff
+	background: #0eb0ea
+	+border-radius(2px)  
+	display: inline-block
+	vertical-align: top
+	padding: 8px 14px
+	+box
+	position: relative
+	&:active
+		top: 1px
+	&_black
+		background: #434e55 
+		
+.select
+	position: relative
 	cursor: pointer
+	color: #333333
+	+reg
+	font-size: 12px
+	text-align: left
+	select
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+	&.is-active
+		.select__text
+			+border-radius(2px 2px 0 0)
+.select__text
+	position: relative
+	display: block
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	background-color: #fff
+	padding: 6px 27px 6px 10px
+	+box 
+	border: 1px solid #d7d7d7
+	+border-radius(2px)
+	height: 30px
+	z-index: 2 
+	&:after
+		content: ""
+		position: absolute
+		right: 9px
+		top: 50%
+		margin-top: -2px
+		+arr(8, 4, #999999, b)
+.select__list
+	position: absolute
+	display: none
+	left: 0
+	right: 0
+	top: 100%
+	z-index: 200
+	max-height: 200px 
+	overflow: auto
+	border: 1px solid #d7d7d7
+	border-top: none
+	+border-radius(0 0 2px 2px)
+	background: #fff 
+	li
+		padding: 6px 10px 6px 10px
+		cursor: pointer
+		
+.input, .textarea
+	background-color: #fff
+	padding: 7px 27px 7px 10px
+	+box 
+	border: 1px solid #d7d7d7
+	+border-radius(2px)
+	width: 100%
+	color: #333333
+	+reg
+	font-size: 12px
+	+placeholder-color(#999999)
+	&.error
+		border-color: #f44336
+.textarea
+	height: 110px
+	resize: none
 
-button[disabled],
-html input[disabled]
-	cursor: default
-
-input[type="checkbox"],
-input[type="radio"]
-	box-sizing: border-box
-	padding: 0
-
-input[type="search"]
-	-webkit-appearance: textfield
-	-moz-box-sizing: content-box
-	-webkit-box-sizing: content-box
-	box-sizing: content-box
-
-input[type="search"]::-webkit-search-cancel-button
-input[type="search"]::-webkit-search-decoration
-	-webkit-appearance: none
-
-button::-moz-focus-inner,
-input::-moz-focus-inner
-	border: 0
-	padding: 0
-
-input[type="submit"]::-moz-focus-inner
-	padding: 0
-	border: 0
+.label
+	+bold
+	font-size: 12px
+	color: #333333 
+	a
+		color: #0096db
+		display: block 
+.checkbox
+	display: inline-block
+	vertical-align: top
+	position: relative
+	+reg
+	font-size: 12px
+	color: #333 
+	padding: 2px 0 2px 30px 
+	cursor: pointer
+	+user-select(none)
+	input
+		visibility: hidden
+		+opacity(0)
+		position: absolute
+		top: 0
+		left: 0
+		&:checked + span
+			&:after
+				top: 5px
+				visibility: visible
+				+opacity(1)
+	span
+		&:before, &:after
+			content: "" 
+			position: absolute
+		&:before
+			border: 1px solid #d7d7d7
+			+border-radius(2px)
+			width: 20px
+			height: 20px
+			+box
+			background: #fff
+			top: 0
+			left: 0
+		&:after
+			top: 2px
+			left: 5px
+			+s(checkbox)
+			visibility: hidden
+			+opacity(0)
+			+transition(all 0.3s)
+			
+.reset
+	+reg
+	font-size: 12px
+	color: #333 	
+	padding: 8px 0
+	cursor: pointer
+	background: none

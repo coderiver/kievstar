@@ -1,196 +1,159 @@
-$(document).ready(function() {
+head.ready(function() {
 
-	$('.js-select').selectmenu();
-
-	$('input, textarea').placeholder();
-
-	$('.box_slide > .box__headline').click(function (event) {
-		jQuery('.box_slide > .box__content').slideToggle();
-		jQuery('.box_slide').toggleClass('is-active');
-		return false;
-	});
-
-
-	// tabs
-	$(".js-tabs-pane").removeClass("is-visible");
-	$(".js-tabs-nav li:first").addClass("is-active");
-	$(".js-tabs-pane:first").addClass("is-visible");
-
-	$(".js-tabs-nav li").click(function() {
-		$(".js-tabs-nav li").removeClass("is-active");
-		$(this).addClass("is-active");
-		$(".js-tabs-pane").removeClass("is-visible");
-		var activeTab = $(this).find("a").attr("href");
-		$(activeTab).addClass("is-visible");
-		return false;
-	});
-
-	// //scroll to navbar
-	// var nav = $('.js-navbar');
-	// var top = nav.offset().top;
-
-	// $(".js-navbar a").click(function (){
-	// 	var page = $(this).attr("href");
-
-	// 	$('html, body').animate({
-	// 		scrollTop: $(page).offset().top - nav.outerHeight()
-	// 	}, 500);
-	// 	return false;
+	// $(document).on("click", function(){
+	// 	$(".js-popup").hide();
 	// });
 
+	// function scrollFixedElements() {
+	//     var scroll_left = $(this).scrollLeft();
+	//     $(".fixed-element").css({
+	//         left: -scroll_left
+	//     });
+	// }
+	// scrollFixedElements();
 	// $(window).scroll(function(){
-	// 			var windowpos = $(window).scrollTop();
-
-	// 			if(windowpos < top) {
-	// 				nav.removeClass('is-fixed');
-	// 				$('body').removeClass('is-navbar-fixed');
-	// 			} else {
-	// 				nav.addClass('is-fixed');
-	// 				$('body').addClass('is-navbar-fixed');
-	// 			}
+	//     scrollFixedElements()
 	// });
-
-	
-
-	// $('.star').raty();
-
-
-
-
-
-
-
-	// popup
-	jQuery('.profile__login').click(function(event) {
-		jQuery('.popup').addClass('is-active');
-		jQuery('.overlay').addClass('is-active');
-		return false;
-	});
-	jQuery('.popup__close, .overlay').click(function(event) {
-		jQuery('.popup').removeClass('is-active');
-		jQuery('.overlay').removeClass('is-active');
+	//menu mob
+	$('.js-menu-btn').on('click', function() {
+		$('.js-menu').toggleClass('is-active');
 		return false;
 	});
 
-		
 	//select
-	function select() {
-		var el = $('.js-select-other');
-		var el_title = el.children("span");
-		var item = el.find('li');
-		var input = el.find(".js-select-input");
-		var el_text = el.find(".js-select-text");
-		var checkbox = el.find(".checkbox");
-		var list = el.find('.js-select-drop');
-		el_title.bind("click",function(event){
-			tooltip();
-			if ($(this).parent().hasClass('is-open')) {
-				$(this).parent().removeClass('is-open');
-				$(this).parent().parent().parent().removeClass('is-open');
-			}
-			else {
-				el.removeClass('is-open');
-				$('.row').removeClass('is-open')
-				$(this).parent().addClass('is-open');
-				$(this).parent().parent().parent().addClass('is-open');
-			};
-			event.stopPropagation();
-		});
-		checkbox.bind("click",function(event){
-			event.stopPropagation();
-		});
-		item.bind("click",function(){
-			$(this).toggleClass("is-selected");
-			var text = $(this).html();
-			var id = $(this).attr("data-id");
-			$(this).parents(".js-select-other").find(".js-select-text").html(text);
-			$(this).parents(".js-select-other").find(".js-select-input").val(id);
-	 });
-		item.click(function(){
-			$(this).parent().parent().parent().addClass("is-select");
-		})
-	};
-	select();
+	 $(document).click(function() {
+        $(".js-select").removeClass("is-active");
+	      $(".js-select-list").slideUp(100);
+    });
+    
+	// select list
+    $("body").on("click",".js-select",function(event) {
+        event.stopPropagation();
+    });
+    $("body").on("click",".js-select-text",function(event) {
+    	var select = $(this).parents(".js-select");
+        if (select.hasClass("is-active")) {
+            $(".js-select").removeClass("is-active");
+            $(".js-select-list").slideUp(100);
+        }
+        else {
+            $(".js-select").removeClass("is-active");
+            $(".js-select-list").slideUp(100);
+            select.toggleClass("is-active").find(".js-select-list").slideToggle(100);
+        }
+       
+    });
 
-	// if($(".js-select-input").val("change")){
-	// 	$(this).parent().addClass("is-select");
-	// };
+    $("body").on("click",".js-select-list li",function() {
+        var val = $(this).attr("data-val");
+        var text = $(this).text();
+        var select = $(this).parents(".js-select");
+        var selectList = $(this).parents(".js-select-list");
+        select.find(".js-select-text").text(text);
+        select.find("option").removeAttr("selected");
+        select.find('option[value="'+val+'"]').attr("selected", "selected");
+        selectList.find("li").removeClass("is-active");
+        $(this).addClass("is-active");
+        select.removeClass("is-active");
+        selectList.slideUp(100);
+        return false;
+        
+    });
 
-	//click document
-	$(document).click(function() {
-		$('.js-select-other').removeClass('is-open');
-		$(".search__form").removeClass("is-active");
-	});
-
-	// for tag
-	$('.tag .icon_cross').click(function() {
-	  $(this).parent().fadeOut(100);
-	})
-
-	if($('#slider-range-min').length>1){
-		  $( "#slider-range-min" ).slider({
-		    range: "min",
-		    value: 173,
-		    min: 0,
-		    max: 1000,
-		    slide: function( event, ui ) {
-		      $( "#amount" ).val(ui.value + " грн");
-		    }
-		  });
-		  $( "#amount" ).val($( "#slider-range-min" ).slider( "value" ) + " грн");
-	  }
-
-	function tooltip() {
-		var btn = $('.js-tooltip');
-		var box = $('.js-tooltip-box');
-		var box_content = box.find('.box__content');		
-		btn.bind('click', function(){
-			var text = $(this).attr('data-tooltip');
-			box_content.html(text);
-			//slide
-			var pos_top = $(this).position().top;
-			box.css('top', pos_top);
-		});
-	}
-	tooltip();
-
-
-	$('.star').raty({
-		path      : 'img/icons',
-		// size      : 24,
-		starHalf  : 'star-on.png',
-		starOff   : 'star-off.png',
-		starOn    : 'star-on.png',
-		// target    : '#function-hint',
-		cancel    : false,
-		targetKeep: true,
-		precision : true
-	});
-
-	$(".search__input").focus(function (){
-		$(this).parent().parent().addClass("is-active");
-	});
-		
-	$( ".search__form" ).click(function( event ) {
-	  event.stopPropagation();
-	});
-	$(".js-theme").on('click', function(){
-		$(".js-theme").removeClass('is-active');
-		$(this).addClass('is-active');
-		$('.js-popup-overlay').addClass('is-active');
-	});
-	$('#mysite-form').validate();
-	// $('#site-email, #site-name').on('change', function (){
-	// 	$('#js-btn-mysite').removeAttr("disabled");
-	// });
-	function buttondisabled() {
-		$('#site-email, #site-name').on('input', function (){
-			var nameLength = $('#site-name').val().length;
-			var emailLength = $('#site-email').val().length;
-			if ((nameLength || emailLength) > 0) {
-				$('#js-btn-mysite').removeAttr("disabled");
-			};
-		});
-	}
-	buttondisabled();
+    //feedback
+    $('.js-feedback').each(function() {
+        $('.js-feedback-btn').on('click', function() {
+            $(this).parents('.js-feedback').toggleClass('is-active');
+            return false;
+        });
+        $('body').on('click', function() {
+            $('.js-feedback').removeClass('is-active');
+        });
+        $('.js-feedback-close').on('click', function() {
+            $('.js-feedback').removeClass('is-active');
+        });
+        $(this).on('click', function(event) {
+            event.stopPropagation();
+        });
+    });
+    //tooltip
+    $('.js-tooltip').on('click', function() {
+        tooltip = $(this).offset();
+        tooltipblock = $('.js-tooltip-block').offset();
+        tooltipbox = $('.js-tooltip-box');
+        tooltipbox.css('top', tooltip.top - tooltipblock.top);   
+        var text = $(this).attr('data-tooltip');
+        tooltipbox.find('.help__body p').html(text);         
+    });
+    //field dropdown
+    $('.js-field').each(function() {
+        $('.js-field-input').on('click', function() {
+            $(this).parents('.js-field').find('.js-field-drop').addClass('is-active');
+        });        
+        $('body').on('click', function() {
+            $('.js-field-drop').removeClass('is-active');
+        });
+        $(this).on('click', function(event) {
+            event.stopPropagation();
+        });
+    });
+    //regions
+    $('.js-region').each(function() {
+        $(this).find('.checkbox').on('click', function () {
+            $(this).parents('.js-region').find('.input').val($(this).text());
+        });
+    });
+    //validate
+    $(".js-form").validate({
+        rules: {
+            firstname: "required",
+            lastname: "required",
+            description: {
+                required: true,
+                minlength: 100,
+                maxlength: 4000
+            },
+            heading: {
+                required: true,
+                minlength: 1
+            },
+            category: {
+                required: true,
+                minlength: 1
+            },
+            region: {
+                required: true,
+                minlength: 1
+            },
+            email: {
+                required: true,
+                minlength: 1
+            },
+            agree: "required"
+        },
+        messages: {
+            heading: {
+                required: "Ошибка: Вашему объявлению нужен заголовок",
+                minlength: "Ошибка: Вашему объявлению нужен заголовок"
+            },
+            category: {
+                required: "Ошибка: Выберите категорию",
+                minlength: "Ошибка: Выберите категорию"
+            },
+            description: {
+                required: "Ошибка: Ваше объявление нуждается в описании",
+                minlength: "Ошибка: Ваше объявление нуждается в описании"
+            },
+            region: {
+                required: "Ошибка: Выберите регион",
+                minlength: "Ошибка: Выберите регион"
+            },
+            email: {
+                required: "Ошибка: Введите свой email",
+                minlength: "Ошибка: Введите свой email"
+            },
+            email: "Ошибка: Введите свой email",
+            agree: "Please accept our policy"
+        }
+    });
 });
