@@ -166,20 +166,18 @@ head.ready(function() {
     });
 
     //drop arr
-    $('.js-drop').each(function() {
-        $('.js-drop-left').on('click', function () {
-            $(this).parents('.js-drop').find('.js-drop-block').css({
-                right: '-33%',
-                left: 0
-            });
-            return false;
-        });
-        $('.js-drop-right').on('click', function () {
-            $(this).parents('.js-drop').find('.js-drop-block').css({
-                left: '-33%',
-                right: '0'
-            });
-            return false;
-        });
+    $('.js-drop-left').on('click', function () {
+        $('.js-drop-block').animate({ "left": "+=33%" });
+        if ($('.js-drop-block').offset().left >=! '0%') {
+            $('.js-drop-left').hide();
+        };
+        return false;
+    });
+    $('.js-drop-right').on('click', function () {
+        $('.js-drop-block').animate({ "left": "-=33%" });
+        if ($('.js-drop-block').offset().left > '0') {
+            $('.js-drop-left').show();
+        };
+        return false;
     });
 });

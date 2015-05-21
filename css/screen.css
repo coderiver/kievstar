@@ -203,7 +203,7 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 @media only screen and (max-width: 900px) { .field__drop { width: 100%; } }
 .field__drop.is-active { display: block; }
 .field__lists-wrap { overflow: hidden; }
-.field__lists { position: relative; }
+.field__lists { position: relative; left: 0; }
 @media only screen and (max-width: 500px) { .field__lists { height: 200px; overflow: auto; } }
 .field__list { width: 33.3%; display: inline-block; vertical-align: top; border-right: 1px solid #d7d7d7; overflow: auto; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 @media only screen and (max-width: 500px) { .field__list { width: 100%; height: auto; overflow: visible; border: none; border-bottom: 1px solid #d7d7d7; } }
@@ -229,8 +229,9 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .field label.error { display: block; margin-top: -1px; font-size: 12px; color: white; background: #f44336; -moz-border-radius: 0 0 2px 2px; -webkit-border-radius: 0; border-radius: 0 0 2px 2px; padding: 10px; z-index: 100; }
 .field .help.is-files { left: 100%; top: 50%; -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 .field__arr { position: absolute; top: 50%; width: 50px; height: 50px; margin-top: -50px; border: 1px solid #eeeeee; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background: white; }
+@media only screen and (max-width: 500px) { .field__arr { display: none; } }
 .field__arr:before { content: ""; position: absolute; top: 50%; left: 50%; margin: -17px 0 0 -17px; }
-.field__arr.is-left { left: -50px; border-right: none; }
+.field__arr.is-left { left: -50px; border-right: none; display: none; }
 .field__arr.is-left:before { background: url('../img/icons-s63f580211c.png') 0 -318px no-repeat; width: 34px; height: 34px; }
 .field__arr.is-left:hover:before { background: url('../img/icons-s63f580211c.png') 0 -274px no-repeat; width: 34px; height: 34px; }
 .field__arr.is-right { right: -50px; border-left: none; }

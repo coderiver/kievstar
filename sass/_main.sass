@@ -469,6 +469,7 @@
 		overflow: hidden
 	&__lists
 		position: relative
+		left: 0
 		+r(500)
 			height: 200px
 			overflow: auto
@@ -587,6 +588,8 @@
 		border: 1px solid #eee
 		+box
 		background: #fff 
+		+r(500)
+			display: none
 		&:before
 			content: ""
 			position: absolute
@@ -596,6 +599,7 @@
 		&.is-left
 			left: -50px
 			border-right: none
+			display: none
 			&:before
 				+s(left)
 			&:hover
