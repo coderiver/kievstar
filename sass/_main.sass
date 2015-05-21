@@ -432,6 +432,12 @@
 	&__inner
 		margin-bottom: 10px
 		+clr
+	&__price
+		float: left
+		font-size: 12px
+		+reg
+		margin: 6px 10px 6px 0
+		color: #0096db 
 	&_newspaper
 		.textarea
 			+border-radius(2px 2px 0 0)
@@ -443,17 +449,26 @@
 		position: absolute
 		font-size: 0
 		top: 100%
-		left: 0
-		right: 0
+		left: 50%
+		+translateX(-50%)
+		width: 190%
 		z-index: 200
 		background: #fff
 		+box-shadow(0 2px 5px rgba(0, 0, 0, 0.5))  
-		padding: 10px 
+		padding: 20px 
 		margin-top: 5px
 		display: none
+		+box
+		&_region
+			width: 100%
+		+r(900)
+			width: 100%
 		&.is-active
 			display: block
+	&__lists-wrap
+		overflow: hidden
 	&__lists
+		position: relative
 		+r(500)
 			height: 200px
 			overflow: auto
@@ -462,7 +477,6 @@
 		display: inline-block
 		vertical-align: top
 		border-right: 1px solid #d7d7d7 
-		height: 200px
 		overflow: auto
 		+box
 		+r(500)
@@ -471,6 +485,24 @@
 			overflow: visible
 			border: none
 			border-bottom: 1px solid #d7d7d7
+		&.is-child
+			position: absolute
+			top: 0
+			bottom: 0 
+			+r(500)
+				position: static
+			&:nth-child(2)
+				left: 33.3%
+			&:nth-child(3)
+				left: 66.6%
+			&:nth-child(4)
+				left: 99.9%
+			&:nth-child(5)
+				left: 133.2%
+			&:nth-child(6)
+				left: 166.5%
+			&:nth-child(7)
+				left: 199.8%
 		li
 			color: #0094df
 			cursor: pointer
@@ -533,10 +565,7 @@
 					width: 100%
 	label
 		&.error
-			position: absolute
-			top: 100%
-			left: 0
-			right: 0
+			display: block
 			margin-top: -1px
 			font-size: 12px
 			color: #fff
@@ -544,7 +573,42 @@
 			+border-radius(0 0 2px 2px)
 			padding: 10px
 			z-index: 100  
-				 
+	.help
+		&.is-files
+			left: 100%
+			top: 50%
+			+translateY(-50%)	
+	&__arr
+		position: absolute
+		top: 50%
+		width: 50px
+		height: 50px
+		margin-top: -50px
+		border: 1px solid #eee
+		+box
+		background: #fff 
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -17px 0 0 -17px 
+		&.is-left
+			left: -50px
+			border-right: none
+			&:before
+				+s(left)
+			&:hover
+				&:before
+					+s(left-hover)
+		&.is-right
+			right: -50px
+			border-left: none
+			&:before
+				+s(right)
+			&:hover
+				&:before
+					+s(right-hover)
 .message
 	padding: 10px 10px 10px 50px
 	position: relative

@@ -129,12 +129,20 @@ head.ready(function() {
                 required: true,
                 minlength: 1
             },
+            email: {
+                required: true,
+                minlength: 1
+            },
             agree: "required"
         },
         messages: {
             heading: {
                 required: "Ошибка: Вашему объявлению нужен заголовок",
                 minlength: "Ошибка: Вашему объявлению нужен заголовок"
+            },
+            price: {
+                required: "Ошибка: Введите сумму",
+                minlength: "Ошибка: Введите сумму"
             },
             category: {
                 required: "Ошибка: Выберите категорию",
@@ -155,5 +163,23 @@ head.ready(function() {
             email: "Ошибка: Введите свой email",
             agree: "Please accept our policy"
         }
+    });
+
+    //drop arr
+    $('.js-drop').each(function() {
+        $('.js-drop-left').on('click', function () {
+            $(this).parents('.js-drop').find('.js-drop-block').css({
+                right: '-33%',
+                left: 0
+            });
+            return false;
+        });
+        $('.js-drop-right').on('click', function () {
+            $(this).parents('.js-drop').find('.js-drop-block').css({
+                left: '-33%',
+                right: '0'
+            });
+            return false;
+        });
     });
 });
