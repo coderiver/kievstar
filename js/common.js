@@ -171,12 +171,18 @@ head.ready(function() {
         if ($('.js-drop-block').offset().left >=! '0%') {
             $('.js-drop-left').hide();
         };
+        if ($('.js-drop-block').offset().left < '0') {
+            $('.js-drop-right').show();
+        };
         return false;
     });
     $('.js-drop-right').on('click', function () {
         $('.js-drop-block').animate({ "left": "-=33%" });
         if ($('.js-drop-block').offset().left > '0') {
             $('.js-drop-left').show();
+        };
+        if ($('.js-drop-block').offset().left < '0') {
+            $('.js-drop-right').hide();
         };
         return false;
     });
