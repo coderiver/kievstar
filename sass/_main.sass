@@ -873,3 +873,195 @@
 	&__text
 		margin-bottom: 8px
 		
+
+//landing
+.land
+	&__promo
+		background: #00b0eb
+		position: relative
+		+vertical
+		height: 500px
+		color: #fff 
+		&:after
+			content: "" 
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: url(../img/promo-bg.jpg) no-repeat
+			+cover
+			background-position: top center 
+			+opacity(0.15) 
+		.land__inner
+			display: inline-block
+			vertical-align: middle
+			width: 100%
+			text-align: left
+		span
+			+light
+			font-size: 30px
+			letter-spacing: 0.025em 
+			line-height: 1.2
+			display: block
+			margin-bottom: 30px
+		p
+			+reg
+			font-size: 12px
+			letter-spacing: 0.025em 
+			line-height: 1.2
+			max-width: 440px
+		&-btn
+			padding: 20px 0 
+			color: #fff 
+			.btn
+				width: 150px
+				margin-right: 20px
+			p
+				+reg
+				font-size: 12px
+				letter-spacing: 0.025em 
+				line-height: 1.2
+				display: inline-block
+				vertical-align: top
+				padding: 13px 0 
+	&__inner
+		position: relative
+		z-index: 2
+		max-width: 980px
+		padding: 0 20px
+		margin: 0 auto
+		+box
+		+clr
+		+r(900)
+			padding: 0 12px 
+	h5
+		margin-bottom: 20px
+	&__row
+		padding: 40px 0 10px
+		.land__list
+			li
+				width: 33.3%
+				+r(700)
+					width: 100%
+	&__list
+		margin: 0 -10px 
+		font-size: 0
+		i
+			display: block
+			width: 40px
+			height: 40px
+			background: #00b0eb
+			+border-radius(50%) 
+			position: relative
+			margin: 0 0 20px 
+			&:before
+				content: "" 
+				position: absolute
+				top: 50%
+				left: 50%
+				margin: -6px 0 0 -6px 
+				+s(ok)
+		li
+			+reg
+			font-size: 12px
+			line-height: 16px
+			color: #666 
+			display: inline-block
+			vertical-align: top
+			width: 100%
+			padding: 0 10px 30px
+			+box 
+	&__work
+		background: #00B0EB 
+		padding: 40px 0 20px 
+		position: relative
+		+box
+		min-height: 720px 
+		h5
+			color: #fff
+		.land__box
+			float: right
+			padding-left: 10px
+			+r(800)
+				padding: 0
+		.land__list
+			li
+				color: #fff
+				span
+					display: block
+					font-size: 16px
+					width: 40px
+					height: 40px
+					line-height: 42px
+					text-align: center
+					background: #fff 
+					color: #00b0eb
+					+border-radius(50%) 
+					position: relative
+					margin: 0 0 20px
+
+	&__left
+		font-size: 0
+		padding: 40px 0 0
+		position: absolute
+		top: 40px
+		left: 0
+		text-align: center
+		width: 54%
+		max-width: 870px
+		z-index: 3 
+		+r(1300)
+			width: 60%
+		+r(800)
+			width: 100%
+			position: static
+			padding: 0 0 20px 
+		img
+			margin-bottom: 20px
+			max-width: 100%
+	&__box
+		width: 33.3%
+		+box
+		+r(800)
+			width: 100%
+	&__start		
+		background: #00b0eb
+		position: relative
+		color: #fff 
+		text-align: center
+		padding: 40px 0 20px 
+		&:after
+			content: "" 
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: url(../img/land-start.png) no-repeat
+			+cover
+			background-position: center center 
+			+opacity(0.15) 
+		h5
+			color: #fff 
+		p
+			max-width: 400px
+			margin: 0 auto 
+	&__footer
+		padding: 40px 0 15px
+		background: #f7f8fb
+	&__partners
+		font-size: 0
+		div
+			display: inline-block
+			vertical-align: top
+			max-width: 160px
+			margin: 0 20px 20px 0
+			a
+				display: block
+			img
+				margin-bottom: 10px
+			p
+				color: #666666 
+				font-size: 11px
+				+reg

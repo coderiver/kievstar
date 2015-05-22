@@ -84,7 +84,10 @@ h4
 	color: #333333
 	+reg
 	font-size: 18px 
-
+h5
+	+reg
+	font-size: 20px
+	color: #333333 
 h6
 	+bold
 	font-size: 13px
@@ -124,11 +127,17 @@ h6
 	padding: 8px 14px
 	+box
 	position: relative
+	text-align: center
 	&:active
 		top: 1px
 	&_black
 		background: #434e55 
-		
+	&_big
+		padding: 12px 20px
+		letter-spacing: 0.025em 
+	&_green
+		background: #88f238
+		color: #434e55  
 .select
 	position: relative
 	cursor: pointer

@@ -181,9 +181,12 @@ head.ready(function() {
         if ($('.js-drop-block').offset().left > '0') {
             $('.js-drop-left').show();
         };
-        if ($('.js-drop-block').offset().left < '0') {
+        if ($(".field__lists-wrap").offset().left !== $(".field__list:last-child").offset().left) {
             $('.js-drop-right').hide();
         };
+        // if ($('.js-drop-block').offset().left < '0') {
+        //     $('.js-drop-right').hide();
+        // };
         return false;
     });
 });
