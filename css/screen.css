@@ -196,9 +196,11 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .field .file span:before { top: 0; bottom: 0; left: 50%; width: 4px; margin-left: -2px; }
 .field .file span:after { left: 0; right: 0; top: 50%; height: 4px; margin-top: -2px; }
 .field__mail { max-width: 220px; float: left; width: 100%; margin: 0 20px 0 0; position: relative; }
+@media only screen and (max-width: 500px) { .field__mail.is-price { width: 200px; } }
 .field__checkbox { float: left; padding: 5px 0 5px 0; }
 .field__inner { margin-bottom: 10px; *zoom: 1; }
 .field__inner:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 500px) { .field__inner .field__checkbox { float: none; clear: both; } }
 .field__price { float: left; font-size: 12px; font-family: "HelveticaNeue Roman", Helvetica, sans-serif; margin: 6px 10px 6px 0; color: #0096db; }
 .field_newspaper .textarea { -moz-border-radius: 2px 2px 0 0; -webkit-border-radius: 2px; border-radius: 2px 2px 0 0; height: 60px; }
 .field_btns .btn { margin-right: 20px; }

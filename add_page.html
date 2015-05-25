@@ -221,9 +221,24 @@
 								<div class="field">
 									<label>
 										<span class="label">Краткое описание:</span>
-										<textarea name="" id="" cols="30" rows="10" minlength="100" maxlength="4000" class="textarea js-tooltip" data-tooltip="text3"></textarea>
+										<textarea name="" id="" cols="30" rows="10" minlength="100" maxlength="4000"  required name="text" class="textarea js-tooltip" data-tooltip="text3"></textarea>
 									</label>									
 								</div>
+								<div class="field">
+									<span class="label">Ціна:</span>
+									<div class="field__inner">
+										<div class="field__mail is-price">
+											<input type="text" class="input js-tooltip" data-tooltip="text5" required name="price">
+										</div>
+										<a href="#" class="field__price">грн</a>
+										<div class="field__checkbox">
+											<label class="checkbox">
+												<input type="checkbox">
+												<span>Торг</span>
+											</label>
+										</div>
+									</div>	
+								</div>	
 								<div class="field js-field js-region">
 									<span class="label">Регион:</span>
 									<input type="text" class="input js-tooltip js-field-input" name="region" data-tooltip="text4" required>
@@ -261,22 +276,7 @@
 											<a href="#">Скасувати</a>
 										</div>
 									</div>
-								</div>
-								<div class="field">
-									<span class="label">Ціна:</span>
-									<div class="field__inner">
-										<div class="field__mail">
-											<input type="text" class="input" required name="price">
-										</div>
-										<a href="#" class="field__price">грн</a>
-										<div class="field__checkbox">
-											<label class="checkbox">
-												<input type="checkbox">
-												<span>Торг</span>
-											</label>
-										</div>
-									</div>	
-								</div>		
+								</div>	
 								<div class="field">
 									<span class="label">Изображения:</span>
 									<div class="field__row">

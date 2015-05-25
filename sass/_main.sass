@@ -426,12 +426,19 @@
 		width: 100%
 		margin: 0 20px 0 0 
 		position: relative
+		&.is-price
+			+r(500)
+				width: 200px 
 	&__checkbox
 		float: left
 		padding: 5px 0 5px 0 
 	&__inner
 		margin-bottom: 10px
 		+clr
+		.field__checkbox
+			+r(500)
+				float: none
+				clear: both
 	&__price
 		float: left
 		font-size: 12px
