@@ -6,6 +6,7 @@
 	padding: 0 20px
 	margin: 0 auto
 	+clr
+	position: relative
 	+r(900)
 		padding: 0 12px 
 .header
@@ -91,7 +92,10 @@
 		+r(900)
 			display: block
 		+r(400)
-			margin: 25px 0 0 
+			margin: 25px 0 0
+			position: absolute
+			top: 0
+			right: 0
 .logo
 	float: left
 	margin: 9px 40px 10px 0 
@@ -117,7 +121,11 @@
 	padding: 33px 0 10px 9px
 	+box
 	+r(400)
-		display: none
+		float: none
+		clear: both
+		border: none
+		height: auto
+		padding: 5px 0 10px
 	&__inner
 		position: relative
 		padding: 0 15px 0 0 
@@ -142,7 +150,11 @@
 		top: 100%
 		left: 0
 		right: 0
-		display: none
+		display: none		
+		z-index: 10
+		margin: 0 -5px
+		padding: 0 5px
+		background: #fff 
 		
 //main
 .main
@@ -889,6 +901,17 @@
 
 //landing
 .land
+	.header
+		.logo
+			margin-right: 0
+		.btn
+			+r(900)				
+				float: right
+				margin: 25px 20px 0 7px
+			+r(400)
+				position: absolute 
+				top: 0
+				right: 0
 	&__promo
 		background: #00b0eb
 		position: relative
@@ -1072,9 +1095,204 @@
 			margin: 0 20px 20px 0
 			a
 				display: block
+				&:hover
+					img
+						+gray-zero
 			img
 				margin-bottom: 10px
+				+gray
+				+transition(all 0.3s)
 			p
 				color: #666666 
 				font-size: 11px
 				+reg
+
+.page	
+	background: #0eb0ea  
+	+border-radius(0 0 2px 2px)
+	h4
+		color: #fff 
+		margin-bottom: 24px
+	&__bottom
+		border: 1px solid rgba(255, 255, 255, 0.2)
+		padding: 20px 
+.about
+	padding: 20px 20px 7px
+	h5, p, a, li
+		color: #fff 
+	&__advertisement
+		float: right
+		width: 100%
+		max-width: 280px
+		margin-left: 25px
+		+r(800)
+			margin: 0 0 25px
+			float: none 
+	&__text
+		overflow: hidden
+		div
+			max-width: 560px
+	p, li
+		margin-bottom: 13px
+		font-size: 12px
+		b
+			+bold
+	ul
+		li
+			padding: 0 0 0 20px
+			position: relative
+			&:before
+				content: "" 
+				position: absolute
+				top: 6px
+				left: 8px
+				width: 4px
+				height: 4px
+				+border-radius(50%)
+				background: #fff  
+			span
+				display: block
+				max-width: 510px
+			small
+				display: block
+				color: #B3E5FC
+				font-size: 10px
+				line-height: 1
+.topic
+	display: block
+	border: 1px solid rgba(255, 255, 255, 0.2)
+	+border-radius(2px)
+	+transition(background 0.3s, border 0.3s)
+	position: relative
+	padding: 9px 40px 9px 9px
+	+clr 
+	margin-bottom: 10px 
+	&.is-active, &:hover
+		background: rgba(255, 255, 255, 0.2)
+		border-color: #FFF
+	&__sticker
+		position: absolute
+		top: -1px
+		right: 4px
+		background: #ffd900
+		line-height: 1 
+		width: 30px
+		text-align: center
+		z-index: 2 
+		padding: 5px 0 2px 
+		&:before, &:after
+			position: absolute
+			top: 100%
+			content: ""
+		&:before
+			left: 0
+			+arr(15, 10, #ffd900, tl)
+		&:after
+			right: 0
+			+arr(15, 10, #ffd900, tr)
+	&__img
+		width: 38px
+		height: 38px
+		font-size: 0
+		float: left
+		border: 1px solid #fff
+		margin-right: 10px
+		img
+			width: 100%
+			height: 100%
+	&__info
+		overflow: hidden
+	&__title
+		font-size: 12px
+		+reg
+		line-height: 1
+		display: block
+		margin-bottom: 8px
+	&__lines
+		width: 150px
+		border-top: 1px solid #fff
+		position: relative
+		height: 10px
+		display: block
+		&:before, &:after
+			content: "" 
+			position: absolute
+			left: 0
+			border-top: 1px solid #fff
+		&:before
+			width: 130px
+			top: 4px
+		&:after
+			width: 100px
+			bottom: 0
+
+.my
+	background: #fff
+	+border-radius(2px)
+	padding: 20px 60px  0 20px
+	+clr
+	position: relative
+	+r(500)
+		padding: 20px 20px 0 20px 
+	&__img
+		border: 1px solid #EEE
+		background: #111
+		width: 180px
+		height: 140px
+		+box
+		float: left
+		margin: 0 20px 20px 0
+		+r(700)
+			float: none
+			margin: 0 auto 20px
+		img
+			width: 100%
+			height: 100%
+	&__info
+		overflow: hidden
+		padding: 0 0 10px
+		+r(700)
+			clear: both
+			overflow: hidden 
+	&__header
+		+clr
+		margin-bottom: 15px
+	&__title
+		color: #333
+		+bold
+		font-size: 14px
+		float: left 
+		+r(500)
+			float: none
+			display: block
+	&__date
+		color: #999
+		font-size: 12px
+		+reg
+		float: right
+		padding: 1px 0 0  
+		+r(500)
+			float: none
+			display: block
+	&__text
+		max-width: 610px
+		margin-bottom: 20px
+		p
+			color: #666
+			font-size: 12px
+			+reg 
+	&__circles
+		position: absolute
+		top: 50%
+		right: 18px
+		margin-top: -10px
+		+r(500)
+			top: 40px
+		i
+			display: block
+			width: 4px
+			height: 4px
+			+border-radius(50%)
+			background: #000
+			+opacity(0.2)
+			margin: 0 0 2px 
