@@ -1132,32 +1132,58 @@
 		overflow: hidden
 		div
 			max-width: 560px
-	p, li
-		margin-bottom: 13px
-		font-size: 12px
-		b
-			+bold
-	ul
-		li
-			padding: 0 0 0 20px
-			position: relative
-			&:before
-				content: "" 
-				position: absolute
-				top: 6px
-				left: 8px
-				width: 4px
-				height: 4px
-				+border-radius(50%)
-				background: #fff  
-			span
-				display: block
-				max-width: 510px
-			small
-				display: block
-				color: #B3E5FC
-				font-size: 10px
-				line-height: 1
+		p, li
+			margin-bottom: 13px
+			font-size: 12px
+			b
+				+bold
+		ul
+			li
+				padding: 0 0 0 20px
+				position: relative
+				&:before
+					content: "" 
+					position: absolute
+					top: 6px
+					left: 8px
+					width: 4px
+					height: 4px
+					+border-radius(50%)
+					background: #fff  
+				span
+					display: block
+					max-width: 510px
+				small
+					display: block
+					color: #B3E5FC
+					font-size: 10px
+					line-height: 1
+		div
+			ul
+				padding: 0 15px 
+				font-size: 0
+				margin-bottom: 13px
+				li
+					padding: 5px 
+					margin: 0
+					display: inline-block
+					&:before
+						display: none
+					a
+						display: block
+						width: 80px
+						height: 80px
+						border: 1px solid rgba(255, 255, 255, 0.2)
+						+border-radius(2px)
+						+vertical
+						+box
+						+transition(all 0.3s)
+						&:hover
+							border-color: rgba(255, 255, 255, 0.4) 
+						img
+							display: inline-block
+							vertical-align: middle
+							max-width: 95%
 .topic
 	display: block
 	border: 1px solid rgba(255, 255, 255, 0.2)
