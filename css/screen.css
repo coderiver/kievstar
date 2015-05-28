@@ -248,6 +248,11 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .field__arr.is-right { right: -50px; border-left: none; }
 .field__arr.is-right:before { background: url('../img/icons-s63f580211c.png') 0 -427px no-repeat; width: 34px; height: 34px; }
 .field__arr.is-right:hover:before { background: url('../img/icons-s63f580211c.png') 0 -383px no-repeat; width: 34px; height: 34px; }
+.field_phone { max-width: 220px; }
+.field__phone { *zoom: 1; }
+.field__phone:after { content: " "; display: table; clear: both; }
+.field__phone span { float: left; width: 60px; text-align: center; padding: 6px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background: #ebebeb; font-family: "HelveticaNeue Roman", Helvetica, sans-serif; font-size: 12px; color: #999999; -moz-border-radius: 2px 0 0 2px; -webkit-border-radius: 2px; border-radius: 2px 0 0 2px; border: 1px solid #d7d7d7; border-right: none; }
+.field__phone .input { width: 160px; -moz-border-radius: 0 2px 2px 0; -webkit-border-radius: 0; border-radius: 0 2px 2px 0; }
 
 .message { padding: 10px 10px 10px 50px; position: relative; height: 30px; text-align: center; font-size: 0; text-align: left; }
 .message:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
