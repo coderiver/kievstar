@@ -125,7 +125,7 @@
 		clear: both
 		border: none
 		height: auto
-		padding: 5px 0 10px
+		padding: 10px 0 10px
 	&__inner
 		position: relative
 		padding: 0 15px 0 0 
@@ -155,6 +155,8 @@
 		margin: 0 -5px
 		padding: 0 5px
 		background: #fff 
+		+r(400)
+			padding: 5px  
 		
 //main
 .main
@@ -912,6 +914,9 @@
 				position: absolute 
 				top: 0
 				right: 0
+				&:active
+					margin-top: 26px
+					top: 0
 	&__promo
 		background: #00b0eb
 		position: relative
@@ -1255,11 +1260,11 @@
 .my
 	background: #fff
 	+border-radius(2px)
-	padding: 20px 60px  0 20px
+	padding: 20px 60px  20px 20px
 	+clr
 	position: relative
 	+r(500)
-		padding: 20px 20px 0 20px 
+		padding: 20px 20px 20px 20px 
 	&__img
 		border: 1px solid #EEE
 		background: #111
@@ -1267,7 +1272,7 @@
 		height: 140px
 		+box
 		float: left
-		margin: 0 20px 20px 0
+		margin: 0 20px 0 0
 		+r(700)
 			float: none
 			margin: 0 auto 20px
@@ -1276,7 +1281,7 @@
 			height: 100%
 	&__info
 		overflow: hidden
-		padding: 0 0 10px
+		padding: 0 
 		+r(700)
 			clear: both
 			overflow: hidden 
@@ -1302,23 +1307,8 @@
 			display: block
 	&__text
 		max-width: 610px
-		margin-bottom: 20px
+		margin-bottom: 10px
 		p
 			color: #666
 			font-size: 12px
 			+reg 
-	&__circles
-		position: absolute
-		top: 50%
-		right: 18px
-		margin-top: -10px
-		+r(500)
-			top: 40px
-		i
-			display: block
-			width: 4px
-			height: 4px
-			+border-radius(50%)
-			background: #000
-			+opacity(0.2)
-			margin: 0 0 2px 

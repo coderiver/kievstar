@@ -118,12 +118,13 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 @media only screen and (max-width: 900px) { .nav li { display: block; padding: 0; } }
 
 .lang { float: right; border-left: 1px solid #eeeeee; height: 79px; padding: 33px 0 10px 9px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-@media only screen and (max-width: 400px) { .lang { float: none; clear: both; border: none; height: auto; padding: 5px 0 10px; } }
+@media only screen and (max-width: 400px) { .lang { float: none; clear: both; border: none; height: auto; padding: 10px 0 10px; } }
 .lang__inner { position: relative; padding: 0 15px 0 0; width: 35px; }
 .lang__inner:after { content: ""; position: absolute; top: 6px; right: 0; background: url('../img/icons-s63f580211c.png') 0 0 no-repeat; width: 8px; height: 5px; }
 .lang__inner:hover .lang__drop { display: block; }
 .lang__link { font-family: "HelveticaNeue Medium", Helvetica, sans-serif; font-size: 10px; letter-spacing: 0.025em; color: #0eb0ea; text-transform: uppercase; }
 .lang__drop { position: absolute; top: 100%; left: 0; right: 0; display: none; z-index: 10; margin: 0 -5px; padding: 0 5px; background: white; }
+@media only screen and (max-width: 400px) { .lang__drop { padding: 5px; } }
 
 .main { padding: 20px 0 40px; }
 
@@ -324,7 +325,8 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 
 .land .header .logo { margin-right: 0; }
 @media only screen and (max-width: 900px) { .land .header .btn { float: right; margin: 25px 20px 0 7px; } }
-@media only screen and (max-width: 400px) { .land .header .btn { position: absolute; top: 0; right: 0; } }
+@media only screen and (max-width: 400px) { .land .header .btn { position: absolute; top: 0; right: 0; }
+  .land .header .btn:active { margin-top: 26px; top: 0; } }
 .land__promo { background: #00b0eb; position: relative; text-align: center; font-size: 0; height: 500px; color: white; }
 .land__promo:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .land__promo:after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: url(../img/promo-bg.jpg) no-repeat; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-position: top center; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15); opacity: 0.15; }
@@ -409,13 +411,13 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .topic__lines:before { width: 130px; top: 4px; }
 .topic__lines:after { width: 100px; bottom: 0; }
 
-.my { background: white; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding: 20px 60px 0 20px; *zoom: 1; position: relative; }
+.my { background: white; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; padding: 20px 60px 20px 20px; *zoom: 1; position: relative; }
 .my:after { content: " "; display: table; clear: both; }
-@media only screen and (max-width: 500px) { .my { padding: 20px 20px 0 20px; } }
-.my__img { border: 1px solid #eeeeee; background: #111111; width: 180px; height: 140px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; float: left; margin: 0 20px 20px 0; }
+@media only screen and (max-width: 500px) { .my { padding: 20px 20px 20px 20px; } }
+.my__img { border: 1px solid #eeeeee; background: #111111; width: 180px; height: 140px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; float: left; margin: 0 20px 0 0; }
 @media only screen and (max-width: 700px) { .my__img { float: none; margin: 0 auto 20px; } }
 .my__img img { width: 100%; height: 100%; }
-.my__info { overflow: hidden; padding: 0 0 10px; }
+.my__info { overflow: hidden; padding: 0; }
 @media only screen and (max-width: 700px) { .my__info { clear: both; overflow: hidden; } }
 .my__header { *zoom: 1; margin-bottom: 15px; }
 .my__header:after { content: " "; display: table; clear: both; }
@@ -423,8 +425,5 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 @media only screen and (max-width: 500px) { .my__title { float: none; display: block; } }
 .my__date { color: #999999; font-size: 12px; font-family: "HelveticaNeue Roman", Helvetica, sans-serif; float: right; padding: 1px 0 0; }
 @media only screen and (max-width: 500px) { .my__date { float: none; display: block; } }
-.my__text { max-width: 610px; margin-bottom: 20px; }
+.my__text { max-width: 610px; margin-bottom: 10px; }
 .my__text p { color: #666666; font-size: 12px; font-family: "HelveticaNeue Roman", Helvetica, sans-serif; }
-.my__circles { position: absolute; top: 50%; right: 18px; margin-top: -10px; }
-@media only screen and (max-width: 500px) { .my__circles { top: 40px; } }
-.my__circles i { display: block; width: 4px; height: 4px; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; background: black; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20); opacity: 0.2; margin: 0 0 2px; }
