@@ -200,4 +200,16 @@ head.ready(function() {
         };
         return false;
     });
+
+    //statistics
+    $('.s-item__call').on('click', function() {
+        if ($(this).hasClass('is-active')) {
+            $(this).parents('.s-item').find('.s-item__call').removeClass('is-active');
+        }
+        else {
+            $(this).parents('.s-item').find('.s-item__call').removeClass('is-active');
+            $(this).addClass('is-active');
+        };
+        return false;
+    });
 });
