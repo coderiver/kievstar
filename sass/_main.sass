@@ -1663,8 +1663,8 @@
 			border: 1px solid #F44336
 			background: #fff
 			+border-radius(15px)
-			padding: 4px 11px 4px 4px
-			text-align: right 
+			padding: 4px 4px 4px 4px
+			text-align: center 
 			display: inline-block
 			min-width: 55px 
 			i
@@ -1695,7 +1695,7 @@
 		float: left
 		margin-right: 20px
 		line-height: 20px
-		width: 40px
+		padding: 0 8px 
 		text-align: center
 		+r(600)
 			display: block
@@ -1709,7 +1709,8 @@
 		overflow: hidden
 		line-height: 20px
 	&__call
-		border: 1px solid #0EB0EA
+		// border: 1px solid #0EB0EA
+		border: 1px solid transparent
 		+box
 		+border-radius(15px)
 		background: #fff
@@ -1733,12 +1734,14 @@
 						right: 5px
 						bottom: 5px
 		&.is-blue
-			border-color: #0EB0EA
+			&.is-active
+				border-color: #0EB0EA
 			i
 				&:before
 					background: #0EB0EA
 		&.is-green
-			border-color: #4caf50
+			&.is-active
+				border-color: #4caf50
 			i
 				&:before
 					background: #4caf50
