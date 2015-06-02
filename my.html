@@ -17,7 +17,7 @@
 	<header class="header">
 		<div class="inner">
 			<a href="#" class="logo">
-				<img src="img/logo.png" alt="">
+				<img src="img/logo1.png" alt="">
 			</a>
 			<div class="lang">
 				<div class="lang__inner">
@@ -38,7 +38,7 @@
 						<li><a href="#">Объявления</a></li>
 					</ul>
 				</nav>
-				<button class="btn">Выход</button>
+				<button class="btn js-login-btn">Выход</button>
 				<ul class="header__list">
 					<li><a href="#">Сайт</a></li>
 					<li><a href="#">Личный кабинет</a></li>
@@ -70,8 +70,8 @@
 				<div class="tabs__block js-tabs-block">
 					<ul>
 						<li><a href="#" class="js-tabs-btn">Об услуге</a></li>
-						<li><a href="#" class="js-tabs-btn is-active">Добавить объявление</a></li>
-						<li><a href="#" class="js-tabs-btn">Мои объявления</a></li>
+						<li><a href="#" class="js-tabs-btn">Добавить объявление</a></li>
+						<li><a href="#" class="js-tabs-btn is-active">Мои объявления</a></li>
 						<li><a href="#" class="js-tabs-btn">Статистика</a></li>
 					</ul>
 				</div>
@@ -83,7 +83,7 @@
 				<div class="add">
 					<div class="add__inner">
 						<div class="add__heading">
-							<h4>Добавить объявление</h4>
+							<h4>Мои объявления</h4>
 							<a href="#" class="btn btn_large">Добавить объявление</a>
 						</div>						
 						<div class="item">
@@ -282,6 +282,31 @@
 	<!-- end footer -->
 </div>
 <!-- END out-->
+<div class="popup-wrap js-login">
+	<div class="popup-wrapper">
+		<!-- begin popup_login  -->
+		<div class="popup">
+			<div class="popup__inner">
+				<a href="#" class="popup__close js-popup-close"></a>
+				<h3>Войти в аккаунт</h3>
+				<p class="gray">Таким образом, авторские права на реферат принадлежат только вам.</p>
+				<form action="" class="popup__login">
+					<input type="text" class="input" placeholder="Электронная почта">
+					<input type="text" class="input" placeholder="Пароль">
+					<label class="checkbox checkbox-mod">
+						<input type="checkbox">
+						<span>Запомнить меня</span>
+					</label>
+					<a href="#" class="p-link">Напомнить пароль</a>
+					<button class="btn btn_blue">Войти</button>
+				</form>
+			</div>
+			<div class="popup__link">
+				<a href="#registration" class="p-link js-popup-open">Зарегистрироваться</a>
+			</div>
+		</div>
+	</div>
+</div>
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

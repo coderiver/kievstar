@@ -212,4 +212,17 @@ head.ready(function() {
         };
         return false;
     });
+    //login
+    $('.js-login-btn').on('click', function() {
+        $('.js-login').toggleClass('is-active');
+        return false;
+    });
+    $('.js-login').each(function() {
+    	$('body').on('click', function() {
+    		$('.js-login').removeClass('is-active');
+    	});	
+    	$('.popup').on('click', function(event) {
+    		event.stopPropagation();
+    	});
+    });
 });
