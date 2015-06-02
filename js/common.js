@@ -217,6 +217,10 @@ head.ready(function() {
         $('.js-login').toggleClass('is-active');
         return false;
     });
+    $('.js-popup-close').on('click', function() {
+        $('.js-login').removeClass('is-active');
+        return false;
+    });
     $('.js-login').each(function() {
     	$('body').on('click', function() {
     		$('.js-login').removeClass('is-active');
