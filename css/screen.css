@@ -520,7 +520,7 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .s-item__missed div i:before { content: ""; display: inline-block; vertical-align: middle; background: url('../img/icons-sebe9fd85ac.png') 0 -486px no-repeat; width: 8px; height: 12px; }
 .s-item__missed div span { line-height: 20px; display: block; overflow: hidden; font-family: "HelveticaNeue Roman", Helvetica, sans-serif; font-size: 12px; color: #333333; padding: 0 4px; }
 .s-item__id { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 11px; color: white; background: #0eb0ea; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; float: left; margin-right: 20px; line-height: 20px; padding: 0 8px; text-align: center; }
-@media only screen and (max-width: 600px) { .s-item__id { display: block; float: none; margin: 0 0 10px; } }
+@media only screen and (max-width: 600px) { .s-item__id { display: inline-block; float: none; margin: 0 0 10px; } }
 .s-item__title { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 14px; color: #333333; display: block; overflow: hidden; line-height: 20px; }
 .s-item__call { border: 1px solid transparent; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; background: white; *zoom: 1; position: relative; white-space: nowrap; max-width: 30px; padding: 0 0 0 28px; cursor: pointer; display: inline-block; vertical-align: top; margin: 0 10px 10px 0; overflow: hidden; }
 .s-item__call:after { content: " "; display: table; clear: both; }
