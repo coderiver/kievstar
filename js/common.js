@@ -229,4 +229,96 @@ head.ready(function() {
     		event.stopPropagation();
     	});
     });
+
+    $('.js-market-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        dots: false,
+        arrows: true
+    });
+
+    $('.js-section-slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        infinite: false,
+        responsive: [
+            {
+              breakpoint: 1140,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 960,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 680,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 510,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    });
+
+    $('body').click(function() {
+        $('.js-drop').removeClass('is-active');
+        return false;
+    });
+
+    $('.js-nav-item').click(function() {
+        $(this).toggleClass('is-active');
+        return false;
+    });
+
+    $('.js-reg-btn').click(function() {
+        $('js-register').toggleClass('is-active');
+        return false;
+    });
+
+    $('.js-popup-close').click(function() {
+        $('.js-register').removeClass('is-active');
+        return false;
+    });
+
+    $('.js-register').each(function() {
+        $('body').click(function() {
+            $('.js-register').removeClass('is-active');
+        }); 
+        $('.popup').click(function(event) {
+            event.stopPropagation();
+        });
+    });
+
+    $('.js-btn-nav').click(function(){
+        $(this).toggleClass('is-active');
+        $('.js-nav').toggleClass('is-open');
+    });
+
+    $('.js-search-mob').click(function() {
+        $(this).parent().toggleClass('is-search');
+        $('.js-search').toggleClass('is-active');
+    });
+
+    $('.js-menu-mob').click(function() {
+        $(this).toggleClass('is-active');
+        $(this).parent().toggleClass('is-tools');
+        $('.js-tools-mob').toggleClass('is-active');
+    });
+
 });

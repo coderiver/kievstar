@@ -1884,3 +1884,802 @@
 		position: absolute
 		top: 15px
 		right: 15px
+		
+
+.inner_market
+	max-width: 1350px
+	width: 100% 
+	padding: 0
+	+r(1370)
+		width: 96%
+		margin: 0 auto
+	
+.header_market
+	border: none
+	.header__top
+		+clr
+	.header__tabs
+		float: left
+		+clr
+		li
+			float: left
+			a
+				display: block
+				width: 135px
+				padding: 5px 
+				background: #FFF 
+				text-align: center
+				font-size: 12px
+				color: #5e9efc
+				+museo
+				&.is-active
+					background: #239FFF 
+					color: #FFF
+	.header__tools
+		float: right
+		padding: 5px 0
+		+clr
+		li
+			float: left
+			padding-left: 5px
+			&:after
+				content: ""
+				display: inline-block
+				vertical-align: middle
+				margin-left: 5px
+				+s(dot)
+			&:last-child
+				&:after
+					display: none
+			a
+				color: #363636
+				+museo
+				&:hover
+					text-decoration: underline
+		.lang
+			float: none
+			height: auto
+			padding: 0
+			border: none
+			a
+				padding-right: 15px
+				text-transform: none
+				font-size: 12px
+				color: #333
+				+museo
+	.header__blue-menu
+		padding: 10px
+		background: #239FFF 
+		+justify
+	.logo
+		float: none
+		display: inline-block
+		vertical-align: top
+		margin: 0
+	.header__search
+		display: inline-block
+		vertical-align: top
+		width: percentage(640/1350)
+		label
+			position: relative
+			display: block
+			width: 100% 
+			height: 40px
+			input
+				width: 100%
+				height: 40px
+				background: transparent
+				border-bottom: 1px solid #FFF 
+				color: #FFF  
+			span
+				display: block
+				position: absolute
+				top: 30%
+				right: 10px
+				+s(search)
+	.header__sell
+		display: inline-block
+		vertical-align: top
+		padding-top: 3px
+		font-size: 0
+		.sell
+			display: inline-block
+			vertical-align: top
+			padding-left: 30px
+			margin-left: 20px
+			border-left: 1px solid rgba(255, 255, 255, 0.1) 
+			&:first-child
+				border: none
+				padding: 0
+				margin: 0
+			.sell__icon
+				display: inline-block
+				vertical-align: middle
+				margin-right: 20px
+			.sell__text
+				display: inline-block
+				vertical-align: middle
+				a
+					display: block
+					font-size: 14px
+					line-height: 1.4
+					color: #FFF
+					+museo
+				p
+					display: block
+					opacity: 0.7
+					font-size: 12px
+					font-weight: 300 
+					line-height: 1.4
+					color: #FFF 
+	.header__nav
+		margin: 20px 0 10px
+		border-top: 1px solid #dfdfdf 
+		border-bottom: 1px solid #dfdfdf 
+		background: #FCFCFD
+		text-align: center 
+		> ul
+			position: relative
+			font-size: 0
+			z-index: 99999
+			> li
+				display: inline-block
+				vertical-align: middle
+				> a
+					display: block
+					padding: 10px 20px
+					font-size: 15px
+					color: #333
+					+museo
+					&:hover, &.is-active
+						margin: 0 -1px
+						border-left: 1px solid #e0e0e0 
+						border-right: 1px solid #e0e0e0
+						border-bottom: none 
+						background: #FFFEFE 
+						color: #5e9efc
+				&.is-active
+					> .header__drop
+						display: block	
+	.header__drop
+		display: none
+		position: absolute
+		top: 41px
+		left: 0
+		right: 0
+		width: 100%
+		height: 225px
+		padding: 30px 75px
+		border: 1px solid #e0e0e0
+		background: #FFF 
+		z-index: 99	
+		text-align: left
+		+clr
+		.drop-wrap
+			overflow: hidden
+			font-size: 0
+			h4
+				display: block
+				width: 45%
+				padding-bottom: 10px
+				border-bottom: 1px solid #DFDFDF
+				margin-bottom: 20px 
+				text-transform: uppercase
+				font-size: 12px
+				font-weight: 700 
+				color: #333
+				+museo
+			ul
+				display: inline-block
+				vertical-align: top
+				width: 25%
+				padding-right: 10px
+				li
+					display: block
+					margin-bottom: 10px
+					a
+						font-size: 12px
+						color: #363636
+						+museo
+						&:hover
+							text-decoration: underline
+							color: #5e9efc
+			&.top
+				float: left
+				width: 20%
+				margin-right: 25px	
+				h4
+					width: 100% 
+				ul
+					width: 100% 
+	+r(1270)
+		.header__nav
+			ul li a
+				padding: 10px 15px
+	+r(1180)
+		.header__sell
+			.sell
+				padding-left: 10px
+				margin-left: 10px
+		.header__nav
+			ul li a
+				padding: 10px 10px
+	+r(1080)
+		.header__nav
+			ul li a
+				padding: 10px 5px
+	+r(1023)
+		.header__search
+			width: 30%
+	+r(990)
+		.header__nav
+			margin: 0 0 10px 0
+			background: transparent
+			border: none 
+			ul
+				display: none
+				text-align: left
+				border: 1px solid #EEE 
+				li
+					display: block
+					a
+						padding: 10px
+				&.is-open
+					display: block
+	+r(710)
+		.header__tabs li a
+			text-align: left
+			font-size: 16px
+		.header__tools
+			display: none
+		.header__blue-menu
+			text-align: left
+			+clr
+			&.is-search
+				position: relative
+				height: 120px
+			&.is-tools
+				position: relative
+		.header__search
+			display: none
+			&.is-active
+				display: block
+				position: absolute
+				top: 60px
+				left: 10px
+				right: 10px
+				width: auto
+		.header__sell
+			display: none
+	+r(680)
+		.logo_l
+			display: none
+		.header__nav
+			display: none
+			
+.logo_s
+	display: none
+	+r(680)
+		display: inline-block
+				
+.btn-nav
+	display: none
+	position: relative
+	width: 200px
+	height: 40px
+	padding: 10px 50px 10px 10px
+	margin-top: 10px
+	border: 1px solid #EEE
+	text-align: left
+	font-size: 12px
+	color: #333
+	+reg
+	+clr
+	span
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		width: 39px
+		height: 38px
+		border-left: 1px solid #EEE 
+		+vertical
+		&:after
+			content: ""
+			display: inline-block
+			vertical-align: middle
+			+arr(6, 3, #333, b)
+	&.is-active
+		border-bottom: none
+		span:after
+			+arr(6, 3, #333, t)
+	+r(990)
+		display: block
+		
+.search-mob
+	display: none
+	float: right
+	margin: 10px 35px 0 0
+	+s(search-btn)
+	+r(710)
+		display: block
+		
+.menu-mob
+	display: none
+	float: right
+	padding: 22px 0
+	span
+		display: block
+		position: relative
+		width: 30px
+		height: 3px
+		background: #FFF
+		-webkit-transition-duration: 0s
+		transition-duration: 0s
+		-webkit-transition-delay: 0.2s
+		transition-delay: 0.2s
+		&:before, &:after
+			content: ""
+			position: absolute
+			left: 0
+			width: 30px
+			height: 3px
+			background: #FFF
+			+transition(transform, 0.2s, 0.2s 0s)
+		&:before
+			top: -9px
+		&:after
+			top: 9px
+	&.is-active
+		span
+			background: transparent 
+			-webkit-transition-delay: 0.2s 
+			transition-delay: 0.2s
+			&:before
+				top: 0
+				+rotate(45)
+			&:after
+				top: 0
+				+rotate(-45)
+	+r(710)
+		display: block
+
+.tools-mob
+	display: none
+	position: absolute
+	top: 65px
+	left: 0
+	right: 0
+	padding: 0 30px
+	border: 1px solid #dfdfdf 
+	background: #FFF 
+	z-index: 999	
+	> a
+		display: block
+		padding: 30px 0
+		border-bottom: 1px solid #dfdfdf
+		color: #5e9efc
+		font-size: 22px
+		line-height: 1
+		+museo
+	&.is-active
+		display: block
+		
+.lang-mob
+	display: block
+	padding: 10px
+	width: 100% 
+	text-align: center
+	a
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		padding: 20px 0
+		margin: 0 auto
+		color: #333
+		font-size: 20px
+		line-height: 1
+		+museo
+		&:first-child
+			border-right: 2px solid #5e9efc
+					
+.footer_market
+	.inner_market
+		padding: 0 20px
+	.footer__wrap	
+		float: left
+		width: percentage(280/1350) 
+		h3
+			font-size: 15px
+			color: #333
+			margin-bottom: 25px
+			+museo
+		ul
+			li
+				display: block
+				margin-bottom: 10px
+				a
+					color: #5e9efc
+					font-size: 12px
+					+museo
+					&:hover
+						text-decoration: underline
+	.footer__phone
+		a
+			display: block
+			margin-top: 40px
+			font-size: 20px
+			color: #333
+			+museo
+		p
+			font-size: 12px
+			color: #333
+			+museo
+	+r(1023)
+		.footer__wrap
+			width: 22%
+			margin-right: 3%
+	+r(700)
+		.footer__wrap
+			width: 31%
+			margin-right: 2%
+			&.phone
+				display: none
+	+r(380)
+		.footer__wrap
+			display: block
+			width: 100%
+			margin: 0
+			h3
+				margin-bottom: 10px
+			ul
+				display: none
+				
+.nav-mob
+	display: none
+	position: relative
+	padding: 15px 10px
+	margin-bottom: 20px
+	border: 1px solid #DFDFDF 
+	background: #FCFCFD
+	color: #333
+	font-size: 16px
+	+museo 
+	span
+		display: inline-block
+		vertical-align: middle
+		margin-right: 20px
+		+s(categories)
+	&:after
+		content: ""
+		position: absolute
+		top: 40%
+		right: 10px
+		+s(arr-categories) 
+	+r(680)
+		display: block
+
+
+.market
+	padding: 0 0 40px 
+	.market__top
+		font-size: 0
+	.market__slider
+		width: percentage(932/1350)
+		height: 410px
+		display: inline-block
+		vertical-align: top
+		.slider
+			position: relative
+			.slide
+				display: inline-block
+				vertical-align: top
+				> img
+					width: 100%
+				.slide__text
+					position: absolute
+					top: 70px
+					left: 70px
+					width: 296px 
+					color: #FFF 
+					+museo
+					h3
+						display: block
+						margin-bottom: 15px
+						font-size: 24px
+					p
+						font-size: 12px
+					a.btn_yellow
+						margin-top: 25px
+						padding: 10px 45px
+						background: #FFDB00
+						-webkit-border-radius: 20px 
+						border-radius: 20px  
+						color: #363636
+						font-size: 13px
+						+museo
+				.slide__tape
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 0
+					height: 100px
+					background-color: rgba(24, 24, 24, 0.5)
+					+vertical
+					text-align: right
+				.slide__item
+					display: inline-block
+					vertical-align: middle
+					width: 80px
+					height: 80px
+					margin: 0 25px
+					background: #FFF 
+					+vertical
+					+museo
+					img
+						display: inline-block
+						vertical-align: middle
+					p
+						display: inline-block
+						vertical-align: middle
+						color: #363636
+						font-size: 14px
+						span
+							display: block
+							color: #5e9efc
+							font-size: 18px
+			.slick-list
+				overflow: hidden
+			.slick-prev, .slick-next
+				position: absolute
+				top: 45%
+				font-size: 0
+				z-index: 999
+			.slick-prev
+				left: 20px
+				+s(prev)
+			.slick-next
+				right: 20px
+				+s(next)
+	.market__banners
+		display: inline-block
+		vertical-align: top
+		width: percentage(398/1350) 
+		margin-left: percentage(19/1350) 
+	.market__banner
+		width: 100% 
+		height: auto
+		+clr
+		+vertical
+		+museo
+		text-align: left
+		.banner-text
+			float: left
+			width: 60%
+			margin-right: -10%
+			padding: 30px 0 0 30px
+		.banner-img
+			float: right
+			width: 40% 
+			img
+				width: 100% 
+		&.banner1
+			margin-bottom: 20px
+			background: #FECC02 
+			h4
+				padding-bottom: 15px
+				font-size: 18px
+				color: #FFF 
+			p
+				width: 200px
+				color: #fdf7d8
+				font-size: 12px
+		&.banner2
+			background: #F6F6F6 
+			font-size: 18px
+			h4
+				padding-top: 30px
+				color: #363636
+			span
+				color: #949ea5
+	+r(1180)
+		.market__slider
+			width: 100% 
+			height: auto
+		.market__banners
+			display: none
+	+r(900)
+		.market__slider .slider .slide 
+			.slide__text
+				top: 50px
+			.slide__tape
+				height: 80px
+			.slide__item
+				width: 70px
+				height: 70px
+				margin: 0 5px
+				img
+					width: 100% 
+	+r(780)
+		.market__slider .slider .slide 
+			.slide__text
+				top: 30px
+	+r(680)
+		padding: 0
+		.market__slider
+			display: none
+				
+.market__section
+	padding: 40px 0
+	.slider-wrap
+		position: relative
+		padding-top: 50px
+		h2
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			margin-bottom: 20px
+			font-size: 22px
+			color: #333
+			+museo
+	.slider
+		margin-left: -20px
+		.slide
+			position: relative
+			display: inline-block
+			vertical-align: top
+			width: 245px
+			height: 160px
+			margin-left: 20px
+			border: 1px solid #EEE
+			-webkit-border-radius: 2px 
+			border-radius: 2px  
+			background: #FFF 
+			text-align: center
+			+vertical
+			.slide__img
+				display: inline-block
+				vertical-align: middle
+			.slide__top
+				position: absolute
+				top: 10px
+				right: 10px
+			.slide__bottom
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				background-color: rgba(255, 255, 255, 0.9)
+				padding: 10px
+				text-align: left
+				+museo
+				span
+					color: #2196f3
+					font-size: 14px
+				p
+					display: block
+					padding-bottom: 10px
+					border-bottom: 1px solid rgba(0, 0, 0, 0.1) 
+					margin-bottom: 10px
+					color: #999
+					font-size: 12px
+				b
+					font-size: 14px
+					color: #333
+		.slick-list
+			overflow: hidden
+		.slick-prev, .slick-next
+			position: absolute
+			top: 0
+			width: 30px
+			height: 30px
+			border: 1px solid #EEE
+			-webkit-border-radius: 2px
+			border-radius: 2px 
+			background: #FFF 
+			text-align: center
+			+vertical
+			&:after
+				content: ""
+				display: inline-block
+				vertical-align: middle
+		.slick-prev
+			left: 200px
+			&:after
+				+s(arr-prev-a)
+			&.slick-disabled
+				&:after
+					+s(arr-prev)
+		.slick-next
+			left: 230px
+			&:after
+				+s(arr-next-a)
+			&.slick-disabled
+				&:after
+					+s(arr-next)
+	+r(680)
+		padding: 20px 0 
+				
+.market__links
+	+justify
+	.market__link
+		display: inline-block
+		vertical-align: top
+		width: 32%
+		height: 160px
+		padding: 20px
+		background: #239FFF
+		-webkit-border-radius: 3px
+		border-radius: 3px
+		+vertical
+		text-align: left
+		img
+			display: inline-block
+			vertical-align: top
+			margin-right: 40px
+		p
+			display: inline-block
+			vertical-align: middle
+			text-transform: uppercase
+			font-size: 18px
+			line-height: 1
+			color: #FFF
+			+museo
+			&:after
+				content: ""
+				display: inline-block
+				margin-left: 5px
+				vertical-align: baseline
+				+s(dots) 
+		&:hover
+			p
+				color: #f5da33
+	+r(1080)
+		.market__link img
+			margin-right: 5%
+	+r(960)
+		.market__link 
+			text-align: center
+			img
+				display: none
+	+r(710)
+		display: none
+				
+.popup_enter
+	-webkit-border-radius: 10px
+	border-radius: 10px
+	label
+		text-align: left
+		p
+			margin-bottom: 5px
+		input
+			-webkit-border-radius: 10px
+			border-radius: 10px
+	.popup__enter
+		.p-link
+			float: right
+		.btn
+			-webkit-border-radius: 20px
+			border-radius: 20px
+	.popup__link
+		border: none
+		padding: 12px 20px 0
+		
+.popup_register
+	-webkit-border-radius: 10px
+	border-radius: 10px
+	label
+		display: block
+		text-align: left
+		p
+			margin-bottom: 5px
+		&.checkbox
+			margin-top: 10px
+	.popup__register
+		.btn
+			-webkit-border-radius: 20px
+			border-radius: 20px
+	.popup__link
+		border: none
+		padding: 12px 20px 0
