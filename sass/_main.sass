@@ -1887,12 +1887,10 @@
 		
 
 .inner_market
-	max-width: 1350px
-	width: 100% 
+	max-width: 100%
+	width: 96%
+	margin: 0 auto
 	padding: 0
-	+r(1370)
-		width: 96%
-		margin: 0 auto
 	
 .header_market
 	border: none
@@ -1906,7 +1904,7 @@
 			a
 				display: block
 				width: 135px
-				padding: 5px 
+				padding: 8px 
 				background: #FFF 
 				text-align: center
 				font-size: 12px
@@ -1917,7 +1915,7 @@
 					color: #FFF
 	.header__tools
 		float: right
-		padding: 5px 0
+		padding: 8px 0
 		+clr
 		li
 			float: left
@@ -1953,9 +1951,12 @@
 		+justify
 	.logo
 		float: none
-		display: inline-block
-		vertical-align: top
 		margin: 0
+		&.logo_l
+			display: inline-block
+			vertical-align: top
+		&.logo_s
+			display: none
 	.header__search
 		display: inline-block
 		vertical-align: top
@@ -2031,15 +2032,15 @@
 					font-size: 15px
 					color: #333
 					+museo
-					&:hover, &.is-active
+					&:hover
 						margin: 0 -1px
 						border-left: 1px solid #e0e0e0 
 						border-right: 1px solid #e0e0e0
 						border-bottom: none 
 						background: #FFFEFE 
 						color: #5e9efc
-				&.is-active
-					> .header__drop
+				&:hover
+					.header__drop
 						display: block	
 	.header__drop
 		display: none
@@ -2154,6 +2155,8 @@
 	+r(680)
 		.logo_l
 			display: none
+		.logo_s
+			display: inline-block
 		.header__nav
 			display: none
 			
@@ -2378,7 +2381,7 @@
 					width: 100%
 				.slide__text
 					position: absolute
-					top: 70px
+					top: 20%
 					left: 70px
 					width: 296px 
 					color: #FFF 

@@ -281,11 +281,6 @@ head.ready(function() {
         return false;
     });
 
-    $('.js-nav-item').click(function() {
-        $(this).toggleClass('is-active');
-        return false;
-    });
-
     $('.js-reg-btn').click(function() {
         $('js-register').toggleClass('is-active');
         return false;

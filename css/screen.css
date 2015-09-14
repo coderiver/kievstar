@@ -562,8 +562,7 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .popup__login .p-link { float: right; padding: 3px 0 0; margin: 0 0 10px; }
 .popup__close { background: url('../img/icons-s4d1b9276ba.png') 0 -248px no-repeat; width: 10px; height: 10px; position: absolute; top: 15px; right: 15px; }
 
-.inner_market { max-width: 1350px; width: 100%; padding: 0; }
-@media only screen and (max-width: 1370px) { .inner_market { width: 96%; margin: 0 auto; } }
+.inner_market { max-width: 100%; width: 96%; margin: 0 auto; padding: 0; }
 
 .header_market { border: none; }
 .header_market .header__top { *zoom: 1; }
@@ -571,9 +570,9 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .header_market .header__tabs { float: left; *zoom: 1; }
 .header_market .header__tabs:after { content: " "; display: table; clear: both; }
 .header_market .header__tabs li { float: left; }
-.header_market .header__tabs li a { display: block; width: 135px; padding: 5px; background: #FFF; text-align: center; font-size: 12px; color: #5e9efc; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
+.header_market .header__tabs li a { display: block; width: 135px; padding: 8px; background: #FFF; text-align: center; font-size: 12px; color: #5e9efc; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
 .header_market .header__tabs li a.is-active { background: #239FFF; color: #FFF; }
-.header_market .header__tools { float: right; padding: 5px 0; *zoom: 1; }
+.header_market .header__tools { float: right; padding: 8px 0; *zoom: 1; }
 .header_market .header__tools:after { content: " "; display: table; clear: both; }
 .header_market .header__tools li { float: left; padding-left: 5px; }
 .header_market .header__tools li:after { content: ""; display: inline-block; vertical-align: middle; margin-left: 5px; background: url('../img/icons-s4d1b9276ba.png') 0 -320px no-repeat; width: 4px; height: 4px; }
@@ -584,7 +583,9 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .header_market .header__tools .lang a { padding-right: 15px; text-transform: none; font-size: 12px; color: #333; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
 .header_market .header__blue-menu { padding: 10px; background: #239FFF; text-align: justify; line-height: 0; font-size: 0; text-justify: newspaper; zoom: 1; text-align-last: justify; }
 .header_market .header__blue-menu:after { content: ""; display: inline-block; width: 100%; height: 0px; visibility: hidden; overflow: hidden; }
-.header_market .logo { float: none; display: inline-block; vertical-align: top; margin: 0; }
+.header_market .logo { float: none; margin: 0; }
+.header_market .logo.logo_l { display: inline-block; vertical-align: top; }
+.header_market .logo.logo_s { display: none; }
 .header_market .header__search { display: inline-block; vertical-align: top; width: 47.40741%; }
 .header_market .header__search label { position: relative; display: block; width: 100%; height: 40px; }
 .header_market .header__search label input { width: 100%; height: 40px; background: transparent; border-bottom: 1px solid #FFF; color: #FFF; }
@@ -600,8 +601,8 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .header_market .header__nav > ul { position: relative; font-size: 0; z-index: 99999; }
 .header_market .header__nav > ul > li { display: inline-block; vertical-align: middle; }
 .header_market .header__nav > ul > li > a { display: block; padding: 10px 20px; font-size: 15px; color: #333; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
-.header_market .header__nav > ul > li > a:hover, .header_market .header__nav > ul > li > a.is-active { margin: 0 -1px; border-left: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0; border-bottom: none; background: #FFFEFE; color: #5e9efc; }
-.header_market .header__nav > ul > li.is-active > .header__drop { display: block; }
+.header_market .header__nav > ul > li > a:hover { margin: 0 -1px; border-left: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0; border-bottom: none; background: #FFFEFE; color: #5e9efc; }
+.header_market .header__nav > ul > li:hover .header__drop { display: block; }
 .header_market .header__drop { display: none; position: absolute; top: 41px; left: 0; right: 0; width: 100%; height: 225px; padding: 30px 75px; border: 1px solid #e0e0e0; background: #FFF; z-index: 99; text-align: left; *zoom: 1; }
 .header_market .header__drop:after { content: " "; display: table; clear: both; }
 .header_market .header__drop .drop-wrap { overflow: hidden; font-size: 0; }
@@ -633,6 +634,7 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
   .header_market .header__search.is-active { display: block; position: absolute; top: 60px; left: 10px; right: 10px; width: auto; }
   .header_market .header__sell { display: none; } }
 @media only screen and (max-width: 680px) { .header_market .logo_l { display: none; }
+  .header_market .logo_s { display: inline-block; }
   .header_market .header__nav { display: none; } }
 
 .logo_s { display: none; }
@@ -694,7 +696,7 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .market .market__slider .slider { position: relative; }
 .market .market__slider .slider .slide { display: inline-block; vertical-align: top; }
 .market .market__slider .slider .slide > img { width: 100%; }
-.market .market__slider .slider .slide .slide__text { position: absolute; top: 70px; left: 70px; width: 296px; color: #FFF; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
+.market .market__slider .slider .slide .slide__text { position: absolute; top: 20%; left: 70px; width: 296px; color: #FFF; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
 .market .market__slider .slider .slide .slide__text h3 { display: block; margin-bottom: 15px; font-size: 24px; }
 .market .market__slider .slider .slide .slide__text p { font-size: 12px; }
 .market .market__slider .slider .slide .slide__text a.btn_yellow { margin-top: 25px; padding: 10px 45px; background: #FFDB00; -webkit-border-radius: 20px; border-radius: 20px; color: #363636; font-size: 13px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
@@ -783,5 +785,3 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .popup_register label.checkbox { margin-top: 10px; }
 .popup_register .popup__register .btn { -webkit-border-radius: 20px; border-radius: 20px; }
 .popup_register .popup__link { border: none; padding: 12px 20px 0; }
-
-/*# sourceMappingURL=screen.css.map */
