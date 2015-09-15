@@ -562,7 +562,8 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .popup__login .p-link { float: right; padding: 3px 0 0; margin: 0 0 10px; }
 .popup__close { background: url('../img/icons-s4d1b9276ba.png') 0 -248px no-repeat; width: 10px; height: 10px; position: absolute; top: 15px; right: 15px; }
 
-.inner_market { max-width: 100%; width: 96%; margin: 0 auto; padding: 0; }
+.inner_market { max-width: 1350px; width: 100%; margin: 0 auto; }
+@media only screen and (max-width: 1370px) { .inner_market { width: 96%; margin: 0 auto; } }
 
 .header_market { border: none; }
 .header_market .header__top { *zoom: 1; }
@@ -614,7 +615,7 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .header_market .header__drop .drop-wrap.top { float: left; width: 20%; margin-right: 25px; }
 .header_market .header__drop .drop-wrap.top h4 { width: 100%; }
 .header_market .header__drop .drop-wrap.top ul { width: 100%; }
-@media only screen and (max-width: 1270px) { .header_market .header__nav ul li a { padding: 10px 15px; } }
+@media only screen and (max-width: 1280px) { .header_market .header__nav > ul > li > a { padding: 10px 15px; } }
 @media only screen and (max-width: 1180px) { .header_market .header__sell .sell { padding-left: 10px; margin-left: 10px; }
   .header_market .header__nav ul li a { padding: 10px 10px; } }
 @media only screen and (max-width: 1080px) { .header_market .header__nav ul li a { padding: 10px 5px; } }
