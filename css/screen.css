@@ -562,8 +562,7 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .popup__login .p-link { float: right; padding: 3px 0 0; margin: 0 0 10px; }
 .popup__close { background: url('../img/icons-s4d1b9276ba.png') 0 -248px no-repeat; width: 10px; height: 10px; position: absolute; top: 15px; right: 15px; }
 
-.inner_market { max-width: 1350px; width: 100%; margin: 0 auto; }
-@media only screen and (max-width: 1370px) { .inner_market { width: 96%; margin: 0 auto; } }
+.inner_market { max-width: 1350px; width: 100%; margin: 0 auto; padding: 0; }
 
 .header_market { border: none; }
 .header_market .header__top { *zoom: 1; }
