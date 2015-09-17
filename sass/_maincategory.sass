@@ -62,13 +62,15 @@
 
 		&:hover
 			color: #5e9efc
-	img
+	i
 		padding-right: 10px
 		position: absolute
 		+r(500)
 			position: absolute
 			top: 33px
 			left: 10px
+		&:hover
+			cursor: pointer
 
 
 	h2
@@ -117,5 +119,53 @@
 		display: none
 
 
+.cat_icons_avto
+	+s(cat-avto)
+
+.cat_icons_tehno
+	+s(cat-tehno)
+
+.cat_icons_office
+	+s(cat-office)
+
+.cat_icons_child
+	+s(cat-child)
+
+.cat_icons_home
+	+s(cat-home)
+
+.cat_icons_music
+	+s(cat-music)
+
+.cat_icons_com
+	+s(cat-com)
+
+.cat_icons_equipm
+	+s(cat-equipm)
+
+.cat_icons_clothers
+	+s(cat-clothers)
+
+.cat_icons_bear
+	+s(cat-bear)
+
+.cat_icons_cheese
+	+s(cat-cheese)
+
+.cat_icons_sport
+	+s(cat-sport)
+
+.cat_icons_tablet
+	+s(cat-tablet)
+
+.cat_icons_repair
+	+s(cat-repair)
+
+.cat_icons_play
+	+s(cat-play)
+
+@each $s in cat-avto,cat-tehno, cat-office, cat-child,cat-home,cat-child,cat-music,cat-com,cat-equipm,cat-clothers,cat-bear,cat-cheese,cat-sport,cat-tablet,cat-repair,cat-play
+	.icon-#{$s}
+		+s(#{$s})
 
 
