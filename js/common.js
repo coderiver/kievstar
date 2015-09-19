@@ -14,6 +14,11 @@ head.ready(function() {
 	// $(window).scroll(function(){
 	//     scrollFixedElements()
 	// });
+
+
+    $('.js-dt').click(function(event) {
+        $(this).closest('dl').toggleClass('is-active');
+    });
 	//menu mob
 	$('.js-menu-btn').on('click', function() {
 		$('.js-menu').toggleClass('is-active');
