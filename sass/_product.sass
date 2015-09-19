@@ -1,3 +1,92 @@
+.productmain
+	float: left
+	width: 71% 
+.productsidebar
+	float: right
+	width: 27% 
+.side
+	border: 1px solid #EEE 
+	.side__title
+		text-align: center
+		text-transform: uppercase
+		font-size: 16px 
+		font-weight: normal
+		color: #2EA2FC 
+		height: 56px 
+		line-height: 56px 
+		background: #FCFCFC 
+		border-bottom: 1px solid #EEE 
+	.side__content
+		padding: 14px 
+		ul
+			list-style: none
+			font-size: 13px 
+			color: #666666 
+		li
+			padding: 6px 0 10px 0
+			margin-bottom: 17px  
+			padding-left: 37px 
+			-webkit-perspective-origin: right
+			-moz-perspective-origin: right
+			position: relative
+			&:before
+				position: absolute
+				left: 0
+				top: 0
+				content: ' '  
+			&.side__scall:before
+				+s(scall)
+				top: 5px 
+			&.side__click:before
+				+s(click)
+				top: -2px 
+			&.side__cart:before
+				+s(cart)
+.product
+	padding: 20px 0 
+	.product__left
+		float: left
+		width: 40%
+		margin-right: 20px 
+	.product__photo
+		text-align: center
+		padding: 50px 0
+		border: 1px solid #EEE  
+	.product__right
+		overflow: hidden
+		h3
+			color: #333333 
+			font-size: 18px 
+			font-weight: normal
+			margin-bottom: 3px 
+			margin-top: 10px 
+		p
+			font-size: 12px 
+			color: #666666 
+			line-height: 1.3
+			margin-bottom: .5em  
+	&__title
+		font-size: 24px 
+		color: #333333 
+		font-weight: normal
+		margin-bottom: 6px 
+	&__more
+		text-decoration: none
+		+museo
+		font-size: 13px 
+		color: #00A3FF 
+		&:before
+			+s(moar)
+			content: ' '
+			vertical-align: middle
+			display: inline-block
+			margin-right: 4px 
+			position: relative
+			top: -2px 
+	
+		
+
+
 .productmob
 	margin: 0 10px 
 	.productmob__title
