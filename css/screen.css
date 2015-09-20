@@ -917,6 +917,7 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .l-col1 .category__content { margin-left: 27px; }
 .l-col1 .category li { font: 12px/1 HelveticaNeue Medium; margin-bottom: 8px; }
 .l-col1 .category li a { text-decoration: none; color: #363636; }
+.l-col1 .category li a:hover { text-decoration: underline; color: #5e9efc; }
 .l-col1 .category .sub__category { margin-left: 27px; }
 .l-col1 .category .sub__category__title i { display: inline-block; width: 20px; height: 20px; margin-right: 5px; vertical-align: middle; background: url(../img/icons/sub_icon.png) no-repeat top left; }
 .l-col1 .category .sub__category__title a { color: #5e9efc; vertical-align: middle; font: 12px/1 HelveticaNeue Medium; margin-bottom: 6px; }
@@ -1098,7 +1099,8 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .ltop__left p { font-size: 20px; color: #E4F5FF; line-height: 1.3; margin-bottom: 29px; }
 .ltop__left p span { font-size: 16px; display: inline-block; vertical-align: middle; }
 .ltop__left p:last-child { margin-bottom: 0; }
-.ltop__left .ltop__btn { height: 40px; line-height: 40px; width: 180px; display: inline-block; text-align: center; background: #FBD83E; border-radius: 40px; font-size: 16px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; color: #333333; text-decoration: none; margin-right: 32px; }
+.ltop__left .ltop__btn { height: 40px; line-height: 40px; width: 180px; display: inline-block; text-align: center; background: #FBD83E; border-radius: 40px; font-size: 16px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; color: #333333; text-decoration: none; margin-right: 32px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 2px solid #FBD83E; line-height: 36px; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; -webkit-transition: all 0.1s linear; transition: all 0.1s linear; }
+.ltop__left .ltop__btn:hover { color: #FBD83E; background: transparent; }
 
 .ladapt { background: #ECEDEE; font-size: 0; padding-top: 23px; margin-bottom: 30px; }
 .ladapt__text { display: inline-block; vertical-align: middle; width: 50%; font-size: 24px; color: #2D2D2D; line-height: 1.3; }
@@ -1178,7 +1180,8 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 
 .gogo { background: #22A4FF; text-align: center; padding: 46px 0; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
 @media only screen and (max-width: 640px) { .gogo { padding: 30px 20px; } }
-.gogo__btn { height: 40px; line-height: 40px; padding: 0 20px; display: inline-block; text-align: center; background: #FBD83E; border-radius: 40px; font-size: 16px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; color: #333333; text-decoration: none; vertical-align: middle; }
+.gogo__btn { height: 40px; line-height: 40px; padding: 0 20px; display: inline-block; text-align: center; background: #FBD83E; border-radius: 40px; font-size: 16px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; color: #333333; text-decoration: none; vertical-align: middle; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 2px solid #FBD83E; line-height: 36px; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; -webkit-transition: all 0.1s linear; transition: all 0.1s linear; }
+.gogo__btn:hover { color: #FBD83E; background: transparent; }
 @media only screen and (max-width: 640px) { .gogo__btn { margin-bottom: 10px; } }
 .gogo__sep { display: inline-block; vertical-align: middle; height: 41px; width: 1px; border-left: 1px solid #7BC1FF; margin: 0 18px; }
 @media only screen and (max-width: 640px) { .gogo__sep { display: none; } }
