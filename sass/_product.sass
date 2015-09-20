@@ -1,9 +1,15 @@
 .productmain
 	float: left
 	width: 71% 
+	+r(800)
+		width: auto
+		float: none
 .productsidebar
 	float: right
 	width: 27% 
+	+r(800)
+		width: auto
+		float: none
 .side
 	border: 1px solid #EEE 
 	.side__title
@@ -16,6 +22,8 @@
 		line-height: 56px 
 		background: #FCFCFC 
 		border-bottom: 1px solid #EEE 
+		font-weight: 700
+		+museo 
 	.side__content
 		padding: 14px 
 		ul
@@ -29,6 +37,9 @@
 			-webkit-perspective-origin: right
 			-moz-perspective-origin: right
 			position: relative
+			+museo
+			font-weight: 500
+			padding-right: 15px  
 			&:before
 				position: absolute
 				left: 0
@@ -42,12 +53,22 @@
 				top: -2px 
 			&.side__cart:before
 				+s(cart)
+			&.side__label:before
+				+s(label)
+			&.side__queen:before
+				+s(queen)
+			&.side__label,&.side__queen
+				padding-top: 0 
 .product
 	padding: 20px 0 
 	.product__left
 		float: left
 		width: 40%
 		margin-right: 20px 
+		+r(540)
+			width: auto
+			float: none
+			margin-bottom: 20px 
 	.product__photo
 		text-align: center
 		padding: 50px 0
@@ -89,8 +110,52 @@
 			position: relative
 			top: -2px 
 	
-		
+.lookfor
+	clear: both
+	padding-top: 40px 
+	margin-bottom: 50px 
+	
+	&__title
+		+museo
+		font-weight: 500 
+		color: #333333 
+		font-size: 30px 
+		text-align: center
+		margin-bottom: 20px 
 
+	.lookfor__wrap
+		width: 844px
+		height: 296px 
+		background: url(../img/lookfor.jpg) no-repeat 0 0
+		position: relative 
+		margin: 0 auto 
+		+r(800)
+			background: none
+			width: auto
+			height: auto  
+			text-align: center
+		a
+			position: absolute
+			bottom: 50px 
+			left: 140px 
+			height: 40px 
+			line-height: 40px
+			display: inline-block
+			text-align: center
+			background: #FBD83E 
+			border-radius: 40px
+			font-size: 16px 
+			+museo
+			color: #333333 
+			text-decoration: none
+			width: 142px 
+			+r(800)
+				display: inline-block
+				margin-right: 15px 
+				position: static
+		.lookform__sell
+			left: auto 
+			right: 133px 
 
 .productmob
 	margin: 0 10px 
