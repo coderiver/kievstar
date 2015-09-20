@@ -171,3 +171,44 @@
 		+s(#{$s})
 
 
+.mobile-list
+	list-style: none
+	margin-top: 10px 
+	li
+		margin-bottom: 10px 
+		a
+			display: block
+			border: 1px solid #DFDFDF 
+			background: #FCFCFD
+			font-size: 15px 
+			text-decoration: none
+			color: #3D3D3D 
+			font-size: 15px 
+			padding-top: 15px 
+			padding-bottom: 15px 
+			position: relative
+			padding-left: 60px 
+			&:before
+				position: absolute
+				top: 50%
+				margin-top: -7px  
+				right: 15px 
+				content: ' '
+				+s(arr-categories)
+			i
+				position: absolute
+				left: 10px 
+				top: 50%
+				margin-top: -13px  
+		&.mobile-list__subitem
+			a
+				padding-left: 80px 
+		&.mobile-list__back
+			a
+				padding-left: 90px 
+				i
+					left: 40px 
+				&:before
+					right: auto 
+					left: 10px 
+					+transform(rotate(180deg))
