@@ -69,6 +69,7 @@
 			width: auto
 			float: none
 			margin-bottom: 20px 
+			margin-right: 0 
 	.product__photo
 		text-align: center
 		padding: 50px 0
@@ -109,12 +110,91 @@
 			margin-right: 4px 
 			position: relative
 			top: -2px 
-	
-.lookfor
+.ptable
+	width: 100%
+	border-spacing: 0
+	border-collapse: collapse   
+	margin-bottom: 20px 
+	thead
+		th
+			text-align: center
+			font-weight: 500
+			+museo
+			color: #666666  
+			font-size: 13px 
+			padding-bottom: 8px 
+			border-bottom: 1px solid #EEE 
+			&:first-child
+				text-align: left
+	tbody
+		td
+			text-align: center
+			padding: 20px 0 30px 0
+			border-bottom: 1px solid #EDEDED 
+			+museo
+			&:first-child
+				text-align: left
+	&__addtocart
+		vertical-align: top !important
+		padding-top: 10px 
+		a
+			display: inline-block
+			+s(addtocart)
+			+hide-text
+			vertical-align: top 
+	&__price
+		color: #333333 
+		font-size: 20px 
+	&__status
+		padding-left: 20px  
+		padding-right: 20px 
+		span
+			display: inline-block
+			color: #84959D 
+			padding: 4px 17px
+			line-height: 1
+			background: #ECEEF0   
+			border-radius: 20px
+	&__action
+		a
+			display: inline-block
+			margin-right: 10px 
+			height: 33px 
+			line-height: 33px
+			padding: 0 33px 
+			font-size: 13px 
+			color: #303030 
+			text-decoration: none
+			border-radius: 33px
+			&.ptable__call
+				color: #fff 
+				background: #2275B8 
+				position: relative
+				&:before
+					position: absolute
+					left: 13px
+					top: 8px  
+					+s(call)
+					content: ' '
+				&:hover
+					color: #303030 
+					background: #FFD922
+					&:before
+						+s(blackphone)
+			&.ptable__oneclick
+				color: #2EA1FC  
+				background: #fff 
+				+box
+				border: 2px solid #2EA1FC 
+				line-height: 29px 
+				&:hover
+					background: #2EA1FC 
+					color: #fff 
+.product__bottom
 	clear: both
 	padding-top: 40px 
 	margin-bottom: 50px 
-	
+.lookfor
 	&__title
 		+museo
 		font-weight: 500 
