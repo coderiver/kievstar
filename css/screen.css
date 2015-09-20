@@ -787,7 +787,7 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .category-wrapper h1 { margin: 30px 0; font: bold 22px HelveticaNeue, Helvetica, sans-serif; }
 @media only screen and (max-width: 500px) { .category-wrapper h1 { display: none; margin: 0; } }
 
-.category { margin: 0 70px 95px 95px; font-size: 0; }
+.category { margin: 0 20px 95px 95px; font-size: 0; }
 @media only screen and (max-width: 1024px) { .category { margin: 0 50px; } }
 @media only screen and (max-width: 690px) { .category { margin: 0; } }
 @media only screen and (max-width: 500px) { .category { margin-bottom: 100px; } }
