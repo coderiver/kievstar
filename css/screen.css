@@ -1003,16 +1003,17 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .product .product__left { float: left; width: 40%; margin-right: 20px; }
 .product .product__photo { text-align: center; padding: 50px 0; border: 1px solid #EEE; }
 .product .product__right { overflow: hidden; }
-.product .product__right h3 { color: #333333; font-size: 18px; font-weight: normal; margin-bottom: 3px; margin-top: 10px; }
-.product .product__right p { font-size: 12px; color: #666666; line-height: 1.3; margin-bottom: 0.5em; }
-.product__title { font-size: 24px; color: #333333; font-weight: normal; margin-bottom: 6px; }
+.product .product__right h3 { color: #333333; font-size: 18px; font-weight: normal; margin-bottom: 3px; margin-top: 10px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; font-weight: 500; }
+.product .product__right p { font-size: 12px; color: #666666; line-height: 1.3; margin-bottom: 0.5em; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
+.product__title { font-size: 24px; color: #333333; font-weight: normal; margin-bottom: 6px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; font-weight: 500; }
 .product__more { text-decoration: none; font-family: "MuseoSansCyrl", Helvetica, sans-serif; font-size: 13px; color: #00A3FF; }
 .product__more:before { background: url('../img/icons-s4833889118.png') 0 -1358px no-repeat; width: 13px; height: 13px; content: " "; vertical-align: middle; display: inline-block; margin-right: 4px; position: relative; top: -2px; }
 
 .productmob { margin: 0 10px; }
 .productmob .productmob__title { font-size: 13px; color: #363636; font-family: "MuseoSansCyrl", Helvetica, sans-serif; font-weight: 300; line-height: 1.3; padding-top: 5px; margin-bottom: 7px; }
 .productmob .productmob__left { float: left; margin-right: 15px; }
-.productmob .productmob__right { overflow: hidden; }
+.productmob .productmob__left img { display: block; width: 80%; margin: 0 auto; }
+.productmob .productmob__right { overflow: hidden; padding-bottom: 15px; }
 .productmob .productmob__rating { margin-bottom: 20px; }
 .productmob .productmob__rating img { display: block; width: 120px; }
 .productmob .productmob__price { padding-left: 50px; position: relative; font-size: 11px; }
