@@ -232,7 +232,7 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .field__list.is-child:nth-child(9) { left: 266.4%; }
 .field__list.is-child:nth-child(10) { left: 299.7%; }
 .field__list li { color: #0094df; cursor: pointer; display: block; padding: 5px; margin: 0; border: none; font-size: 13.3px; z-index: 20; overflow: hidden; white-space: nowrap; -o-text-overflow: ellipsis; -ms-text-overflow: ellipsis; text-overflow: ellipsis; }
-.field__list li:hover { color: #fff; background-image: -moz-linear-gradient(#00abec, #007dd5); background-image: -webkit-linear-gradient(#00abec, #007dd5); background-image: linear-gradient(#00abec, #007dd5); }
+.field__list li:hover { color: #fff; background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYWJlYyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwN2RkNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00abec), color-stop(100%, #007dd5)); background-image: -moz-linear-gradient(#00abec, #007dd5); background-image: -webkit-linear-gradient(#00abec, #007dd5); background-image: linear-gradient(#00abec, #007dd5); }
 .field__choice { clear: both; padding: 20px 10px 10px; }
 .field__choice button { margin-right: 5px; font-size: 12px; line-height: 30px; display: inline-block; height: 30px; padding: 0 15px; -moz-transition: all 0.2s; -o-transition: all 0.2s; -webkit-transition: all 0.2s; transition: all 0.2s; text-decoration: none; color: white; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; background: #4db21d; }
 .field__choice button:hover { background: #449c19; }
@@ -650,7 +650,7 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 
 .menu-mob { display: none; float: right; padding: 22px 0; }
 .menu-mob span { display: block; position: relative; width: 30px; height: 3px; background: #FFF; -webkit-transition-duration: 0s; transition-duration: 0s; -webkit-transition-delay: 0.2s; transition-delay: 0.2s; }
-.menu-mob span:before, .menu-mob span:after { content: ""; position: absolute; left: 0; width: 30px; height: 3px; background: #FFF; -moz-transition: -moz-transform, 0.2s, 0.2s 0s; -o-transition: -o-transform, 0.2s, 0.2s 0s; -webkit-transition: -webkit-transform, 0.2s, 0.2s 0s; transition: transform, 0.2s, 0.2s 0s; }
+.menu-mob span:before, .menu-mob span:after { content: ""; position: absolute; left: 0; width: 30px; height: 3px; background: #FFF; -moz-transition: -moz-transform, 0.2s, 0.2s 0s; -o-transition: -o-transform, 0.2s, 0.2s 0s; -webkit-transition: -webkit-transform, 0.2s, 0.2s; -webkit-transition-delay: 0s, 0s, 0s; transition: transform, 0.2s, 0.2s 0s; }
 .menu-mob span:before { top: -9px; }
 .menu-mob span:after { top: 9px; }
 .menu-mob.is-active span { background: transparent; -webkit-transition-delay: 0.2s; transition-delay: 0.2s; }
@@ -1087,6 +1087,24 @@ h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; 
 .lookingfor .lookingfor__buy, .lookingfor .lookingfor__sell { display: inline-block; height: 30px; line-height: 30px; text-align: center; width: 120px; text-decoration: none; text-transform: uppercase; box-sizing: border-box; border-radius: 30px; cursor: pointer; font-family: "MuseoSansCyrl", Helvetica, sans-serif; font-weight: 500; }
 .lookingfor .lookingfor__buy { margin-right: 15px; color: #61A0F9; border: 1px solid #61A0F9; }
 .lookingfor .lookingfor__sell { background: #FCD83D; color: #3D3D3D; }
+
+.popup_buy { -webkit-border-radius: 10px; border-radius: 10px; }
+.popup_buy .popup__buy { text-align: left; }
+.popup_buy .popup__buy > p { color: #363636; font-size: 12px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
+.popup_buy .popup__buy > label.has-error { color: #d45d60; font-size: 12px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
+.popup_buy .popup__buy > label.has-error .input { margin: 0; }
+.popup_buy .popup__buy > label.has-error .form-error { display: block; margin-bottom: 10px; }
+.popup_buy .popup__buy > label p { margin-bottom: 7px; color: #95a7b7; font-size: 12px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
+.popup_buy .popup__buy > label p.popup__span { display: inline-block; vertical-align: middle; margin: 0 25px 0 0; }
+.popup_buy .popup__buy > label .input { -webkit-border-radius: 10px; border-radius: 10px; }
+.popup_buy .popup__buy > label .input.input_prise { display: inline-block; vertical-align: middle; width: 160px; margin-right: 10px; }
+.popup_buy .popup__buy > label .input.input_prise + p { display: inline-block; vertical-align: middle; margin-bottom: 10px; }
+.popup_buy .popup__buy > label .btn { width: auto; vertical-align: middle; padding: 10px 27px; -webkit-border-radius: 20px; border-radius: 20px; }
+
+.popup_success { -webkit-border-radius: 10px; border-radius: 10px; }
+.popup_success p { color: #363636; font-size: 12px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
+.popup_success p > a { color: #5e9efc; font-size: 12px; font-family: "MuseoSansCyrl", Helvetica, sans-serif; }
+.popup_success .btn { width: auto; vertical-align: middle; padding: 10px 27px; -webkit-border-radius: 20px; border-radius: 20px; }
 
 .ltop { background: #00A2FF; font-family: "MuseoSansCyrl", Helvetica, sans-serif; color: #fff; position: relative; overflow: hidden; margin-bottom: 25px; }
 .ltop__rightcircle, .ltop__rightpic { position: absolute; right: -145px; width: 290px; height: 290px; position: absolute; top: 50%; margin-top: -145px; background: #FED930; border-radius: 50%; }

@@ -147,7 +147,7 @@
 									</td>
 									<td class="ptable__action">
 										<a href="#" class="ptable__call">Показать телефон</a>
-										<a href="#" class="ptable__oneclick">Купить в 1 клик</a>
+										<a href="#" class="ptable__oneclick js-buy-btn">Купить в 1 клик</a>
 									</td>
 									<td class="ptable__addtocart">
 										<a href="#">Add to cart</a>
@@ -165,7 +165,7 @@
 									</td>
 									<td class="ptable__action">
 										<a href="#" class="ptable__call">Показать телефон</a>
-										<a href="#" class="ptable__oneclick">Купить в 1 клик</a>
+										<a href="#" class="ptable__oneclick js-buy-btn">Купить в 1 клик</a>
 									</td>
 									<td class="ptable__addtocart">
 										<a href="#">Add to cart</a>
@@ -183,7 +183,7 @@
 									</td>
 									<td class="ptable__action">
 										<a href="#" class="ptable__call">Показать телефон</a>
-										<a href="#" class="ptable__oneclick">Купить в 1 клик</a>
+										<a href="#" class="ptable__oneclick js-buy-btn">Купить в 1 клик</a>
 									</td>
 									<td class="ptable__addtocart">
 										<a href="#">Add to cart</a>
@@ -201,7 +201,7 @@
 									</td>
 									<td class="ptable__action">
 										<a href="#" class="ptable__call">Показать телефон</a>
-										<a href="#" class="ptable__oneclick">Купить в 1 клик</a>
+										<a href="#" class="ptable__oneclick js-buy-btn">Купить в 1 клик</a>
 									</td>
 									<td class="ptable__addtocart">
 										<a href="#">Add to cart</a>
@@ -312,7 +312,7 @@
 					<button class="btn btn_blue">Войти</button>
 				</form>
 				<div class="popup__link">
-					<a href="#registration" class="p-link js-register">Зарегистрироваться</a>
+					<a href="#" class="p-link js-register-btn">Зарегистрироваться</a>
 				</div>
 			</div>
 		</div>
@@ -337,8 +337,49 @@
 					<button class="btn btn_blue">Зарегистрироваться</button>
 				</form>
 				<div class="popup__link">
-					<a href="#enter" class="p-link js-enter">Войти</a>
+					<a href="#" class="p-link js-enter-btn">Войти</a>
 				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup-wrap js-buy">
+	<div class="popup-wrapper">
+		<!-- begin popup_login  -->
+		<div class="popup popup_buy">
+			<div class="popup__inner">
+				<a href="#" class="popup__close js-popup-close"></a>
+				<h3>Купить товар</h3>
+				<form action="" class="popup__buy js-buy-form">
+					<p>Укажите цену по которой Вы хотите приобести данный товар:</p>
+					<label>
+						<p>Цена</p>
+						<input type="text" class="input input_prise">
+						<p>грн.</p>
+					</label>
+					<p>Укажите Ваш email адрес, чтобы мы могли Вас уведомить о цене и продавцах данного товара:</p>
+					<label>
+						<p>Email</p>
+						<input type="text" class="input" data-validation="email" data-validation-error-msg="Это поле есть обязательным">
+					</label>
+					<label>
+						<p class="popup__span">*мы не шлем спам</p>
+						<button class="btn btn_blue js-buy-success-btn">ОК</button>
+					</label>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup-wrap js-buy-success">
+	<div class="popup-wrapper">
+		<!-- begin popup_login  -->
+		<div class="popup popup_success">
+			<div class="popup__inner">
+				<a href="#" class="popup__close js-popup-close"></a>
+				<h3>Успешно</h3>
+				<p>Ваши предложения добавлены на склад. Вы можете управлять вашими предложениями в <a href="#">личном кабинете</a></p>
+				<button class="btn btn_blue js-popup-close">ОК</button>
 			</div>
 		</div>
 	</div>

@@ -416,3 +416,68 @@
 	.lookingfor__sell
 		background: #FCD83D 
 		color: #3D3D3D 
+		
+.popup_buy
+	-webkit-border-radius: 10px
+	border-radius: 10px
+	.popup__buy
+		text-align: left
+		> p
+			color: #363636
+			font-size: 12px
+			+museo
+		> label
+			&.has-error
+				color: #d45d60
+				font-size: 12px
+				+museo
+				.input
+					margin: 0
+				.form-error
+					display: block
+					margin-bottom: 10px
+			p
+				margin-bottom: 7px
+				color: #95a7b7
+				font-size: 12px
+				+museo
+				&.popup__span
+					display: inline-block
+					vertical-align: middle
+					margin: 0 25px 0 0
+			.input
+				-webkit-border-radius: 10px
+				border-radius: 10px
+				&.input_prise
+					display: inline-block
+					vertical-align: middle
+					width: 160px
+					margin-right: 10px
+					+ p
+						display: inline-block
+						vertical-align: middle
+						margin-bottom: 10px
+			.btn
+				width: auto
+				vertical-align: middle
+				padding: 10px 27px
+				-webkit-border-radius: 20px
+				border-radius: 20px
+.popup_success
+	-webkit-border-radius: 10px
+	border-radius: 10px
+	p
+		color: #363636
+		font-size: 12px
+		+museo
+		> a
+			color: #5e9efc
+			font-size: 12px
+			+museo
+	.btn
+		width: auto
+		vertical-align: middle
+		padding: 10px 27px
+		-webkit-border-radius: 20px
+		border-radius: 20px
+

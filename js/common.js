@@ -287,7 +287,7 @@ head.ready(function() {
     });
 
     $('.js-reg-btn').click(function() {
-        $('js-register').toggleClass('is-active');
+        $('.js-register').toggleClass('is-active');
         return false;
     });
 
@@ -299,6 +299,32 @@ head.ready(function() {
     $('.js-register').each(function() {
         $('body').click(function() {
             $('.js-register').removeClass('is-active');
+        }); 
+        $('.popup').click(function(event) {
+            event.stopPropagation();
+        });
+    });
+
+    $('.js-register-btn').click(function() {
+        $('.js-register').toggleClass('is-active');
+        $('.js-enter').removeClass('is-active');
+        return false;
+    });
+
+    $('.js-enter-btn').click(function() {
+        $('.js-enter').toggleClass('is-active');
+        $('.js-register').removeClass("is-active");
+        return false;
+    });
+
+    $('.js-popup-close').click(function() {
+        $('.js-enter').removeClass('is-active');
+        return false;
+    });
+
+    $('.js-enter').each(function() {
+        $('body').click(function() {
+            $('.js-enter').removeClass('is-active');
         }); 
         $('.popup').click(function(event) {
             event.stopPropagation();
@@ -319,6 +345,49 @@ head.ready(function() {
         $(this).toggleClass('is-active');
         $(this).parent().toggleClass('is-tools');
         $('.js-tools-mob').toggleClass('is-active');
+    });
+
+    $('.js-buy-btn').click(function() {
+        $('.js-buy').toggleClass('is-active');
+        return false;
+    });
+
+    $('.js-buy').each(function() {
+        $('body').click(function() {
+            $('.js-buy').removeClass('is-active');
+        }); 
+        $('.popup').click(function(event) {
+            event.stopPropagation();
+        });
+    });
+
+    $('.js-popup-close').click(function() {
+        $('.js-buy').removeClass('is-active');
+        return false;
+    });
+
+    $.validate({
+        form: '.js-buy-form'
+    });
+
+    $('.js-buy-success-btn').click(function() {
+        $('.js-buy-success').toggleClass('is-active');
+        $('.js-buy').removeClass('is-active');
+        return false;
+    });
+
+    $('.js-buy-success').each(function() {
+        $('body').click(function() {
+            $('.js-buy-success').removeClass('is-active');
+        }); 
+        $('.popup').click(function(event) {
+            event.stopPropagation();
+        });
+    });
+
+    $('.js-popup-close').click(function() {
+        $('.js-buy-success').removeClass('is-active');
+        return false;
     });
 
 });
