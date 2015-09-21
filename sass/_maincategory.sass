@@ -1,0 +1,214 @@
+.main
+	+r(500)
+	padding: 0
+
+
+ 
+.category-wrapper
+	h1
+		margin: 30px 0
+		font: bold  22px HelveticaNeue, Helvetica, sans-serif
+		+r(500)
+			display: none
+			margin: 0
+
+.category
+	margin: 0 20px 95px 95px
+	font-size: 0
+	+r(1024)
+		margin: 0 50px
+	+r(690)
+		margin: 0
+	+r(500)
+		margin-bottom: 100px
+
+
+.category-item
+	width: 22%
+	display: inline-block
+	margin-right: 3%
+	margin-bottom: 40px
+	vertical-align: top
+	+r(1024)
+		width: 29%
+		margin-right: 4%
+		+clr
+	+r(690)
+		width: 45%
+		margin-right: 5%
+	+r(500)
+		width: 100%
+		margin: 0
+		margin-top: 10px
+		border: 1px solid #ededed
+
+
+
+.a__header
+	height: 40px
+	border-bottom: 1px solid #ededed
+	color: #ababab
+	position: relative
+	+r(500)
+		border-bottom: 0
+
+
+
+.a__header
+	+r(500)
+		height: 90px
+	a
+		color: black
+
+		&:hover
+			color: #5e9efc
+	i
+		padding-right: 10px
+		position: absolute
+		+r(500)
+			position: absolute
+			top: 33px
+			left: 10px
+		&:hover
+			cursor: pointer
+
+
+	h2
+		padding-left: 40px
+		font: 16px bold HelveticaNeue, Helvetica, sans-serif
+		+font(HelveticaNeue,HelveticaNeue)
+		+r(800)
+			font-size: 14px
+			padding-left: 33px
+		+r(500)
+			padding-left: 80px
+			padding-top: 30px
+			font: 26px bold HelveticaNeue, Helvetica, sans-serif
+			&:after
+				content: '>'
+				position: absolute
+				right: 30px
+		+r(400)
+			font-size: 12px
+
+	span
+		font-size: 11px
+		color: #ababab
+		padding-left: 10px
+		+r(800)
+			font-size: 9px
+			padding-left: 5px
+		+r(500)
+			display: none
+
+.a__content
+	margin-top: 15px
+	+r(500)
+		display: none
+	a
+		color: #5e9efc
+		font-size: 12px
+
+		&:hover
+			text-decoration: underline
+	span
+		font-size: 10px
+		margin: 0 2px
+		color: grey
+
+.is-hidden
+	+r(500)
+		display: none
+
+
+.cat_icons_avto
+	+s(cat-avto)
+
+.cat_icons_tehno
+	+s(cat-tehno)
+
+.cat_icons_office
+	+s(cat-office)
+
+.cat_icons_child
+	+s(cat-child)
+
+.cat_icons_home
+	+s(cat-home)
+
+.cat_icons_music
+	+s(cat-music)
+
+.cat_icons_com
+	+s(cat-com)
+
+.cat_icons_equipm
+	+s(cat-equipm)
+
+.cat_icons_clothers
+	+s(cat-clothers)
+
+.cat_icons_bear
+	+s(cat-bear)
+
+.cat_icons_cheese
+	+s(cat-cheese)
+
+.cat_icons_sport
+	+s(cat-sport)
+
+.cat_icons_tablet
+	+s(cat-tablet)
+
+.cat_icons_repair
+	+s(cat-repair)
+
+.cat_icons_play
+	+s(cat-play)
+
+@each $s in cat-avto,cat-tehno, cat-office, cat-child,cat-home,cat-child,cat-music,cat-com,cat-equipm,cat-clothers,cat-bear,cat-cheese,cat-sport,cat-tablet,cat-repair,cat-play
+	.icon-#{$s}
+		+s(#{$s})
+
+
+.mobile-list
+	list-style: none
+	margin-top: 10px 
+	li
+		margin-bottom: 10px 
+		a
+			display: block
+			border: 1px solid #DFDFDF 
+			background: #FCFCFD
+			font-size: 15px 
+			text-decoration: none
+			color: #3D3D3D 
+			font-size: 15px 
+			padding-top: 15px 
+			padding-bottom: 15px 
+			position: relative
+			padding-left: 60px 
+			&:before
+				position: absolute
+				top: 50%
+				margin-top: -7px  
+				right: 15px 
+				content: ' '
+				+s(arr-categories)
+			i
+				position: absolute
+				left: 10px 
+				top: 50%
+				margin-top: -13px  
+		&.mobile-list__subitem
+			a
+				padding-left: 80px 
+		&.mobile-list__back
+			a
+				padding-left: 90px 
+				i
+					left: 40px 
+				&:before
+					right: auto 
+					left: 10px 
+					+transform(rotate(180deg))

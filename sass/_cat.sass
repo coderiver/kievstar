@@ -1,0 +1,405 @@
+$border-grey: #eeeeee
+
+.is__hidden
+	display: none
+
+.l 
+	margin: 0 auto
+	
+
+	&__inner
+		margin: auto
+		max-width: 1350px
+		overflow: hidden
+		padding: 0 20px
+		width: 96%
+
+.breadcrumb
+	display: block
+	margin: 10px 0
+
+	ul
+		list-style: none
+		padding: 0
+		margin: 0
+		display: inline-block
+		li
+			display: inline-block
+			vertical-align: middle
+			a
+				padding: 0 12px 0 0
+				margin-right: 6px
+				color: #5e9efc
+				+museo
+				font-size: 15px
+				line-height: 43px
+				text-decoration: underline
+				background: url(../img/icons/brc_icon.png) no-repeat center right
+			.is__active
+				text-decoration: none
+				color: #363636
+				background: none
+
+	i
+		width: 22px
+		height: 22px
+		display: inline-block
+		vertical-align: middle
+		margin-right: 5px
+		background: url(../img/icons/icon_house.png) no-repeat center
+
+.l-col1 
+	width: 268px
+	border: 1px solid $border-grey
+	padding: 20px
+	float: left
+
+	.category
+		margin-left: 15px
+		margin-bottom: 20px
+		position: relative
+
+		&__title 
+			margin-bottom: 10px
+			display: block
+			i
+				display: inline-block
+				background: url(../img/icons/cat_icon.png) no-repeat top left
+				height: 20px
+				width: 20px
+				vertical-align: bottom
+			h5
+				font: bold 14px/1 HelveticaNeue Bold, sans-serif
+				color: #363636
+				display: inline-block
+				margin-left: 3px
+		
+		&__content
+			margin-left: 27px
+
+		li
+			font: 12px/1 HelveticaNeue Medium
+			margin-bottom: 8px
+
+			a
+				text-decoration: none
+				color: #363636
+				&:hover
+					text-decoration: underline
+					color: #5e9efc 
+		.sub__category
+			margin-left: 27px
+
+			&__title
+
+				i
+					display: inline-block
+					width: 20px
+					height: 20px
+					margin-right: 5px
+					vertical-align: middle
+					background: url(../img/icons/sub_icon.png) no-repeat top left
+				a
+					color: #5e9efc
+					vertical-align: middle
+					font: 12px/1 HelveticaNeue Medium
+					margin-bottom: 6px
+
+					&:active 
+						i
+							background: url(../img/icons/sub_icon.png) no-repeat bottom left
+
+			ul
+				margin-left: 27px
+
+.l-col2
+	margin-left: 288px
+
+.line
+	text-align: center	
+
+.top__line__category
+	margin-bottom: 11px
+
+.col__wrapper
+	margin-right: -2%
+	font: 14px Arial, sans-serif
+	font-size: 0
+
+.half-col
+	overflow: hidden
+	position: relative
+	width: 50%
+	display: inline-block
+	font-size: 0
+	margin-bottom: 20px
+
+.top__bl
+	width: 46%
+	margin-right: 4%
+	height: 38px
+	display: inline-block
+	text-align: left
+	vertical-align: top
+	font-size: 0
+	padding-top: 4px
+
+	.title__category
+		text-align: left
+		padding: 2px 0 0
+		color: #363636
+		font: 22px/1 HelveticaNeue Regular, sans-serif
+.good
+	min-height: 200px
+	/* width: 246px */
+	/* margin-left: 20px */
+	width: 46%
+	border: 1px solid #eeeeee
+	display: inline-block
+	margin-right: 4%
+	font: 12px/1 HelveticaNeue Medium, sans-serif
+	font-size: 0
+	padding: 6px
+	overflow: hidden
+	text-align: left
+	text-decoration: none
+	
+	&__image
+		margin-bottom: 8px
+		text-align: center
+		height: 138px
+		position: relative
+		img
+			position: absolute
+			bottom: 0
+			top: 0
+			right: 0
+			left: 0
+			margin: auto
+
+	.good__title
+		color: #679cf1
+		font-size: 12px
+		line-height: 16px
+
+	.good__category
+		color: #9f9f9f
+		font-size: 12px
+		line-height: 16px
+	p
+		margin-bottom: 2px 2px
+		font-size: 12px
+		color: #363636
+		line-height: 16px
+
+
+
+/* ARROWS */
+.arrows
+	width: 60px
+	background-color: $border-grey
+	overflow: hidden
+.ar
+	width: 30px
+	height: 28px
+	position: relative
+	vertical-align: middle
+	border: 1px solid $border-grey
+.arw__l
+	float: left
+	background:  #fff url(../img/arrows.png) no-repeat -11px -9px
+	&:hover
+		background-position: -11px -61px
+.arw__r
+	float: right
+	background: #fff  url(../img/arrows.png) no-repeat -56px -10px
+	&:hover
+		background-position: -57px -61px
+
+.show__more
+	text-align: center
+
+	a
+		display: inline-block
+		text-decoration: none
+		color: #5995f0
+		border-bottom: 1px solid #5995f0
+		margin: 0 0 20px
+		+med
+		font-size: 18px
+		font-weight: 400
+		padding-bottom: 1px
+		border-top: 1px solid transparent
+	
+		&:hover
+			border-color: transparent
+
+
+.section
+	margin: 10px 0
+	font-size: 0
+
+	.inner__section
+		margin-right: -2%
+
+	.title__section
+		color: #363636
+		+med
+		font-weight: 400
+		margin-bottom: 15px
+		font-size: 22px
+
+	.good
+		height: 160px
+		text-align: center
+		margin-bottom: 20px
+		position: relative
+		min-height: auto
+		margin-right: 2%
+		width: 23%
+		
+		.slide__bottom
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0 
+			background-color: rgba(255, 255, 255, 0.9)
+			padding: 10px 
+			font-size: 14px
+			text-align: left 
+			font-family: MuseoSansCyrl, Helvetica, sans-serif
+			span
+				color: #2196f3
+				font-size: 14px
+			p
+				display: block
+				padding-bottom: 10px
+				border-bottom: 1px solid rgba(0, 0, 0, 0.1) 
+				margin-bottom: 10px
+				color: #999
+				font-size: 12px
+			b
+				font-size: 14px
+				color: #333
+
+		img
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			margin: auto
+			display: block 
+
+		.tag
+			position: absolute
+			right: 12px
+			top: 12px
+			width: 40px
+			height: 40px
+			z-index: 100
+
+	&__watched
+		.good
+			height: 160px
+
+	&__popular
+		.good
+			height: 150px
+
+
+//Media quaries
++r(1311)
+	.top__bl
+		.title__category
+			font-size: 18px
+	
++r(1255)
+	.section__popular
+		.good
+			.slide__bottom 
+				p
+					padding-bottom: 3px
+					margin-bottom: 3px
+				span
+					font-size: 12px
+				b
+					font-size: 12px
++r(1000)
+	.col__wrapper
+		margin-right: -4%
+	.half-col
+		width: 100%
+
+	.section__popular, .section__watched
+
+		.good 
+			width: 31.33333333333%
+
++r(870)
+	.l-col1 
+		float: none
+		width: 100%
+
+	.category
+		display: inline-block
+		vertical-align: top
+
+		.category__content
+			display: none
+
+		.sub__category
+			display: none
+
+	.l-col2 
+		margin: 0
++r(710)
+	.tools-mob > a
+		font-size: 17px
+		padding: 20px 0
+	.lang-mob a
+		padding: 14px 0	
+
++r(650)
+	.section
+		.inner__section
+			margin-right: -4%
+	.section__popular, .section__watched
+		.good 
+			width: 46%
+			margin-right: 4%
++r(420)
+	.section
+		.inner__section
+			margin-right: 0
+		.good
+			width: 100%
+			margin-right: 0
+			min-height: 200px
+			&__image
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				top: 0
+				margin: auto 
+		.title__section
+			font-size: 19px
+	.good
+		width: 100%
+		margin-right: 0
+
+	.top__bl
+		width: auto
+		display: block
+	.category
+		display: block
+		text-align: center
+
++r(357)
+	.breadcrumb 
+		ul 
+			li
+				a
+					font-size: 13px
+		
