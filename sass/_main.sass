@@ -1948,11 +1948,11 @@
 				color: #333
 				+museo
 	.header__blue-menu
-		padding: 10px
 		background: #239FFF 
 		+justify
 	.logo
 		float: none
+		padding: 10px
 		margin: 0
 		&.logo_l
 			display: inline-block
@@ -1963,6 +1963,7 @@
 		display: inline-block
 		vertical-align: top
 		width: percentage(640/1350)
+		padding: 10px
 		label
 			position: relative
 			display: block
@@ -1988,33 +1989,58 @@
 		.sell
 			display: inline-block
 			vertical-align: top
-			padding-left: 30px
-			margin-left: 20px
+			padding: 0 10px
 			border-left: 1px solid rgba(255, 255, 255, 0.1) 
 			&:first-child
 				border: none
-				padding: 0
-				margin: 0
-			.sell__icon
-				display: inline-block
-				vertical-align: middle
-				margin-right: 20px
-			.sell__text
-				display: inline-block
-				vertical-align: middle
-				a
-					display: block
-					font-size: 14px
-					line-height: 1.4
-					color: #FFF
-					+museo
-				p
-					display: block
-					opacity: 0.7
-					font-size: 12px
-					font-weight: 300 
-					line-height: 1.4
-					color: #FFF 
+			.sell__wrap
+				padding: 10px
+				cursor: pointer
+				-webkit-border-radius: 2px
+				border-radius: 2px
+				&:hover
+					background: #FFF
+					.sell__icon
+						&.basket
+							span
+								+s(basket-h)
+						&.truck
+							span
+								+s(sell-h)
+					.sell__text
+						a
+							color: #2196F3
+						p
+							color: #666  
+				.sell__icon
+					display: inline-block
+					vertical-align: middle
+					margin-right: 20px
+					span
+						display: inline-block
+						vertical-align: middle
+					&.basket
+						span
+							+s(basket)
+					&.truck
+						span
+							+s(sell)
+				.sell__text
+					display: inline-block
+					vertical-align: middle
+					a
+						display: block
+						font-size: 14px
+						line-height: 1.4
+						color: #FFF
+						+museo
+					p
+						display: block
+						opacity: 0.7
+						font-size: 12px
+						font-weight: 300 
+						line-height: 1.4
+						color: #FFF 
 	.header__nav
 		margin: 20px 0 10px
 		border-top: 1px solid #dfdfdf 
