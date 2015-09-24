@@ -38,38 +38,46 @@
 	top: 0
 	left: 0
 	width: 100%
-	height: 100%    
-	
+	height: 100%
+
 =cover
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: 50% 50%
-	
-// =background-size($width: 100%, $height: 100%)
-// 	-moz-background-size: $width $height
-// 	-webkit-background-size: $width $height
-// 	background-size: $width $height 
-	
+
+=bg-size($width: 100%, $height: 100%)
+	-moz-background-size: $width $height
+	-webkit-background-size: $width $height
+	background-size: $width $height
+
 // retina, also available as +hdpi
 =retina
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
 		@content
 
 =box
-	+box-sizing(border-box)
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
 // vertical-align at center
 =vcenter
 	position: absolute
 	top: 50%
 	left: 50%
-	+translate(-50%,-50%)  
-	
+	+translate(-50%,-50%)
+
 //simple gradient
 =g($color1, $color2)
-	+background-image(linear-gradient($color1, $color2))
+	// +background-image(linear-gradient($color1, $color2))
+	background-image: -moz-linear-gradient($color1, $color2) 
+	background-image: -webkit-linear-gradient($color1, $color2) 
+	background-image: linear-gradient($color1, $color2)
 
 =gh($color1, $color2)
-	+background-image(linear-gradient(left, $color1, $color2))
+	// +background-image(linear-gradient(left, $color1, $color2))
+	background-image: -moz-linear-gradient(left, $color1, $color2) 
+	background-image: -webkit-linear-gradient(left, $color1, $color2) 
+	background-image: linear-gradient(to right, $color1, $color2)
 
 //asdfast font-family
 =font($alias, $name)
@@ -79,7 +87,7 @@
 		src: url("fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("fonts/" + $name + ".woff2") format("woff2"), url("fonts/" + $name + ".woff") format("woff"), url("fonts/" + $name + ".ttf") format("truetype")
 		font-weight: normal
 		font-style: normal
-// usage: 
+// usage:
 //+font(black, cytiapro-black-webfont)
 
 // ROTATE
@@ -133,7 +141,7 @@
 		display: inline-block
 		vertical-align: middle
 		width: 0
-		height: 100% 
+		height: 100%
 
 =clr
 	&:after
@@ -269,7 +277,7 @@
 		border-width: 0 0 $height + px $width + px
 		border-color: transparent transparent $bg transparent
 	@if $direction == bl
-		border-width: $width + px 0 0 $height + px
+		border-width: $height + px 0 0 $width + px
 		border-color: transparent transparent transparent $bg
 // example
 // +arr(500,50, #000, l)
@@ -279,7 +287,7 @@
 	-ms-transform: rotate($var+deg)
 	-webkit-transform: rotate($var+deg)
 	transform: rotate($var+deg)
-	
+
 =blur($var)
 	-webkit-filter: blur($var)
 	filter: blur($var)
@@ -288,9 +296,18 @@
 	-webkit-transform: scale($var)
 	transform: scale($var)
 
-=counter($var)
+=counter($var, $sep)
 	counter-reset: list + $var
 	> li
 		&:before
-			content: counter(list + $var)
+			content: counter(list + $var) $sep
 			counter-increment: list + $var
+
+@function makelongshadow($color)
+	$val: 0px 0px $color
+	@for $i from 1 through 200
+		$val: #{$val}, #{$i}px #{$i}px #{$color}
+	@return $val
+
+=longshadow($color)
+	text-shadow: makelongshadow($color)
