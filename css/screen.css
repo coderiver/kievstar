@@ -39,6 +39,8 @@ h5 { font-family: "HelveticaNeue Roman", Helvetica, sans-serif; font-size: 20px;
 
 h6 { font-family: "HelveticaNeue Bold", Helvetica, sans-serif; font-size: 13px; color: #424e55; }
 
+@media only screen and (max-width: 680px) { input { font-size: 16px; } }
+
 .btn-menu { width: 30px; height: 30px; background: #0eb0ea; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; position: relative; }
 .btn-menu:active { top: 1px; }
 .btn-menu span { border-top: 2px solid #fff; border-bottom: 2px solid #fff; padding: 3px 0; display: block; width: 80%; margin: 0 auto; }
