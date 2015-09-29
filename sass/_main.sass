@@ -1959,6 +1959,7 @@
 			vertical-align: top
 		&.logo_s
 			display: none
+			padding: 0
 	.header__search
 		display: inline-block
 		vertical-align: top
@@ -2163,6 +2164,7 @@
 			display: none
 		.header__blue-menu
 			text-align: left
+			padding: 0 10px
 			+clr
 			&.is-search
 				position: relative
@@ -2181,10 +2183,11 @@
 		.header__sell
 			display: none
 	+r(680)
-		.logo_l
-			display: none
-		.logo_s
-			display: inline-block
+		.logo
+			&.logo_l
+				display: none
+			&.logo_s
+				display: inline-block
 		.header__nav
 			display: none
 			
@@ -2230,7 +2233,7 @@
 .search-mob
 	display: none
 	float: right
-	margin: 10px 35px 0 0
+	margin: 10px 20px 0 0
 	+s(search-btn)
 	+r(710)
 		display: block
