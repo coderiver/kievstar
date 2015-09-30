@@ -1890,9 +1890,7 @@
 	max-width: 1350px
 	width: 100%
 	margin: 0 auto
-	+r(1370)
-		width: 96%
-		margin: 0 auto
+	padding: 0
 	
 .header_market
 	border: none
@@ -2129,18 +2127,14 @@
 	+r(1180)
 		.header__sell
 			.sell
-				padding-left: 10px
-				margin-left: 10px
-		.header__nav
-			ul li a
-				padding: 10px 10px
-	+r(1080)
+				padding: 0px
 		.header__nav
 			ul li a
 				padding: 10px 5px
 	+r(1023)
 		.header__search
 			width: 30%
+			min-width: 30%
 	+r(990)
 		.header__nav
 			margin: 0 0 10px 0
@@ -2478,8 +2472,8 @@
 	.market__banners
 		display: inline-block
 		vertical-align: top
-		width: percentage(398/1350) 
-		margin-left: percentage(19/1350) 
+		width: 30.5%
+		margin-left: 0.4% 
 	.market__banner
 		width: 100% 
 		height: auto
@@ -2498,7 +2492,6 @@
 			img
 				width: 100% 
 		&.banner1
-			margin-bottom: 20px
 			background: #FECC02 
 			h4
 				padding-bottom: 15px
@@ -2518,22 +2511,31 @@
 				color: #949ea5
 	+r(1180)
 		.market__slider
-			width: 100% 
 			height: auto
-		.market__banners
-			display: none
 	+r(900)
-		.market__slider .slider .slide 
-			.slide__text
-				top: 50px
-			.slide__tape
-				height: 80px
-			.slide__item
-				width: 70px
-				height: 70px
-				margin: 0 5px
-				img
-					width: 100% 
+		.market__slider 
+			width: 100% 
+			.slider .slide 
+				.slide__text
+					top: 50px
+				.slide__tape
+					height: 80px
+				.slide__item
+					width: 70px
+					height: 70px
+					margin: 0 5px
+					img
+						width: 100% 
+		.market__banners
+			display: block
+			width: 100% 
+			margin: 20px 0 20px -1%
+			font-size: 0
+		.market__banner
+			display: inline-block
+			vertical-align: top
+			margin-left: 4%
+			width: 45%
 	+r(780)
 		.market__slider .slider .slide 
 			.slide__text
